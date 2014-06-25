@@ -75,7 +75,7 @@ namespace Bytes2you.Validation.UnitTests.Testing.Helpers
             {
                 action();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Assert.Fail();
             }

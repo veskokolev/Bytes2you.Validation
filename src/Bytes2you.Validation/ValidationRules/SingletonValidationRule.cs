@@ -11,22 +11,26 @@ namespace Bytes2you.Validation.ValidationRules
 
         static SingletonValidationRule()
         {
-            Type ruleType = typeof(TRule);
-
-            if (ruleType.HasPublicConstructors())
-            {
-                throw new InvalidOperationException(
-                    string.Format("The type '{0}' must not have any public constructors.", ruleType.FullName));
-            }
-
-            lazyInstance = new Lazy<TRule>(() => (TRule)Activator.CreateInstance(ruleType, true));
+            lazyInstance = new Lazy<TRule>(() => (TRule)Activator.CreateInstance(typeof(TRule), true));
         }
 
         public static TRule Instance
         {
             get
             {
+                ValidateTRule();
                 return lazyInstance.Value;
+            }
+        }
+
+        private static void ValidateTRule()
+        {
+            Type ruleType = typeof(TRule);
+
+            if (ruleType.HasPublicConstructors())
+            {
+                throw new InvalidOperationException(
+                    string.Format("The type '{0}' must not have any public constructors.", ruleType.FullName));
             }
         }
     }
