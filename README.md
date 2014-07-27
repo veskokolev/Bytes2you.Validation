@@ -37,3 +37,53 @@ public void SomeMethod(string stringArgument)
     // Which means - when stringArgument is null or empty OR is equal to "xxx" we should throw exception.
 }
 ```
+
+Rules List
+==============
+```cs
+Guard.WhenArgument<T>(argument, "argument")
+```
+
+Wor all T:
+```cs
+  .IsEqual(value);
+  .IsNotEqual(value);
+```
+
+When T is class:
+```cs
+  .IsNull();
+  .IsNotNull();
+```
+
+When T is bool:
+```cs
+  .IsTrue();
+  .IsFalse();
+```
+
+When T is IComparable<T>:
+```cs
+  .IsLessThan(bound);
+  .IsGreaterThan(bound);
+  .IsLessThanOrEqual(bound);
+  .IsGreaterThanOrEqual(bound);
+```
+
+When T is IEnumerable:
+```cs
+  .IsNullOrEmpty();
+  .IsNotNullOrEmpty();
+```
+
+When T is Guid:
+```cs
+  .IsEmptyGuid();
+  .IsNotEmptyGuid();
+```
+
+When T is string:
+```cs
+  .IsNullOrEmpty();
+  .IsNotNullOrEmpty();
+```
