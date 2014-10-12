@@ -40,7 +40,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>bytes2you.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\bytes2you.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   
   <ItemGroup>
