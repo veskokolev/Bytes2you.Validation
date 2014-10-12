@@ -3,6 +3,9 @@ Bytes2you.Validation
 
 Fast, extensible, intuitive and easy-to-use C# library providing fluent APIs for argument validation. Gives everything you need to implement defensive programming (http://veskokolev.com/2014/04/27/defensive-programming-technique-the-way-to-fast-failure/) in your .NET applicatinos.
 
+Tests
+==============
+The codebase is fully covered with unit tests (100% code coverage).
 
 API
 ==============
@@ -87,3 +90,7 @@ When T is string:
   .IsNullOrEmpty();
   .IsNotNullOrEmpty();
 ```
+
+Extensibility
+==============
+One can easily add new rules (see ValidationRules namespace) and expose them trugh fulent API extensions (see FluentExtensions).
