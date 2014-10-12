@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9BF2536B-BD3E-4597-9AF5-1BD880A05727}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bytes2you.Validation</RootNamespace>
+    <AssemblyName>Bytes2you.Validation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Helpers\Comparer.cs" />
+    <Compile Include="Extensions\ArgumentExtensions.cs" />
+    <Compile Include="FluentExtensions\ArgumentOfTFluentExtensions.cs" />
+    <Compile Include="FluentExtensions\BoolArgumentFluentExtensions.cs" />
+    <Compile Include="FluentExtensions\ComparableOfTFluentExtensions.cs" />
+    <Compile Include="FluentExtensions\EnumerableArgumentFluentExttensions.cs" />
+    <Compile Include="FluentExtensions\GuidArgumentFluentExtensions.cs" />
+    <Compile Include="Helpers\EnumerableHelper.cs" />
+    <Compile Include="IValidationResult.cs" />
+    <Compile Include="IValidationRule.cs" />
+    <Compile Include="ValidatableArgument.cs" />
+    <Compile Include="Guard.cs" />
+    <Compile Include="IArgument.cs" />
+    <Compile Include="IValidatableArgument.cs" />
+    <Compile Include="IValidationRuleOfT.cs" />
+    <Compile Include="FluentExtensions\StringArgumentFluentExtensions.cs" />
+    <Compile Include="FluentExtensions\ValidatableArgumentFluentExtension.cs" />
+    <Compile Include="ValidationResult.cs" />
+    <Compile Include="ValidationRules\BoundedArgumentValidationRule.cs" />
+    <Compile Include="ValidationRules\EmptyGuidValidationRule.cs" />
+    <Compile Include="ValidationRules\EqualValidationRule.cs" />
+    <Compile Include="ValidationRules\FalseValidationRule.cs" />
+    <Compile Include="ValidationRules\GreaterThanOrEqualValidationRule.cs" />
+    <Compile Include="ValidationRules\GreaterThanValidationRule.cs" />
+    <Compile Include="ValidationRules\LessThanOrEqualValidationRule.cs" />
+    <Compile Include="ValidationRules\LessThanValidationRule.cs" />
+    <Compile Include="ValidationRules\NotEmptyGuidValidationRule.cs" />
+    <Compile Include="ValidationRules\NotEqualValidationRule.cs" />
+    <Compile Include="ValidationRules\NotNullOrEmptyEnumerableValidationRule.cs" />
+    <Compile Include="ValidationRules\NotNullOrEmptyStringValidationRule.cs" />
+    <Compile Include="ValidationRules\NotNullValidationRule.cs" />
+    <Compile Include="ValidationRules\NullOrEmptyEnumerableValidationRule.cs" />
+    <Compile Include="ValidationRules\SingletonValidationRule.cs" />
+    <Compile Include="ValidationRules\TrueValidationRule.cs" />
+    <Compile Include="ValidationRules\ValidationRule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidationRules\NullOrEmptyStringValidationRule.cs" />
+    <Compile Include="ValidationRules\NullValidationRule.cs" />
+    <Compile Include="ValidationRules\ValidationRuleMessages.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
