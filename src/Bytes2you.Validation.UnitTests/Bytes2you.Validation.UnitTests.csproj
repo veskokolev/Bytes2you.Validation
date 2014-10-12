@@ -60,214 +60,76 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Extensions\ArgumentExtensionsTests\ArgumentExtensions_AddValidationRule_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Extensions\ArgumentExtensionsTests\ArgumentExtensions_ToValidatableArgument_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Extensions\TypeExtensionsTests\TypeExtensions_HasPublicConstructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FluentExtensions\ArgumentOfTFluentExtensionsTests\ArgumentOfTFluentExtensions_IsEqual_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FluentExtensions\ArgumentOfTFluentExtensionsTests\ArgumentOfTFluentExtensions_IsNotEqual_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FluentExtensions\ArgumentOfTFluentExtensionsTests\ArgumentOfTFluentExtensions_IsNotNull_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FluentExtensions\ArgumentOfTFluentExtensionsTests\ArgumentOfTFluentExtensions_IsNull_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FluentExtensions\BoolArgumentFluentExtensionsTests\BoolArgumentFluentExtensions_IsFalse_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FluentExtensions\BoolArgumentFluentExtensionsTests\BoolArgumentFluentExtensions_IsTrue_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FluentExtensions\ComparableOfTFluentExtensionsTests\ComparableOfTFluentExtensions_IsGreaterThanOrEqual_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FluentExtensions\ComparableOfTFluentExtensionsTests\ComparableOfTFluentExtensions_IsGreaterThan_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FluentExtensions\ComparableOfTFluentExtensionsTests\ComparableOfTFluentExtensions_IsLessThanOrEqual_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FluentExtensions\ComparableOfTFluentExtensionsTests\ComparableOfTFluentExtensions_IsLessThan_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FluentExtensions\EnumerableArgumentFluentExttensionsTests\EnumerableArgumentFluentExttensions_IsNotNullOrEmpty_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FluentExtensions\EnumerableArgumentFluentExttensionsTests\EnumerableArgumentFluentExttensions_IsNullOrEmpty_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FluentExtensions\GuidArgumentFluentExtensionsTests\GuidArgumentFluentExtensions_IsEmptyGuid_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FluentExtensions\GuidArgumentFluentExtensionsTests\GuidArgumentFluentExtensions_IsNotEmptyGuid_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FluentExtensions\StringArgumentFluentExtensionsTests\StringArgumentFluentExtensions_IsNotNullOrEmpty_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FluentExtensions\StringArgumentFluentExtensionsTests\StringArgumentFluentExtensions_IsNullOrEmpty_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FluentExtensions\ValidatableArgumentFluentExtensionTests\ValidatableArgumentFluentExtension_Throw_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="GuardTests\Guard_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="GuardTests\Guard_WhenArgument_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Helpers\ComparerTests\Comparer_EqualsOfT_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Helpers\EnumerableHelperTests\EnumerableHelper_IsNullOrEmpty_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="Extensions\ArgumentExtensionsTests\ArgumentExtensions_AddValidationRule_Should.cs" />
+    <Compile Include="Extensions\ArgumentExtensionsTests\ArgumentExtensions_ToValidatableArgument_Should.cs" />
+    <Compile Include="Extensions\TypeExtensionsTests\TypeExtensions_HasPublicConstructors_Should.cs" />
+    <Compile Include="FluentExtensions\ArgumentOfTFluentExtensionsTests\ArgumentOfTFluentExtensions_IsEqual_Should.cs" />
+    <Compile Include="FluentExtensions\ArgumentOfTFluentExtensionsTests\ArgumentOfTFluentExtensions_IsNotEqual_Should.cs" />
+    <Compile Include="FluentExtensions\ArgumentOfTFluentExtensionsTests\ArgumentOfTFluentExtensions_IsNotNull_Should.cs" />
+    <Compile Include="FluentExtensions\ArgumentOfTFluentExtensionsTests\ArgumentOfTFluentExtensions_IsNull_Should.cs" />
+    <Compile Include="FluentExtensions\BoolArgumentFluentExtensionsTests\BoolArgumentFluentExtensions_IsFalse_Should.cs" />
+    <Compile Include="FluentExtensions\BoolArgumentFluentExtensionsTests\BoolArgumentFluentExtensions_IsTrue_Should.cs" />
+    <Compile Include="FluentExtensions\ComparableOfTFluentExtensionsTests\ComparableOfTFluentExtensions_IsGreaterThanOrEqual_Should.cs" />
+    <Compile Include="FluentExtensions\ComparableOfTFluentExtensionsTests\ComparableOfTFluentExtensions_IsGreaterThan_Should.cs" />
+    <Compile Include="FluentExtensions\ComparableOfTFluentExtensionsTests\ComparableOfTFluentExtensions_IsLessThanOrEqual_Should.cs" />
+    <Compile Include="FluentExtensions\ComparableOfTFluentExtensionsTests\ComparableOfTFluentExtensions_IsLessThan_Should.cs" />
+    <Compile Include="FluentExtensions\EnumerableArgumentFluentExttensionsTests\EnumerableArgumentFluentExttensions_IsNotNullOrEmpty_Should.cs" />
+    <Compile Include="FluentExtensions\EnumerableArgumentFluentExttensionsTests\EnumerableArgumentFluentExttensions_IsNullOrEmpty_Should.cs" />
+    <Compile Include="FluentExtensions\GuidArgumentFluentExtensionsTests\GuidArgumentFluentExtensions_IsEmptyGuid_Should.cs" />
+    <Compile Include="FluentExtensions\GuidArgumentFluentExtensionsTests\GuidArgumentFluentExtensions_IsNotEmptyGuid_Should.cs" />
+    <Compile Include="FluentExtensions\StringArgumentFluentExtensionsTests\StringArgumentFluentExtensions_IsNotNullOrEmpty_Should.cs" />
+    <Compile Include="FluentExtensions\StringArgumentFluentExtensionsTests\StringArgumentFluentExtensions_IsNullOrEmpty_Should.cs" />
+    <Compile Include="FluentExtensions\ValidatableArgumentFluentExtensionTests\ValidatableArgumentFluentExtension_Throw_Should.cs" />
+    <Compile Include="GuardTests\Guard_Constructors_Should.cs" />
+    <Compile Include="GuardTests\Guard_WhenArgument_Should.cs" />
+    <Compile Include="Helpers\ComparerTests\Comparer_EqualsOfT_Should.cs" />
+    <Compile Include="Helpers\EnumerableHelperTests\EnumerableHelper_IsNullOrEmpty_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Testing\Helpers\Ensure.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Testing\Mocks\ArgumentMock.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Testing\Mocks\IntValidationRuleMock.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Testing\Mocks\SingletonValidationRuleWithPublicConstructorMock.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Testing\Mocks\TypeWithPrivateConstructor.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Testing\Mocks\TypeWithPublicConstructor.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Testing\PerformanceConstants.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatableArgumentTests\ValidatableArgument_AddValidationRule_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatableArgumentTests\ValidatableArgument_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidationResultTests\ValidationResult_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\EmptyGuidValidationRuleTests\EmptyGuidValidationRule_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\EmptyGuidValidationRuleTests\EmptyGuidValidationRule_Validate_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\EqualValidationRuleTests\EqualValidationRule_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\EqualValidationRuleTests\EqualValidationRule_Validate_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\FalseValidationRuleTests\FalseValidationRule_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\FalseValidationRuleTests\FalseValidationRule_Validate_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\GreaterThanOrEqualValidationRuleTests\GreaterThanOrEqualValidationRule_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\GreaterThanOrEqualValidationRuleTests\GreaterThanOrEqualValidationRule_Validate_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\GreaterThanValidationRuleTests\GreaterThanValidationRule_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\GreaterThanValidationRuleTests\GreaterThanValidationRule_Validate_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\LessThanOrEqualValidationRuleTests\LessThanOrEqualValidationRule_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\LessThanOrEqualValidationRuleTests\LessThanOrEqualValidationRule_Validate_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\LessThanValidationRuleTests\LessThanValidationRule_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\LessThanValidationRuleTests\LessThanValidationRule_Validate_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\NotEmptyGuidValidationRuleTests\NotEmptyGuidValidationRule_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\NotEmptyGuidValidationRuleTests\NotEmptyGuidValidationRule_Validate_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\NotEqualValidationRuleTests\NotEqualValidationRule_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\NotEqualValidationRuleTests\NotEqualValidationRule_Validate_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\NotNullOrEmptyEnumerableValidationRuleTests\NotNullOrEmptyEnumerableValidationRule_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\NotNullOrEmptyEnumerableValidationRuleTests\NotNullOrEmptyEnumerableValidationRule_Validate_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\NotNullOrEmptyStringValidationRuleTests\NotNullOrEmptyStringValidationRule_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\NotNullOrEmptyStringValidationRuleTests\NotNullOrEmptyStringValidationRule_Validate_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\NotNullValidationRuleTests\NotNullValidationRule_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\NotNullValidationRuleTests\NotNullValidationRule_Validate_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\NullOrEmptyEnumerableValidationRuleTests\NullOrEmptyEnumerableValidationRule_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\NullOrEmptyEnumerableValidationRuleTests\NullOrEmptyEnumerableValidationRule_Validate_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\NullOrEmptyStringValidationRuleTests\NullOrEmptyStringValidationRule_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\NullOrEmptyStringValidationRuleTests\NullOrEmptyStringValidationRule_Validate_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\NullValidationRuleTests\NullValidationRule_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\NullValidationRuleTests\NullValidationRule_Validate_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\SingletonValidationRuleTests\SingletonValidationRule_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\TrueValidationRuleTests\TrueValidationRule_Constructors_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\TrueValidationRuleTests\TrueValidationRule_Validate_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\ValidationRuleTests\ValidationRule_Name_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ValidatoinRules\ValidationRuleTests\ValidationRule_Validate_Should.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="Testing\Helpers\Ensure.cs" />
+    <Compile Include="Testing\Mocks\ArgumentMock.cs" />
+    <Compile Include="Testing\Mocks\IntValidationRuleMock.cs" />
+    <Compile Include="Testing\Mocks\SingletonValidationRuleWithPublicConstructorMock.cs" />
+    <Compile Include="Testing\Mocks\TypeWithPrivateConstructor.cs" />
+    <Compile Include="Testing\Mocks\TypeWithPublicConstructor.cs" />
+    <Compile Include="Testing\PerformanceConstants.cs" />
+    <Compile Include="ValidatableArgumentTests\ValidatableArgument_AddValidationRule_Should.cs" />
+    <Compile Include="ValidatableArgumentTests\ValidatableArgument_Constructors_Should.cs" />
+    <Compile Include="ValidationResultTests\ValidationResult_Constructors_Should.cs" />
+    <Compile Include="ValidatoinRules\EmptyGuidValidationRuleTests\EmptyGuidValidationRule_Constructors_Should.cs" />
+    <Compile Include="ValidatoinRules\EmptyGuidValidationRuleTests\EmptyGuidValidationRule_Validate_Should.cs" />
+    <Compile Include="ValidatoinRules\EqualValidationRuleTests\EqualValidationRule_Constructors_Should.cs" />
+    <Compile Include="ValidatoinRules\EqualValidationRuleTests\EqualValidationRule_Validate_Should.cs" />
+    <Compile Include="ValidatoinRules\FalseValidationRuleTests\FalseValidationRule_Constructors_Should.cs" />
+    <Compile Include="ValidatoinRules\FalseValidationRuleTests\FalseValidationRule_Validate_Should.cs" />
+    <Compile Include="ValidatoinRules\GreaterThanOrEqualValidationRuleTests\GreaterThanOrEqualValidationRule_Constructors_Should.cs" />
+    <Compile Include="ValidatoinRules\GreaterThanOrEqualValidationRuleTests\GreaterThanOrEqualValidationRule_Validate_Should.cs" />
+    <Compile Include="ValidatoinRules\GreaterThanValidationRuleTests\GreaterThanValidationRule_Constructors_Should.cs" />
+    <Compile Include="ValidatoinRules\GreaterThanValidationRuleTests\GreaterThanValidationRule_Validate_Should.cs" />
+    <Compile Include="ValidatoinRules\LessThanOrEqualValidationRuleTests\LessThanOrEqualValidationRule_Constructors_Should.cs" />
+    <Compile Include="ValidatoinRules\LessThanOrEqualValidationRuleTests\LessThanOrEqualValidationRule_Validate_Should.cs" />
+    <Compile Include="ValidatoinRules\LessThanValidationRuleTests\LessThanValidationRule_Constructors_Should.cs" />
+    <Compile Include="ValidatoinRules\LessThanValidationRuleTests\LessThanValidationRule_Validate_Should.cs" />
+    <Compile Include="ValidatoinRules\NotEmptyGuidValidationRuleTests\NotEmptyGuidValidationRule_Constructors_Should.cs" />
+    <Compile Include="ValidatoinRules\NotEmptyGuidValidationRuleTests\NotEmptyGuidValidationRule_Validate_Should.cs" />
+    <Compile Include="ValidatoinRules\NotEqualValidationRuleTests\NotEqualValidationRule_Constructors_Should.cs" />
+    <Compile Include="ValidatoinRules\NotEqualValidationRuleTests\NotEqualValidationRule_Validate_Should.cs" />
+    <Compile Include="ValidatoinRules\NotNullOrEmptyEnumerableValidationRuleTests\NotNullOrEmptyEnumerableValidationRule_Constructors_Should.cs" />
+    <Compile Include="ValidatoinRules\NotNullOrEmptyEnumerableValidationRuleTests\NotNullOrEmptyEnumerableValidationRule_Validate_Should.cs" />
+    <Compile Include="ValidatoinRules\NotNullOrEmptyStringValidationRuleTests\NotNullOrEmptyStringValidationRule_Constructors_Should.cs" />
+    <Compile Include="ValidatoinRules\NotNullOrEmptyStringValidationRuleTests\NotNullOrEmptyStringValidationRule_Validate_Should.cs" />
+    <Compile Include="ValidatoinRules\NotNullValidationRuleTests\NotNullValidationRule_Constructors_Should.cs" />
+    <Compile Include="ValidatoinRules\NotNullValidationRuleTests\NotNullValidationRule_Validate_Should.cs" />
+    <Compile Include="ValidatoinRules\NullOrEmptyEnumerableValidationRuleTests\NullOrEmptyEnumerableValidationRule_Constructors_Should.cs" />
+    <Compile Include="ValidatoinRules\NullOrEmptyEnumerableValidationRuleTests\NullOrEmptyEnumerableValidationRule_Validate_Should.cs" />
+    <Compile Include="ValidatoinRules\NullOrEmptyStringValidationRuleTests\NullOrEmptyStringValidationRule_Constructors_Should.cs" />
+    <Compile Include="ValidatoinRules\NullOrEmptyStringValidationRuleTests\NullOrEmptyStringValidationRule_Validate_Should.cs" />
+    <Compile Include="ValidatoinRules\NullValidationRuleTests\NullValidationRule_Constructors_Should.cs" />
+    <Compile Include="ValidatoinRules\NullValidationRuleTests\NullValidationRule_Validate_Should.cs" />
+    <Compile Include="ValidatoinRules\SingletonValidationRuleTests\SingletonValidationRule_Constructors_Should.cs" />
+    <Compile Include="ValidatoinRules\TrueValidationRuleTests\TrueValidationRule_Constructors_Should.cs" />
+    <Compile Include="ValidatoinRules\TrueValidationRuleTests\TrueValidationRule_Validate_Should.cs" />
+    <Compile Include="ValidatoinRules\ValidationRuleTests\ValidationRule_Name_Should.cs" />
+    <Compile Include="ValidatoinRules\ValidationRuleTests\ValidationRule_Validate_Should.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Bytes2you.Validation\Bytes2you.Validation.csproj">
