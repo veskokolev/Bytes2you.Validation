@@ -90,6 +90,9 @@
     <Compile Include="ValidationRules\NullValidationRule.cs" />
     <Compile Include="ValidationRules\ValidationRuleMessages.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Bytes2you.Validation.nuspec" />
+  </ItemGroup>
   <!--<ItemGroup>
     <None Include="bytes2you.pfx" />
   </ItemGroup>-->
