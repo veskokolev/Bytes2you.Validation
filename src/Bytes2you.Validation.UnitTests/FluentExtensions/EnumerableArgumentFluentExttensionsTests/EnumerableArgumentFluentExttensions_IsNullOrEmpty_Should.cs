@@ -15,15 +15,15 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.EnumerableArgumentFlue
         public void AddNullOrEmptyEnumerableValidationRule()
         {
             // Arrange.
-            ValidatableArgument<IEnumerable> argument =
-                new ValidatableArgument<IEnumerable>("argument", new int[] { 1, 2, 3 });
+            ValidatableArgument<int[]> argument =
+                new ValidatableArgument<int[]>("argument", new int[] { 1, 2, 3 });
 
             // Act.
             argument.IsNullOrEmpty();
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationRules.Count());
-            Assert.IsTrue(argument.ValidationRules.First() is NullOrEmptyEnumerableValidationRule);
+            Assert.IsTrue(argument.ValidationRules.First() is NullOrEmptyEnumerableValidationRule<int[]>);
         }
 
         [TestMethod]

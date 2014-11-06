@@ -8,14 +8,16 @@ namespace Bytes2you.Validation
 {
     public static class EnumerableArgumentFluentExttensions
     {
-        public static IValidatableArgument<IEnumerable> IsNullOrEmpty(this IArgument<IEnumerable> @argument)
+        public static IValidatableArgument<T> IsNullOrEmpty<T>(this IArgument<T> @argument)
+            where T : IEnumerable
         {
-            return @argument.AddValidationRule(NullOrEmptyEnumerableValidationRule.Instance);
+            return @argument.AddValidationRule(NullOrEmptyEnumerableValidationRule<T>.Instance);
         }
 
-        public static IValidatableArgument<IEnumerable> IsNotNullOrEmpty(this IArgument<IEnumerable> @argument)
+        public static IValidatableArgument<T> IsNotNullOrEmpty<T>(this IArgument<T> @argument)
+            where T : IEnumerable
         {
-            return @argument.AddValidationRule(NotNullOrEmptyEnumerableValidationRule.Instance);
+            return @argument.AddValidationRule(NotNullOrEmptyEnumerableValidationRule<T>.Instance);
         }
     }
 }

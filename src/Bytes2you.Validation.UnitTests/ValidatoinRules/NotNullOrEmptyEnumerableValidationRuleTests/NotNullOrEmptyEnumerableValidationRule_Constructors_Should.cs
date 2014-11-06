@@ -13,7 +13,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinRules.NotNullOrEmptyEnumerabl
         public void NotBePublic()
         {
             // Act.
-            bool hasPublicConstructors = typeof(NotNullOrEmptyEnumerableValidationRule).HasPublicConstructors();
+            bool hasPublicConstructors = typeof(NotNullOrEmptyEnumerableValidationRule<int[]>).HasPublicConstructors();
 
             // Assert.
             Assert.IsFalse(hasPublicConstructors);

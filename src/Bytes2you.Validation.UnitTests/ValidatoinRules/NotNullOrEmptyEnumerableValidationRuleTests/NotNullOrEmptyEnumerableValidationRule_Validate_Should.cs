@@ -15,7 +15,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinRules.NotNullOrEmptyEnumerabl
             int [] value = new int[] { 3, 4, 5 };
 
             // Act.
-            IValidationResult result = NotNullOrEmptyEnumerableValidationRule.Instance.Validate(value);
+            IValidationResult result = NotNullOrEmptyEnumerableValidationRule<int[]>.Instance.Validate(value);
 
             // Assert.
             Assert.IsTrue(result.IsValid);
@@ -29,7 +29,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinRules.NotNullOrEmptyEnumerabl
             int[] value = null;
 
             // Act.
-            IValidationResult result = NotNullOrEmptyEnumerableValidationRule.Instance.Validate(value);
+            IValidationResult result = NotNullOrEmptyEnumerableValidationRule<int[]>.Instance.Validate(value);
 
             // Assert.
             Assert.IsFalse(result.IsValid);
@@ -43,7 +43,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinRules.NotNullOrEmptyEnumerabl
             int[] value = new int[] {};
 
             // Act.
-            IValidationResult result = NotNullOrEmptyEnumerableValidationRule.Instance.Validate(value);
+            IValidationResult result = NotNullOrEmptyEnumerableValidationRule<int[]>.Instance.Validate(value);
 
             // Assert.
             Assert.IsFalse(result.IsValid);
