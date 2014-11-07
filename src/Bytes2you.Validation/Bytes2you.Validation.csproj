@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Extensions\ValidatableArgumentExtensions.cs" />
     <Compile Include="Helpers\Comparer.cs" />
     <Compile Include="Extensions\ArgumentExtensions.cs" />
     <Compile Include="FluentExtensions\ArgumentOfTFluentExtensions.cs" />
