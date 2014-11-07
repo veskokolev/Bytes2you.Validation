@@ -54,7 +54,7 @@
     <Compile Include="Extensions\ArgumentExtensions.cs" />
     <Compile Include="FluentExtensions\ArgumentOfTFluentExtensions.cs" />
     <Compile Include="FluentExtensions\BoolArgumentFluentExtensions.cs" />
-    <Compile Include="FluentExtensions\ComparableOfTFluentExtensions.cs" />
+    <Compile Include="FluentExtensions\ComparableOfTArgumentFluentExtensions.cs" />
     <Compile Include="FluentExtensions\EnumerableArgumentFluentExttensions.cs" />
     <Compile Include="FluentExtensions\GuidArgumentFluentExtensions.cs" />
     <Compile Include="Helpers\EnumerableHelper.cs" />
