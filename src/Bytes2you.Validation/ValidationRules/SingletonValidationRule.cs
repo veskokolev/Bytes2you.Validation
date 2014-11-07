@@ -7,7 +7,7 @@ namespace Bytes2you.Validation.ValidationRules
     public abstract class SingletonValidationRule<TRule, TArgument> : ValidationRule<TArgument>
         where TRule : IValidationRule
     {
-        private static Lazy<TRule> lazyInstance;
+        private static readonly Lazy<TRule> lazyInstance;
 
         static SingletonValidationRule()
         {
@@ -18,7 +18,11 @@ namespace Bytes2you.Validation.ValidationRules
         {
             get
             {
-                ValidateTRule();
+                if (!lazyInstance.IsValueCreated)
+                {
+                    ValidateTRule();  
+                }
+                
                 return lazyInstance.Value;
             }
         }
