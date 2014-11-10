@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Bytes2you.Validation.ValidationRules;
+using Bytes2you.Validation.ValidationPredicates;
 
 namespace Bytes2you.Validation
 {
@@ -9,18 +9,18 @@ namespace Bytes2you.Validation
     {
         private readonly string name;
         private readonly T value;
-        private readonly List<IValidationRule<T>> validationRules;
+        private readonly List<IValidationPredicate<T>> validationPredicates;
 
         public ValidatableArgument(string name, T value)
         {
             if (string.IsNullOrEmpty(name))
             {
-                throw new ArgumentException(ValidationRuleMessages.NullMessage, "name");
+                throw new ArgumentException(ValidationPredicateMessages.NullMessage, "name");
             }
 
             this.name = name;
             this.value = value;
-            this.validationRules = new List<IValidationRule<T>>();
+            this.validationPredicates = new List<IValidationPredicate<T>>();
         }
 
         public ValidatableArgument(IArgument<T> argument)
@@ -44,22 +44,34 @@ namespace Bytes2you.Validation
             }
         }
 
-        public IEnumerable<IValidationRule<T>> ValidationRules
+        public IEnumerable<IValidationPredicate<T>> ValidationPredicates
         {
             get
             {
-                return this.validationRules;
+                return this.validationPredicates;
             }
         }
 
-        public void AddValidationRule(IValidationRule<T> validationRule)
+        public void AddValidationPredicate(IValidationPredicate<T> validationPredicate)
         {
-            if (validationRule == null)
+            if (validationPredicate == null)
             {
-                throw new ArgumentException(ValidationRuleMessages.NullMessage, "validationRule");
+                throw new ArgumentException(ValidationPredicateMessages.NullMessage, "validationPredicate");
             }
 
-            this.validationRules.Add(validationRule);
+            this.validationPredicates.Add(validationPredicate);
+        }
+
+        public IEnumerable<IValidationPredicateResult> MatchValidationPredicates()
+        {
+            List<IValidationPredicateResult> validationPredicateResults = new List<IValidationPredicateResult>();
+            foreach (IValidationPredicate<T> validationPredicate in this.ValidationPredicates)
+            {
+                IValidationPredicateResult validationResult = validationPredicate.Match(this.Value);
+                validationPredicateResults.Add(validationResult);
+            }
+
+            return validationPredicateResults;
         }
     }
 }

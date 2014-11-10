@@ -41,7 +41,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatableArgumentTests
             // Assert.
             Assert.AreEqual(name, argument.Name);
             Assert.AreEqual(value, argument.Value);
-            Assert.IsFalse(argument.ValidationRules.Any());
+            Assert.IsFalse(argument.ValidationPredicates.Any());
         }
 
         [TestMethod]

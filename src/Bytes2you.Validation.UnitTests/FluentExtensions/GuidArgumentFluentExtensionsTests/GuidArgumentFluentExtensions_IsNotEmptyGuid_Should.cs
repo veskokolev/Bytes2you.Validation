@@ -2,7 +2,7 @@
 using System.Linq;
 using Bytes2you.Validation.UnitTests.Testing;
 using Bytes2you.Validation.UnitTests.Testing.Helpers;
-using Bytes2you.Validation.ValidationRules;
+using Bytes2you.Validation.ValidationPredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Bytes2you.Validation.UnitTests.FluentExtensions.GuidArgumentFluentExtensionsTests
@@ -11,7 +11,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.GuidArgumentFluentExte
     public class GuidArgumentFluentExtensions_IsNotEmptyGuid_Should
     {
         [TestMethod]
-        public void AddNotEmptyGuidValidationRule()
+        public void AddNotEmptyGuidValidationPredicate()
         {
             // Arrange.
             ValidatableArgument<Guid> argument =
@@ -21,8 +21,8 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.GuidArgumentFluentExte
             argument.IsNotEmptyGuid();
 
             // Assert.
-            Assert.AreEqual(1, argument.ValidationRules.Count());
-            Assert.IsTrue(argument.ValidationRules.First() is NotEmptyGuidValidationRule);
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is NotEmptyGuidValidationPredicate);
         }
 
         [TestMethod]
@@ -38,8 +38,8 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.GuidArgumentFluentExte
                 {
                     argument.IsNotEmptyGuid();
                 },
-                PerformanceConstants.RuleExecutionCount,
-                PerformanceConstants.RuleTotalExecutionExpectedTime);
+                PerformanceConstants.ValidationPredicateExecutionCount,
+                PerformanceConstants.ValidationPredicateTotalExecutionExpectedTime);
         }
     }
 }

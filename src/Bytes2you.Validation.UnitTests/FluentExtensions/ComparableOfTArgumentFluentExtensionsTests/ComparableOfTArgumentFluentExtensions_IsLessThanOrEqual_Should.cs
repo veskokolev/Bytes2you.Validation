@@ -2,7 +2,7 @@
 using System.Linq;
 using Bytes2you.Validation.UnitTests.Testing;
 using Bytes2you.Validation.UnitTests.Testing.Helpers;
-using Bytes2you.Validation.ValidationRules;
+using Bytes2you.Validation.ValidationPredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Bytes2you.Validation.UnitTests.FluentExtensions.ComparableOfTArgumentFluentExtensionsTests
@@ -11,7 +11,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ComparableOfTArgumentF
     public class ComparableOfTArgumentFluentExtensions_IsLessThanOrEqual_Should
     {
         [TestMethod]
-        public void AddLessThanOrEqualValidationRule()
+        public void AddLessThanOrEqualValidationPredicate()
         {
             // Arrange.
             ValidatableArgument<int> argument = new ValidatableArgument<int>("argument", 3);
@@ -20,8 +20,8 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ComparableOfTArgumentF
             argument.IsLessThanOrEqual(5);
 
             // Assert.
-            Assert.AreEqual(1, argument.ValidationRules.Count());
-            Assert.IsTrue(argument.ValidationRules.First() is LessThanOrEqualValidationRule<int>);
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is LessThanOrEqualValidationPredicate<int>);
         }
 
         [TestMethod]
@@ -36,8 +36,8 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ComparableOfTArgumentF
                 {
                     argument.IsLessThanOrEqual(3);
                 },
-                PerformanceConstants.RuleExecutionCount,
-                PerformanceConstants.RuleTotalExecutionExpectedTime);
+                PerformanceConstants.ValidationPredicateExecutionCount,
+                PerformanceConstants.ValidationPredicateTotalExecutionExpectedTime);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using Bytes2you.Validation.Extensions;
+using System.Text;
 
 namespace Bytes2you.Validation
 {
@@ -13,10 +14,19 @@ namespace Bytes2you.Validation
                 throw new ArgumentNullException("@validatableArgument");
             }
 
-            string invalidArgumentMessage;
-            if (validatableArgument.TryGetInvalidArgumentMessage(out invalidArgumentMessage))
+            IEnumerable<IValidationPredicateResult> matchingValidationPredicateResults = 
+                validatableArgument.MatchValidationPredicates().Where(vp => vp.IsMatch);
+
+            if (matchingValidationPredicateResults.Any())
             {
-                throw new ArgumentException(invalidArgumentMessage, validatableArgument.Name);
+                StringBuilder messageBuilder = new StringBuilder("Invalid argument:\n");
+
+                foreach (IValidationPredicateResult validationPredicateResult in matchingValidationPredicateResults)
+                {
+                    messageBuilder.AppendLine(string.Format(" - {0}", validationPredicateResult.Message));
+                }
+
+                throw new ArgumentException(messageBuilder.ToString(), validatableArgument.Name);
             }
         }
     }

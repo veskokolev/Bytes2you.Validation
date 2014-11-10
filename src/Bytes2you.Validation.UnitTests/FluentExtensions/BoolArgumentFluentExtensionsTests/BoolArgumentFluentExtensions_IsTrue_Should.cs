@@ -2,7 +2,7 @@
 using System.Linq;
 using Bytes2you.Validation.UnitTests.Testing;
 using Bytes2you.Validation.UnitTests.Testing.Helpers;
-using Bytes2you.Validation.ValidationRules;
+using Bytes2you.Validation.ValidationPredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Bytes2you.Validation.UnitTests.FluentExtensions.BoolArgumentFluentExtensionsTests
@@ -11,7 +11,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.BoolArgumentFluentExte
     public class BoolArgumentFluentExtensions_IsTrue_Should
     {
         [TestMethod]
-        public void AddTrueValidationRule()
+        public void AddTrueValidationPredicate()
         {
             // Arrange.
             ValidatableArgument<bool> argument = new ValidatableArgument<bool>("argument", true);
@@ -20,8 +20,8 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.BoolArgumentFluentExte
             argument.IsTrue();
 
             // Assert.
-            Assert.AreEqual(1, argument.ValidationRules.Count());
-            Assert.IsTrue(argument.ValidationRules.First() is TrueValidationRule);
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is TrueValidationPredicate);
         }
 
         [TestMethod]
@@ -36,8 +36,8 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.BoolArgumentFluentExte
                 {
                     argument.IsTrue();
                 },
-                PerformanceConstants.RuleExecutionCount,
-                PerformanceConstants.RuleTotalExecutionExpectedTime);
+                PerformanceConstants.ValidationPredicateExecutionCount,
+                PerformanceConstants.ValidationPredicateTotalExecutionExpectedTime);
         }
     }
 }

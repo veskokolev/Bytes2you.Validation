@@ -2,7 +2,7 @@
 using System.Linq;
 using Bytes2you.Validation.UnitTests.Testing;
 using Bytes2you.Validation.UnitTests.Testing.Helpers;
-using Bytes2you.Validation.ValidationRules;
+using Bytes2you.Validation.ValidationPredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Bytes2you.Validation.UnitTests.FluentExtensions.StringArgumentFluentExtensionsTests
@@ -11,7 +11,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.StringArgumentFluentEx
     public class StringArgumentFluentExtensions_IsNullOrEmpty_Should
     {
         [TestMethod]
-        public void AddNullOrEmptyStringValidationRule()
+        public void AddNullOrEmptyStringValidationPredicate()
         {
             // Arrange.
             ValidatableArgument<string> argument =
@@ -21,8 +21,8 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.StringArgumentFluentEx
             argument.IsNullOrEmpty();
 
             // Assert.
-            Assert.AreEqual(1, argument.ValidationRules.Count());
-            Assert.IsTrue(argument.ValidationRules.First() is NullOrEmptyStringValidationRule);
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is NullOrEmptyStringValidationPredicate);
         }
 
         [TestMethod]
@@ -38,8 +38,8 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.StringArgumentFluentEx
                 {
                     argument.IsNullOrEmpty();
                 },
-                PerformanceConstants.RuleExecutionCount,
-                PerformanceConstants.RuleTotalExecutionExpectedTime);
+                PerformanceConstants.ValidationPredicateExecutionCount,
+                PerformanceConstants.ValidationPredicateTotalExecutionExpectedTime);
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Linq;
 using Bytes2you.Validation.UnitTests.Testing;
 using Bytes2you.Validation.UnitTests.Testing.Helpers;
-using Bytes2you.Validation.ValidationRules;
+using Bytes2you.Validation.ValidationPredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Bytes2you.Validation.UnitTests.FluentExtensions.EnumerableArgumentFluentExttensionsTests
@@ -12,7 +12,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.EnumerableArgumentFlue
     public class EnumerableArgumentFluentExttensions_IsNotNullOrEmpty_Should
     {
         [TestMethod]
-        public void AddNotNullOrEmptyEnumerableValidationRule()
+        public void AddNotNullOrEmptyEnumerableValidationPredicate()
         {
             // Arrange.
             ValidatableArgument<int[]> argument =
@@ -22,8 +22,8 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.EnumerableArgumentFlue
             argument.IsNotNullOrEmpty();
 
             // Assert.
-            Assert.AreEqual(1, argument.ValidationRules.Count());
-            Assert.IsTrue(argument.ValidationRules.First() is NotNullOrEmptyEnumerableValidationRule<int[]>);
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is NotNullOrEmptyEnumerableValidationPredicate<int[]>);
         }
 
         [TestMethod]
@@ -39,8 +39,8 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.EnumerableArgumentFlue
                 {
                     argument.IsNotNullOrEmpty();
                 },
-                PerformanceConstants.RuleExecutionCount,
-                PerformanceConstants.RuleTotalExecutionExpectedTime);
+                PerformanceConstants.ValidationPredicateExecutionCount,
+                PerformanceConstants.ValidationPredicateTotalExecutionExpectedTime);
         }
     }
 }

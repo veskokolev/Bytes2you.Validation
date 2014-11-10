@@ -6,7 +6,8 @@ namespace Bytes2you.Validation
 {
     public interface IValidatableArgument<T> : IArgument<T>
     {
-        IEnumerable<IValidationRule<T>> ValidationRules { get; }
-        void AddValidationRule(IValidationRule<T> validationRule);
+        IEnumerable<IValidationPredicate<T>> ValidationPredicates { get; }
+        void AddValidationPredicate(IValidationPredicate<T> validationPredicate);
+        IEnumerable<IValidationPredicateResult> MatchValidationPredicates();
     }
 }

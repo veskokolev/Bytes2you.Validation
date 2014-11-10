@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Bytes2you.Validation.Extensions;
-using Bytes2you.Validation.ValidationRules;
+using Bytes2you.Validation.ValidationPredicates;
 
 namespace Bytes2you.Validation
 {
@@ -9,12 +9,12 @@ namespace Bytes2you.Validation
     {
         public static IValidatableArgument<string> IsNullOrEmpty(this IArgument<string> @argument)
         {
-            return @argument.AddValidationRule(NullOrEmptyStringValidationRule.Instance);
+            return @argument.AddValidationPredicate(NullOrEmptyStringValidationPredicate.Instance);
         }
 
         public static IValidatableArgument<string> IsNotNullOrEmpty(this IArgument<string> @argument)
         {
-            return @argument.AddValidationRule(NotNullOrEmptyStringValidationRule.Instance);
+            return @argument.AddValidationPredicate(NotNullOrEmptyStringValidationPredicate.Instance);
         }
     }
 }

@@ -2,7 +2,7 @@
 using System.Linq;
 using Bytes2you.Validation.UnitTests.Testing;
 using Bytes2you.Validation.UnitTests.Testing.Helpers;
-using Bytes2you.Validation.ValidationRules;
+using Bytes2you.Validation.ValidationPredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Bytes2you.Validation.UnitTests.FluentExtensions.ArgumentOfTFluentExtensionsTests
@@ -11,7 +11,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ArgumentOfTFluentExten
     public class ArgumentOfTFluentExtensions_IsNotEqual_Should
     {
         [TestMethod]
-        public void AddNotEqualValidationRule()
+        public void AddNotEqualValidationPredicate()
         {
             // Arrange.
             ValidatableArgument<int> argument = new ValidatableArgument<int>("argument", 3);
@@ -20,8 +20,8 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ArgumentOfTFluentExten
             argument.IsNotEqual(5);
 
             // Assert.
-            Assert.AreEqual(1, argument.ValidationRules.Count());
-            Assert.IsTrue(argument.ValidationRules.First() is NotEqualValidationRule<int>);
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is NotEqualValidationPredicate<int>);
         }
 
         [TestMethod]
@@ -36,8 +36,8 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ArgumentOfTFluentExten
                 {
                     argument.IsNotEqual(3);
                 },
-                PerformanceConstants.RuleExecutionCount,
-                PerformanceConstants.RuleTotalExecutionExpectedTime);
+                PerformanceConstants.ValidationPredicateExecutionCount,
+                PerformanceConstants.ValidationPredicateTotalExecutionExpectedTime);
         }
     }
 }

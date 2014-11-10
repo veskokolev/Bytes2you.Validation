@@ -2,7 +2,7 @@
 using System.Linq;
 using Bytes2you.Validation.UnitTests.Testing;
 using Bytes2you.Validation.UnitTests.Testing.Helpers;
-using Bytes2you.Validation.ValidationRules;
+using Bytes2you.Validation.ValidationPredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Bytes2you.Validation.UnitTests.FluentExtensions.ArgumentOfTFluentExtensionsTests
@@ -11,7 +11,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ArgumentOfTFluentExten
     public class ArgumentOfTFluentExtensions_IsNotNull_Should
     {
         [TestMethod]
-        public void AddNullValidationRule()
+        public void AddNullValidationPredicate()
         {
             // Arrange.
             ValidatableArgument<object> argument = new ValidatableArgument<object>("argument", new object());
@@ -20,8 +20,8 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ArgumentOfTFluentExten
             argument.IsNotNull();
 
             // Assert.
-            Assert.AreEqual(1, argument.ValidationRules.Count());
-            Assert.IsTrue(argument.ValidationRules.First() is NotNullValidationRule<object>);
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is NotNullValidationPredicate<object>);
         }
 
         [TestMethod]
@@ -36,8 +36,8 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ArgumentOfTFluentExten
                 {
                     argument.IsNotNull();
                 },
-                PerformanceConstants.RuleExecutionCount,
-                PerformanceConstants.RuleTotalExecutionExpectedTime);
+                PerformanceConstants.ValidationPredicateExecutionCount,
+                PerformanceConstants.ValidationPredicateTotalExecutionExpectedTime);
         }
     }
 }

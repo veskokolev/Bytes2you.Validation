@@ -21,20 +21,20 @@ namespace Bytes2you.Validation.Extensions
             return validatableArgument;
         }
 
-        public static ValidatableArgument<T> AddValidationRule<T>(this IArgument<T> @argument, IValidationRule<T> validationRule)
+        public static ValidatableArgument<T> AddValidationPredicate<T>(this IArgument<T> @argument, IValidationPredicate<T> validationPredicate)
         {
             if (@argument == null)
             {
                 throw new ArgumentNullException("@argument");
             }
 
-            if (validationRule == null)
+            if (validationPredicate == null)
             {
-                throw new ArgumentNullException("validationRule");
+                throw new ArgumentNullException("validationPredicate");
             }
 
             ValidatableArgument<T> validatableArgument = @argument.ToValidatableArgument();
-            validatableArgument.AddValidationRule(validationRule);
+            validatableArgument.AddValidationPredicate(validationPredicate);
 
             return validatableArgument;
         }
