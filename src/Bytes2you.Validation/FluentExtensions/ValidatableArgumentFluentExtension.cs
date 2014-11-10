@@ -7,7 +7,7 @@ namespace Bytes2you.Validation
 {
     public static class ValidatableArgumentFluentExtension
     {
-        public static void Throw<T>(this IValidatableArgument<T> @validatableArgument)
+        public static bool TryGetArgumentException<T>(this IValidatableArgument<T> @validatableArgument, out ArgumentException argumentException)
         {
             if (@validatableArgument == null)
             {
@@ -26,7 +26,27 @@ namespace Bytes2you.Validation
                     messageBuilder.AppendLine(string.Format(" - {0}", validationPredicateResult.Message));
                 }
 
-                throw new ArgumentException(messageBuilder.ToString(), validatableArgument.Name);
+                argumentException = new ArgumentException(messageBuilder.ToString(), validatableArgument.Name);
+            }
+            else
+            {
+                argumentException = null;
+            }
+
+            return argumentException != null;
+        }
+
+        public static void Throw<T>(this IValidatableArgument<T> @validatableArgument)
+        {
+            if (@validatableArgument == null)
+            {
+                throw new ArgumentNullException("@validatableArgument");
+            }
+
+            ArgumentException argumentException = null;
+            if (validatableArgument.TryGetArgumentException(out argumentException))
+            {
+                throw argumentException;
             }
         }
     }

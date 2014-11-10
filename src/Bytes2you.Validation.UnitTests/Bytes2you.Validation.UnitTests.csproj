@@ -80,6 +80,7 @@
     <Compile Include="FluentExtensions\GuidArgumentFluentExtensionsTests\GuidArgumentFluentExtensions_IsNotEmptyGuid_Should.cs" />
     <Compile Include="FluentExtensions\StringArgumentFluentExtensionsTests\StringArgumentFluentExtensions_IsNotNullOrEmpty_Should.cs" />
     <Compile Include="FluentExtensions\StringArgumentFluentExtensionsTests\StringArgumentFluentExtensions_IsNullOrEmpty_Should.cs" />
+    <Compile Include="FluentExtensions\ValidatableArgumentFluentExtensionTests\ValidatableArgumentFluentExtensions_TryGetArgumentException_Should.cs" />
     <Compile Include="FluentExtensions\ValidatableArgumentFluentExtensionTests\ValidatableArgumentFluentExtension_Throw_Should.cs" />
     <Compile Include="GuardTests\Guard_Constructors_Should.cs" />
     <Compile Include="GuardTests\Guard_WhenArgument_Should.cs" />
