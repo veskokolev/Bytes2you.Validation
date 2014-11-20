@@ -11,7 +11,35 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ComparableOfTArgumentF
     public class ComparableOfTArgumentFluentExtensions_IsGreaterThan_Should
     {
         [TestMethod]
-        public void AddGreaterThanValidationPredicate()
+        public void AddGreaterThanValidationPredicate_WhenArgumentIsByte()
+        {
+            // Arrange.
+            ValidatableArgument<byte> argument = new ValidatableArgument<byte>("argument", 3);
+
+            // Act.
+            argument.IsGreaterThan(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is GreaterThanValidationPredicate<byte>);
+        }
+
+        [TestMethod]
+        public void AddGreaterThanValidationPredicate_WhenArgumentIsShort()
+        {
+            // Arrange.
+            ValidatableArgument<short> argument = new ValidatableArgument<short>("argument", 3);
+
+            // Act.
+            argument.IsGreaterThan(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is GreaterThanValidationPredicate<short>);
+        }
+
+        [TestMethod]
+        public void AddGreaterThanValidationPredicate_WhenArgumentIsInt()
         {
             // Arrange.
             ValidatableArgument<int> argument = new ValidatableArgument<int>("argument", 3);
@@ -22,6 +50,76 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ComparableOfTArgumentF
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
             Assert.IsTrue(argument.ValidationPredicates.First() is GreaterThanValidationPredicate<int>);
+        }
+
+        [TestMethod]
+        public void AddGreaterThanValidationPredicate_WhenArgumentIsLong()
+        {
+            // Arrange.
+            ValidatableArgument<long> argument = new ValidatableArgument<long>("argument", 3);
+
+            // Act.
+            argument.IsGreaterThan(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is GreaterThanValidationPredicate<long>);
+        }
+
+        [TestMethod]
+        public void AddGreaterThanValidationPredicate_WhenArgumentIsFloat()
+        {
+            // Arrange.
+            ValidatableArgument<float> argument = new ValidatableArgument<float>("argument", 3);
+
+            // Act.
+            argument.IsGreaterThan(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is GreaterThanValidationPredicate<float>);
+        }
+
+        [TestMethod]
+        public void AddGreaterThanValidationPredicate_WhenArgumentIsDouble()
+        {
+            // Arrange.
+            ValidatableArgument<double> argument = new ValidatableArgument<double>("argument", 3);
+
+            // Act.
+            argument.IsGreaterThan(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is GreaterThanValidationPredicate<double>);
+        }
+
+        [TestMethod]
+        public void AddGreaterThanValidationPredicate_WhenArgumentIsDecimal()
+        {
+            // Arrange.
+            ValidatableArgument<decimal> argument = new ValidatableArgument<decimal>("argument", 3);
+
+            // Act.
+            argument.IsGreaterThan(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is GreaterThanValidationPredicate<decimal>);
+        }
+
+        [TestMethod]
+        public void AddGreaterThanValidationPredicate_WhenArgumentIsDateTime()
+        {
+            // Arrange.
+            ValidatableArgument<DateTime> argument = new ValidatableArgument<DateTime>("argument", DateTime.Now);
+
+            // Act.
+            argument.IsGreaterThan(DateTime.Now);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is GreaterThanValidationPredicate<DateTime>);
         }
 
         [TestMethod]

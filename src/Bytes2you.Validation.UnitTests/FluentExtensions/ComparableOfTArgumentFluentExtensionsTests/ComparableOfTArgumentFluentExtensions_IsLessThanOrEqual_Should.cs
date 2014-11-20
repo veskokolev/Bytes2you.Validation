@@ -11,7 +11,35 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ComparableOfTArgumentF
     public class ComparableOfTArgumentFluentExtensions_IsLessThanOrEqual_Should
     {
         [TestMethod]
-        public void AddLessThanOrEqualValidationPredicate()
+        public void AddLessThanOrEqualValidationPredicate_WhenArgumentIsByte()
+        {
+            // Arrange.
+            ValidatableArgument<byte> argument = new ValidatableArgument<byte>("argument", 3);
+
+            // Act.
+            argument.IsLessThanOrEqual(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is LessThanOrEqualValidationPredicate<byte>);
+        }
+
+        [TestMethod]
+        public void AddLessThanOrEqualValidationPredicate_WhenArgumentIsShort()
+        {
+            // Arrange.
+            ValidatableArgument<short> argument = new ValidatableArgument<short>("argument", 3);
+
+            // Act.
+            argument.IsLessThanOrEqual(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is LessThanOrEqualValidationPredicate<short>);
+        }
+
+        [TestMethod]
+        public void AddLessThanOrEqualValidationPredicate_WhenArgumentIsInt()
         {
             // Arrange.
             ValidatableArgument<int> argument = new ValidatableArgument<int>("argument", 3);
@@ -22,6 +50,76 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ComparableOfTArgumentF
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
             Assert.IsTrue(argument.ValidationPredicates.First() is LessThanOrEqualValidationPredicate<int>);
+        }
+
+        [TestMethod]
+        public void AddLessThanOrEqualValidationPredicate_WhenArgumentIsLong()
+        {
+            // Arrange.
+            ValidatableArgument<long> argument = new ValidatableArgument<long>("argument", 3);
+
+            // Act.
+            argument.IsLessThanOrEqual(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is LessThanOrEqualValidationPredicate<long>);
+        }
+
+        [TestMethod]
+        public void AddLessThanOrEqualValidationPredicate_WhenArgumentIsFloat()
+        {
+            // Arrange.
+            ValidatableArgument<float> argument = new ValidatableArgument<float>("argument", 3);
+
+            // Act.
+            argument.IsLessThanOrEqual(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is LessThanOrEqualValidationPredicate<float>);
+        }
+
+        [TestMethod]
+        public void AddLessThanOrEqualValidationPredicate_WhenArgumentIsDouble()
+        {
+            // Arrange.
+            ValidatableArgument<double> argument = new ValidatableArgument<double>("argument", 3);
+
+            // Act.
+            argument.IsLessThanOrEqual(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is LessThanOrEqualValidationPredicate<double>);
+        }
+
+        [TestMethod]
+        public void AddLessThanOrEqualValidationPredicate_WhenArgumentIsDecimal()
+        {
+            // Arrange.
+            ValidatableArgument<decimal> argument = new ValidatableArgument<decimal>("argument", 3);
+
+            // Act.
+            argument.IsLessThanOrEqual(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is LessThanOrEqualValidationPredicate<decimal>);
+        }
+
+        [TestMethod]
+        public void AddLessThanOrEqualValidationPredicate_WhenArgumentIsDateTime()
+        {
+            // Arrange.
+            ValidatableArgument<DateTime> argument = new ValidatableArgument<DateTime>("argument", DateTime.Now);
+
+            // Act.
+            argument.IsLessThanOrEqual(DateTime.Now);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is LessThanOrEqualValidationPredicate<DateTime>);
         }
 
         [TestMethod]

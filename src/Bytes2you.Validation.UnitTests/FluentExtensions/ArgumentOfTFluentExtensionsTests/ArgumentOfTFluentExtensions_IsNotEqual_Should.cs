@@ -11,7 +11,35 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ArgumentOfTFluentExten
     public class ArgumentOfTFluentExtensions_IsNotEqual_Should
     {
         [TestMethod]
-        public void AddNotEqualValidationPredicate()
+        public void AddNotEqualValidationPredicate_WhenArgumentIsByte()
+        {
+            // Arrange.
+            ValidatableArgument<byte> argument = new ValidatableArgument<byte>("argument", 3);
+
+            // Act.
+            argument.IsNotEqual(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is NotEqualValidationPredicate<byte>);
+        }
+
+        [TestMethod]
+        public void AddNotEqualValidationPredicate_WhenArgumentIsShort()
+        {
+            // Arrange.
+            ValidatableArgument<short> argument = new ValidatableArgument<short>("argument", 3);
+
+            // Act.
+            argument.IsNotEqual(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is NotEqualValidationPredicate<short>);
+        }
+
+        [TestMethod]
+        public void AddNotEqualValidationPredicate_WhenArgumentIsInt()
         {
             // Arrange.
             ValidatableArgument<int> argument = new ValidatableArgument<int>("argument", 3);
@@ -22,6 +50,76 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ArgumentOfTFluentExten
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
             Assert.IsTrue(argument.ValidationPredicates.First() is NotEqualValidationPredicate<int>);
+        }
+
+        [TestMethod]
+        public void AddNotEqualValidationPredicate_WhenArgumentIsLong()
+        {
+            // Arrange.
+            ValidatableArgument<long> argument = new ValidatableArgument<long>("argument", 3);
+
+            // Act.
+            argument.IsNotEqual(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is NotEqualValidationPredicate<long>);
+        }
+
+        [TestMethod]
+        public void AddNotEqualValidationPredicate_WhenArgumentIsFloat()
+        {
+            // Arrange.
+            ValidatableArgument<float> argument = new ValidatableArgument<float>("argument", 3);
+
+            // Act.
+            argument.IsNotEqual(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is NotEqualValidationPredicate<float>);
+        }
+
+        [TestMethod]
+        public void AddNotEqualValidationPredicate_WhenArgumentIsDouble()
+        {
+            // Arrange.
+            ValidatableArgument<double> argument = new ValidatableArgument<double>("argument", 3);
+
+            // Act.
+            argument.IsNotEqual(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is NotEqualValidationPredicate<double>);
+        }
+
+        [TestMethod]
+        public void AddNotEqualValidationPredicate_WhenArgumentIsDecimal()
+        {
+            // Arrange.
+            ValidatableArgument<decimal> argument = new ValidatableArgument<decimal>("argument", 3);
+
+            // Act.
+            argument.IsNotEqual(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is NotEqualValidationPredicate<decimal>);
+        }
+
+        [TestMethod]
+        public void AddNotEqualValidationPredicate_WhenArgumentIsDateTime()
+        {
+            // Arrange.
+            ValidatableArgument<DateTime> argument = new ValidatableArgument<DateTime>("argument", DateTime.Now);
+
+            // Act.
+            argument.IsNotEqual(DateTime.Now);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is NotEqualValidationPredicate<DateTime>);
         }
 
         [TestMethod]

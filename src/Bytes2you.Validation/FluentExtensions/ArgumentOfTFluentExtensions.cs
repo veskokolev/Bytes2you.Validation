@@ -16,6 +16,26 @@ namespace Bytes2you.Validation
         {
             return @argument.AddValidationPredicate(new NotEqualValidationPredicate<T>(value));
         }
+        
+        public static IValidatableArgument<byte> IsEqual(this IArgument<byte> @argument, byte value)
+        {
+            return @argument.AddValidationPredicate(new EqualValidationPredicate<byte>(value));
+        }
+
+        public static IValidatableArgument<byte> IsNotEqual(this IArgument<byte> @argument, byte value)
+        {
+            return @argument.AddValidationPredicate(new NotEqualValidationPredicate<byte>(value));
+        }
+
+        public static IValidatableArgument<short> IsEqual(this IArgument<short> @argument, short value)
+        {
+            return @argument.AddValidationPredicate(new EqualValidationPredicate<short>(value));
+        }
+
+        public static IValidatableArgument<short> IsNotEqual(this IArgument<short> @argument, short value)
+        {
+            return @argument.AddValidationPredicate(new NotEqualValidationPredicate<short>(value));
+        }
 
         public static IValidatableArgument<T> IsNull<T>(this IArgument<T> @argument)
             where T : class
