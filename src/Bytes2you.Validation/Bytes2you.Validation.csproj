@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="FluentExtensions\DoubleArgumentFluentExtensions.cs" />
     <Compile Include="Helpers\Comparer.cs" />
     <Compile Include="Extensions\ArgumentExtensions.cs" />
     <Compile Include="FluentExtensions\ArgumentOfTFluentExtensions.cs" />
@@ -70,6 +71,12 @@
     <Compile Include="FluentExtensions\ValidatableArgumentFluentExtension.cs" />
     <Compile Include="ValidationPredicateResult.cs" />
     <Compile Include="ValidationPredicates\BoundedArgumentValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\DoubleInfinityValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\DoubleNegativeInfinityValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\DoubleNotInfinityValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\DoubleNotNegativeInfinityValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\DoubleNotPositiveInfinityValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\DoublePositiveInfinityValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\EmptyGuidValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\EqualValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\FalseValidationPredicate.cs" />
@@ -77,8 +84,10 @@
     <Compile Include="ValidationPredicates\GreaterThanValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\LessThanOrEqualValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\LessThanValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\DoubleNaNValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\NotEmptyGuidValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\NotEqualValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\DoubleNotNaNValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\NotNullOrEmptyEnumerableValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\NotNullOrEmptyStringValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\NotNullValidationPredicate.cs" />

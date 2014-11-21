@@ -74,6 +74,14 @@
     <Compile Include="FluentExtensions\ComparableOfTArgumentFluentExtensionsTests\ComparableOfTArgumentFluentExtensions_IsGreaterThan_Should.cs" />
     <Compile Include="FluentExtensions\ComparableOfTArgumentFluentExtensionsTests\ComparableOfTArgumentFluentExtensions_IsLessThanOrEqual_Should.cs" />
     <Compile Include="FluentExtensions\ComparableOfTArgumentFluentExtensionsTests\ComparableOfTArgumentFluentExtensions_IsLessThan_Should.cs" />
+    <Compile Include="FluentExtensions\DoubleArgumentFluentExtensionsTest\DoubleArgumentFluentExtensions_IsInfinity_Should.cs" />
+    <Compile Include="FluentExtensions\DoubleArgumentFluentExtensionsTest\DoubleArgumentFluentExtensions_IsNaN_Should.cs" />
+    <Compile Include="FluentExtensions\DoubleArgumentFluentExtensionsTest\DoubleArgumentFluentExtensions_IsNegativeInfinity_Should.cs" />
+    <Compile Include="FluentExtensions\DoubleArgumentFluentExtensionsTest\DoubleArgumentFluentExtensions_IsNotInfinity_Should.cs" />
+    <Compile Include="FluentExtensions\DoubleArgumentFluentExtensionsTest\DoubleArgumentFluentExtensions_IsNotNaN_Should.cs" />
+    <Compile Include="FluentExtensions\DoubleArgumentFluentExtensionsTest\DoubleArgumentFluentExtensions_IsNotNegativeInfinity_Should.cs" />
+    <Compile Include="FluentExtensions\DoubleArgumentFluentExtensionsTest\DoubleArgumentFluentExtensions_IsNotPositiveInfinity_Should.cs" />
+    <Compile Include="FluentExtensions\DoubleArgumentFluentExtensionsTest\DoubleArgumentFluentExtensions_IsPositiveInfinity_Should.cs" />
     <Compile Include="FluentExtensions\EnumerableArgumentFluentExttensionsTests\EnumerableArgumentFluentExttensions_IsNotNullOrEmpty_Should.cs" />
     <Compile Include="FluentExtensions\EnumerableArgumentFluentExttensionsTests\EnumerableArgumentFluentExttensions_IsNullOrEmpty_Should.cs" />
     <Compile Include="FluentExtensions\GuidArgumentFluentExtensionsTests\GuidArgumentFluentExtensions_IsEmptyGuid_Should.cs" />
@@ -98,6 +106,22 @@
     <Compile Include="ValidatableArgumentTests\ValidatableArgument_Constructors_Should.cs" />
     <Compile Include="ValidatableArgumentTests\ValidatableArgument_MatchValidationPredicates_Should.cs" />
     <Compile Include="ValidationPredicateResultTests\ValidationPredicateResult_Constructors_Should.cs" />
+    <Compile Include="ValidationPredicates\DoubleInfinityValidationPredicateTests\DoubleInfinityValidationPredicate_Constructors_Should.cs" />
+    <Compile Include="ValidationPredicates\DoubleInfinityValidationPredicateTests\DoubleInfinityValidationPredicate_Match_Should.cs" />
+    <Compile Include="ValidationPredicates\DoubleNaNValidationPredicateTests\DoubleNaNValidationPredicate_Constructors_Should.cs" />
+    <Compile Include="ValidationPredicates\DoubleNaNValidationPredicateTests\DoubleNaNValidationPredicate_Match_Should.cs" />
+    <Compile Include="ValidationPredicates\DoubleNegativeInfinityValidationPredicateTests\DoubleNegativeInfinityValidationPredicate_Constructors_Should.cs" />
+    <Compile Include="ValidationPredicates\DoubleNegativeInfinityValidationPredicateTests\DoubleNegativeInfinityValidationPredicate_Match_Should.cs" />
+    <Compile Include="ValidationPredicates\DoubleNotInfinityValidationPredicateTests\DoubleNotInfinityValidationPredicate_Constructors_Should.cs" />
+    <Compile Include="ValidationPredicates\DoubleNotInfinityValidationPredicateTests\DoubleNotInfinityValidationPredicate_Match_Should.cs" />
+    <Compile Include="ValidationPredicates\DoubleNotNaNValidationPredicateTests\DoubleNotNaNValidationPredicate_Constructors_Should.cs" />
+    <Compile Include="ValidationPredicates\DoubleNotNaNValidationPredicateTests\DoubleNotNaNValidationPredicate_Match_Should.cs" />
+    <Compile Include="ValidationPredicates\DoubleNotNegativeInfinityValidationPredicateTests\DoubleNotNegativeInfinityValidationPredicate_Constructors_Should.cs" />
+    <Compile Include="ValidationPredicates\DoubleNotNegativeInfinityValidationPredicateTests\DoubleNotNegativeInfinityValidationPredicate_Match_Should.cs" />
+    <Compile Include="ValidationPredicates\DoubleNotPositiveInfinityValidationPredicateTests\DoubleNotPositiveInfinityValidationPredicate_Constructors_Should.cs" />
+    <Compile Include="ValidationPredicates\DoubleNotPositiveInfinityValidationPredicateTests\DoubleNotPositiveInfinityValidationPredicate_Match_Should.cs" />
+    <Compile Include="ValidationPredicates\DoublePositiveInfinityValidationPredicateTests\DoublePositiveInfinityValidationPredicate_Constructors_Should.cs" />
+    <Compile Include="ValidationPredicates\DoublePositiveInfinityValidationPredicateTests\DoublePositiveInfinityValidationPredicate_Match_Should.cs" />
     <Compile Include="ValidationPredicates\EmptyGuidValidationPredicateTests\EmptyGuidValidationPredicate_Constructors_Should.cs" />
     <Compile Include="ValidationPredicates\EmptyGuidValidationPredicateTests\EmptyGuidValidationPredicate_Match_Should.cs" />
     <Compile Include="ValidationPredicates\EqualValidationPredicateTests\EqualValidationPredicate_Constructors_Should.cs" />
@@ -140,6 +164,7 @@
       <Name>Bytes2you.Validation</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
