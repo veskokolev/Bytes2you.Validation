@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="FluentExtensions\ByteArgumentFluentExtensions.cs" />
+    <Compile Include="FluentExtensions\ClassFluentExtensions.cs" />
     <Compile Include="FluentExtensions\DoubleArgumentFluentExtensions.cs" />
     <Compile Include="FluentExtensions\FloatArgumentFluentExtensions.cs" />
     <Compile Include="FluentExtensions\ShortArgumentFluentExtensions.cs" />

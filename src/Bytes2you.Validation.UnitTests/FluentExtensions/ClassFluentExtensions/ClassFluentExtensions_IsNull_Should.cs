@@ -5,10 +5,10 @@ using Bytes2you.Validation.UnitTests.Testing.Helpers;
 using Bytes2you.Validation.ValidationPredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Bytes2you.Validation.UnitTests.FluentExtensions.ArgumentOfTFluentExtensionsTests
+namespace Bytes2you.Validation.UnitTests.FluentExtensions.ClassFluentExtensions
 {
     [TestClass]
-    public class ArgumentOfTFluentExtensions_IsNull_Should
+    public class ClassFluentExtensions_IsNull_Should
     {
         [TestMethod]
         public void AddNullValidationPredicate()

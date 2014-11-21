@@ -66,12 +66,12 @@
     <Compile Include="Extensions\TypeExtensionsTests\TypeExtensions_HasPublicConstructors_Should.cs" />
     <Compile Include="FluentExtensions\ArgumentOfTFluentExtensionsTests\ArgumentOfTFluentExtensions_IsEqual_Should.cs" />
     <Compile Include="FluentExtensions\ArgumentOfTFluentExtensionsTests\ArgumentOfTFluentExtensions_IsNotEqual_Should.cs" />
-    <Compile Include="FluentExtensions\ArgumentOfTFluentExtensionsTests\ArgumentOfTFluentExtensions_IsNotNull_Should.cs" />
-    <Compile Include="FluentExtensions\ArgumentOfTFluentExtensionsTests\ArgumentOfTFluentExtensions_IsNull_Should.cs" />
     <Compile Include="FluentExtensions\BoolArgumentFluentExtensionsTests\BoolArgumentFluentExtensions_IsFalse_Should.cs" />
     <Compile Include="FluentExtensions\BoolArgumentFluentExtensionsTests\BoolArgumentFluentExtensions_IsTrue_Should.cs" />
     <Compile Include="FluentExtensions\ByteArgumentFluentExtensionsTests\ByteArgumentFluentExtensions_IsEqual_Should.cs" />
     <Compile Include="FluentExtensions\ByteArgumentFluentExtensionsTests\ByteArgumentFluentExtensions_IsNotEqual_Should.cs" />
+    <Compile Include="FluentExtensions\ClassFluentExtensions\ClassFluentExtensions_IsNotNull_Should.cs" />
+    <Compile Include="FluentExtensions\ClassFluentExtensions\ClassFluentExtensions_IsNull_Should.cs" />
     <Compile Include="FluentExtensions\ComparableOfTArgumentFluentExtensionsTests\ComparableOfTArgumentFluentExtensions_IsGreaterThanOrEqual_Should.cs" />
     <Compile Include="FluentExtensions\ComparableOfTArgumentFluentExtensionsTests\ComparableOfTArgumentFluentExtensions_IsGreaterThan_Should.cs" />
     <Compile Include="FluentExtensions\ComparableOfTArgumentFluentExtensionsTests\ComparableOfTArgumentFluentExtensions_IsLessThanOrEqual_Should.cs" />
