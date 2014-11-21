@@ -9,7 +9,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.GreaterThanValidat
     public class GreaterThanValidationPredicate_Match_Should
     {
         [TestMethod]
-        public void ReturnFalseAndInvalidMessage_WhenArgumentIsLessThanTheBound()
+        public void ReturnFalseAndUnmatchMessage_WhenArgumentIsLessThanTheBound()
         {
             // Arrange.
             int value = 2;
@@ -24,7 +24,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.GreaterThanValidat
         }
 
         [TestMethod]
-        public void ReturnFalseAndInvalidMessage_WhenArgumentIsEqualToTheBound()
+        public void ReturnFalseAndUnmatchMessage_WhenArgumentIsEqualToTheBound()
         {
             // Arrange.
             int value = 3;
@@ -39,7 +39,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.GreaterThanValidat
         }
 
         [TestMethod]
-        public void ReturnTrueAndValidMessage_WhenArgumentIsGreaterThanTheBound()
+        public void ReturnTrueAndMatchMessage_WhenArgumentIsGreaterThanTheBound()
         {
             // Arrange.
             int value = 4;

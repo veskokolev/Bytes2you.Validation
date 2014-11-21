@@ -9,7 +9,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.FloatNaNValidation
     public class FloatNaNValidationPredicate_Match_Should
     {
         [TestMethod]
-        public void ReturnTrueAndValidMessage_WhenArgumentIsFloatNaN()
+        public void ReturnTrueAndMatchMessage_WhenArgumentIsFloatNaN()
         {
             // Arrange.
             float value = float.NaN;
@@ -23,7 +23,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.FloatNaNValidation
         }
 
         [TestMethod]
-        public void ReturnFalseAndInvalidMessage_WhenArgumentIsNotDoubleNaN()
+        public void ReturnFalseAndUnmatchMessage_WhenArgumentIsNotDoubleNaN()
         {
             // Arrange.
             float value = 5;

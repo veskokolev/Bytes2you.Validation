@@ -9,7 +9,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.DoublePositiveInfi
     public class DoublePositiveInfinityValidationPredicate_Match_Should
     {
         [TestMethod]
-        public void ReturnTrueAndValidMessage_WhenArgumentIsDoublePositiveInfinity()
+        public void ReturnTrueAndMatchMessage_WhenArgumentIsDoublePositiveInfinity()
         {
             // Arrange.
             double value = double.PositiveInfinity;
@@ -23,7 +23,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.DoublePositiveInfi
         }
 
         [TestMethod]
-        public void ReturnFalseAndInvalidMessage_WhenArgumentIsNumber()
+        public void ReturnFalseAndUnmatchMessage_WhenArgumentIsNumber()
         {
             // Arrange.
             double value = 5;
@@ -37,7 +37,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.DoublePositiveInfi
         }
 
         [TestMethod]
-        public void ReturnFalseAndInvalidMessage_WhenArgumentIsDoubleNegativeInfinity()
+        public void ReturnFalseAndUnmatchMessage_WhenArgumentIsDoubleNegativeInfinity()
         {
             // Arrange.
             double value = double.NegativeInfinity;

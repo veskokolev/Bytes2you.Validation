@@ -9,7 +9,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.FloatPositiveInfin
     public class FloatPositiveInfinityValidationPredicate_Match_Should
     {
         [TestMethod]
-        public void ReturnTrueAndValidMessage_WhenArgumentIsFloatPositiveInfinity()
+        public void ReturnTrueAndMatchMessage_WhenArgumentIsFloatPositiveInfinity()
         {
             // Arrange.
             float value = float.PositiveInfinity;
@@ -23,7 +23,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.FloatPositiveInfin
         }
 
         [TestMethod]
-        public void ReturnFalseAndInvalidMessage_WhenArgumentIsNumber()
+        public void ReturnFalseAndUnmatchMessage_WhenArgumentIsNumber()
         {
             // Arrange.
             float value = 5;
@@ -37,7 +37,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.FloatPositiveInfin
         }
 
         [TestMethod]
-        public void ReturnFalseAndInvalidMessage_WhenArgumentIsFloatNegativeInfinity()
+        public void ReturnFalseAndUnmatchMessage_WhenArgumentIsFloatNegativeInfinity()
         {
             // Arrange.
             float value = float.NegativeInfinity;

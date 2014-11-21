@@ -9,7 +9,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.NotNullValidationP
     public class NotNullValidationPredicate_Match_Should
     {
         [TestMethod]
-        public void ReturnTrueAndValidMessage_WhenArgumentIsNotNull()
+        public void ReturnTrueAndMatchMessage_WhenArgumentIsNotNull()
         {
             // Arrange.
             object value = new object();
@@ -23,7 +23,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.NotNullValidationP
         }
 
         [TestMethod]
-        public void ReturnFalseAndInvalidMessage_WhenArgumentIsNull()
+        public void ReturnFalseAndUnmatchMessage_WhenArgumentIsNull()
         {
             // Arrange.
             object value = null;

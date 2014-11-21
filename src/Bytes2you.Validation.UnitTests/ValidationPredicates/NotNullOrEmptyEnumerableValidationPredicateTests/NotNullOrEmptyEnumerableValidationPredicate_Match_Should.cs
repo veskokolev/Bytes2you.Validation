@@ -9,7 +9,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.NotNullOrEmptyEnum
     public class NotNullOrEmptyEnumerableValidationPredicate_Match_Should
     {
         [TestMethod]
-        public void ReturnTrueAndValidMessage_WhenArgumentHasElements()
+        public void ReturnTrueAndMatchMessage_WhenArgumentHasElements()
         {
             // Arrange.
             int [] value = new int[] { 3, 4, 5 };
@@ -23,7 +23,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.NotNullOrEmptyEnum
         }
 
         [TestMethod]
-        public void ReturnFalseAndInvalidMessage_WhenArgumentIsNull()
+        public void ReturnFalseAndUnmatchMessage_WhenArgumentIsNull()
         {
             // Arrange.
             int[] value = null;
@@ -37,7 +37,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.NotNullOrEmptyEnum
         }
 
         [TestMethod]
-        public void ReturnFalseAndInvalidMessage_WhenArgumentIsEmpty()
+        public void ReturnFalseAndUnmatchMessage_WhenArgumentIsEmpty()
         {
             // Arrange.
             int[] value = new int[] {};

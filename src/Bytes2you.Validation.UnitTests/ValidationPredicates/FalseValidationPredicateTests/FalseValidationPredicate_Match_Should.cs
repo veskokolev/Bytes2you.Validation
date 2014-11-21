@@ -9,7 +9,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.FalseValidationPre
     public class FalseValidationPredicate_Match_Should
     {
         [TestMethod]
-        public void ReturnTrueAndValidMessage_WhenArgumentIsFalse()
+        public void ReturnTrueAndMatchMessage_WhenArgumentIsFalse()
         {
             // Arrange.
             bool value = false;
@@ -23,7 +23,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.FalseValidationPre
         }
 
         [TestMethod]
-        public void ReturnFalseAndInvalidMessage_WhenArgumentIsTrue()
+        public void ReturnFalseAndUnmatchMessage_WhenArgumentIsTrue()
         {
             // Arrange.
             bool value = true;

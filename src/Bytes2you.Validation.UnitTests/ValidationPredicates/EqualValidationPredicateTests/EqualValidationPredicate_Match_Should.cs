@@ -9,7 +9,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.EqualValidationPre
     public class EqualValidationPredicate_Match_Should
     {
         [TestMethod]
-        public void ReturnTrueAndValidMessage_WhenArgumentIsEqual()
+        public void ReturnTrueAndMatchMessage_WhenArgumentIsEqual()
         {
             // Arrange.
             EqualValidationPredicate<int> validationPredicate = new EqualValidationPredicate<int>(3);
@@ -23,7 +23,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.EqualValidationPre
         }
 
         [TestMethod]
-        public void ReturnFalseAndInvalidMessage_WhenArgumentIsNotEqual()
+        public void ReturnFalseAndUnmatchMessage_WhenArgumentIsNotEqual()
         {
             // Arrange.
             EqualValidationPredicate<int> validationPredicate = new EqualValidationPredicate<int>(3);

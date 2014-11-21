@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Bytes2you.Validation.UnitTests.ValidationPredicates.DoubleNotNegativeInfinityValidationPredicateTests
 {
+    [TestClass]
     public class DoubleNotNegativeInfinityValidationPredicate_Constructors_Should
     {
         [TestMethod]

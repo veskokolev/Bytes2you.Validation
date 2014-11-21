@@ -9,7 +9,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.NotEqualValidation
     public class NotEqualValidationPredicate_Match_Should
     {
         [TestMethod]
-        public void ReturnTrueAndValidMessage_WhenArgumentIsNotEqual()
+        public void ReturnTrueAndMatchMessage_WhenArgumentIsNotEqual()
         {
             // Arrange.
             NotEqualValidationPredicate<int> validationPredicate = new NotEqualValidationPredicate<int>(3);
@@ -23,7 +23,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.NotEqualValidation
         }
 
         [TestMethod]
-        public void ReturnFalseAndInvalidMessage_WhenArgumentIsEqual()
+        public void ReturnFalseAndUnmatchMessage_WhenArgumentIsEqual()
         {
             // Arrange.
             NotEqualValidationPredicate<int> validationPredicate = new NotEqualValidationPredicate<int>(3);

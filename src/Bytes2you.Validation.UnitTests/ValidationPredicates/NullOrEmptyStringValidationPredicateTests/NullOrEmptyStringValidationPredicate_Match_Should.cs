@@ -9,7 +9,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.NullOrEmptyStringV
     public class NullOrEmptyStringValidationPredicate_Match_Should
     {
         [TestMethod]
-        public void ReturnFalseAndInvalidMessage_WhenArgumentHasElements()
+        public void ReturnFalseAndUnmatchMessage_WhenArgumentHasElements()
         {
             // Arrange.
             string value = "asdf";
@@ -23,7 +23,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.NullOrEmptyStringV
         }
 
         [TestMethod]
-        public void ReturnTrueAndValidMessage_WhenArgumentIsNull()
+        public void ReturnTrueAndMatchMessage_WhenArgumentIsNull()
         {
             // Arrange.
             string value = null;
@@ -37,7 +37,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.NullOrEmptyStringV
         }
 
         [TestMethod]
-        public void ReturnTrueAndValidMessage_WhenArgumentIsEmpty()
+        public void ReturnTrueAndMatchMessage_WhenArgumentIsEmpty()
         {
             // Arrange.
             string value = string.Empty;

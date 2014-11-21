@@ -9,7 +9,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.NotEmptyGuidValida
     public class NotEmptyGuidValidationPredicate_Match_Should
     {
         [TestMethod]
-        public void ReturnTrueAndValidMessage_WhenArgumentIsNotGuidEmpty()
+        public void ReturnTrueAndMatchMessage_WhenArgumentIsNotGuidEmpty()
         {
             // Arrange.
             Guid value = Guid.NewGuid();
@@ -23,7 +23,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.NotEmptyGuidValida
         }
 
         [TestMethod]
-        public void ReturnFalseAndInvalidMessage_WhenArgumentIsGuidEmpty()
+        public void ReturnFalseAndUnmatchMessage_WhenArgumentIsGuidEmpty()
         {
             // Arrange.
             Guid value = Guid.Empty;

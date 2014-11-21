@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Bytes2you.Validation.UnitTests.ValidationPredicates.FloatNotPositiveInfinityValidationPredicateTests
 {
+    [TestClass]
     public class FloatNotPositiveInfinityValidationPredicate_Constructors_Should
     {
         [TestMethod]
