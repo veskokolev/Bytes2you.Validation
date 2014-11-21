@@ -11,34 +11,6 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ArgumentOfTFluentExten
     public class ArgumentOfTFluentExtensions_IsEqual_Should
     {
         [TestMethod]
-        public void AddEqualValidationPredicate_WhenArgumentIsByte()
-        {
-            // Arrange.
-            ValidatableArgument<byte> argument = new ValidatableArgument<byte>("argument", 3);
-
-            // Act.
-            argument.IsEqual(5);
-
-            // Assert.
-            Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is EqualValidationPredicate<byte>);
-        }
-
-        [TestMethod]
-        public void AddEqualValidationPredicate_WhenArgumentIsShort()
-        {
-            // Arrange.
-            ValidatableArgument<short> argument = new ValidatableArgument<short>("argument", 3);
-
-            // Act.
-            argument.IsEqual(5);
-
-            // Assert.
-            Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is EqualValidationPredicate<short>);
-        }
-
-        [TestMethod]
         public void AddEqualValidationPredicate_WhenArgumentIsInt()
         {
             // Arrange.

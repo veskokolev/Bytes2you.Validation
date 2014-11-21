@@ -3,19 +3,19 @@ using System.Linq;
 using Bytes2you.Validation.ValidationPredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Bytes2you.Validation.UnitTests.ValidationPredicates.DoubleNotNegativeInfinityValidationPredicateTests
+namespace Bytes2you.Validation.UnitTests.ValidationPredicates.FloatNotNegativeInfinityValidationPredicateTests
 {
     [TestClass]
-    public class DoubleNotNegativeInfinityValidationPredicate_Match_Should
+    public class FloatNotNegativeInfinityValidationPredicate_Match_Should
     {
         [TestMethod]
         public void ReturnTrueAndValidMessage_WhenArgumentIsNumber()
         {
             // Arrange.
-            double value = 5;
+            float value = 5;
 
             // Act.
-            IValidationPredicateResult result = DoubleNotNegativeInfinityValidationPredicate.Instance.Match(value);
+            IValidationPredicateResult result = FloatNotNegativeInfinityValidationPredicate.Instance.Match(value);
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
@@ -23,13 +23,13 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.DoubleNotNegativeI
         }
 
         [TestMethod]
-        public void ReturnTrueAndValidMessage_WhenArgumentIsDoublePositiveInfinity()
+        public void ReturnTrueAndValidMessage_WhenArgumentIsFloatPositiveInfinity()
         {
             // Arrange.
-            double value = double.PositiveInfinity;
+            float value = float.PositiveInfinity;
 
             // Act.
-            IValidationPredicateResult result = DoubleNotNegativeInfinityValidationPredicate.Instance.Match(value);
+            IValidationPredicateResult result = FloatNotNegativeInfinityValidationPredicate.Instance.Match(value);
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
@@ -37,13 +37,13 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.DoubleNotNegativeI
         }
 
         [TestMethod]
-        public void ReturnFalseAndInvalidMessage_WhenArgumentIsDoubleNegativeInfinity()
+        public void ReturnFalseAndInvalidMessage_WhenArgumentIsFloatNegativeInfinity()
         {
             // Arrange.
-            double value = double.NegativeInfinity;
+            float value = float.NegativeInfinity;
 
             // Act.
-            IValidationPredicateResult result = DoubleNotNegativeInfinityValidationPredicate.Instance.Match(value);
+            IValidationPredicateResult result = FloatNotNegativeInfinityValidationPredicate.Instance.Match(value);
 
             // Assert.
             Assert.IsFalse(result.IsMatch);

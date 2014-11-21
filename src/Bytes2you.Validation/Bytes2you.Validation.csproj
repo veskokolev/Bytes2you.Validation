@@ -51,7 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="FluentExtensions\ByteArgumentFluentExtensions.cs" />
     <Compile Include="FluentExtensions\DoubleArgumentFluentExtensions.cs" />
+    <Compile Include="FluentExtensions\FloatArgumentFluentExtensions.cs" />
+    <Compile Include="FluentExtensions\ShortArgumentFluentExtensions.cs" />
     <Compile Include="Helpers\Comparer.cs" />
     <Compile Include="Extensions\ArgumentExtensions.cs" />
     <Compile Include="FluentExtensions\ArgumentOfTFluentExtensions.cs" />
@@ -80,6 +83,14 @@
     <Compile Include="ValidationPredicates\EmptyGuidValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\EqualValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\FalseValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\FloatInfinityValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\FloatNaNValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\FloatNegativeInfinityValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\FloatNotInfinityValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\FloatNotNaNValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\FloatNotNegativeInfinityValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\FloatNotPositiveInfinityValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\FloatPositiveInfinityValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\GreaterThanOrEqualValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\GreaterThanValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\LessThanOrEqualValidationPredicate.cs" />
