@@ -11,34 +11,6 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ComparableOfTArgumentF
     public class ComparableOfTArgumentFluentExtensions_IsLessThanOrEqual_Should
     {
         [TestMethod]
-        public void AddLessThanOrEqualValidationPredicate_WhenArgumentIsByte()
-        {
-            // Arrange.
-            ValidatableArgument<byte> argument = new ValidatableArgument<byte>("argument", 3);
-
-            // Act.
-            argument.IsLessThanOrEqual(5);
-
-            // Assert.
-            Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is LessThanOrEqualValidationPredicate<byte>);
-        }
-
-        [TestMethod]
-        public void AddLessThanOrEqualValidationPredicate_WhenArgumentIsShort()
-        {
-            // Arrange.
-            ValidatableArgument<short> argument = new ValidatableArgument<short>("argument", 3);
-
-            // Act.
-            argument.IsLessThanOrEqual(5);
-
-            // Assert.
-            Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is LessThanOrEqualValidationPredicate<short>);
-        }
-
-        [TestMethod]
         public void AddLessThanOrEqualValidationPredicate_WhenArgumentIsInt()
         {
             // Arrange.

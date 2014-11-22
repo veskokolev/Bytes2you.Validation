@@ -52,10 +52,10 @@
   <ItemGroup>
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="FluentExtensions\ByteArgumentFluentExtensions.cs" />
-    <Compile Include="FluentExtensions\ClassFluentExtensions.cs" />
+    <Compile Include="FluentExtensions\ClassArgumentFluentExtensions.cs" />
     <Compile Include="FluentExtensions\DoubleArgumentFluentExtensions.cs" />
     <Compile Include="FluentExtensions\FloatArgumentFluentExtensions.cs" />
-    <Compile Include="FluentExtensions\NullableFluentExtensions.cs" />
+    <Compile Include="FluentExtensions\NullableArgumentFluentExtensions.cs" />
     <Compile Include="FluentExtensions\ShortArgumentFluentExtensions.cs" />
     <Compile Include="Helpers\Comparer.cs" />
     <Compile Include="Extensions\ArgumentExtensions.cs" />

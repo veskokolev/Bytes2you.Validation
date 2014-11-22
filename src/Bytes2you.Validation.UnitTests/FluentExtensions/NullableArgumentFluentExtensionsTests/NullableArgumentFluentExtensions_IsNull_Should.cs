@@ -5,10 +5,10 @@ using Bytes2you.Validation.UnitTests.Testing.Helpers;
 using Bytes2you.Validation.ValidationPredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Bytes2you.Validation.UnitTests.FluentExtensions.NullableFluentExtensionsTests
+namespace Bytes2you.Validation.UnitTests.FluentExtensions.NullableArgumentFluentExtensionsTests
 {
     [TestClass]
-    public class NullableFluentExtensions_IsNotNull_Should
+    public class NullableArgumentFluentExtensions_IsNull_Should
     {
         [TestMethod]
         public void AddNullValidationPredicate()
@@ -17,11 +17,11 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.NullableFluentExtensio
             ValidatableArgument<int?> argument = new ValidatableArgument<int?>("argument", 5);
 
             // Act.
-            argument.IsNotNull();
+            argument.IsNull();
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is NotNullNullableValidationPredicate<int>);
+            Assert.IsTrue(argument.ValidationPredicates.First() is NullNullableValidationPredicate<int>);
         }
 
         [TestMethod]
@@ -34,7 +34,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.NullableFluentExtensio
             Ensure.ActionRunsInExpectedTime(
                 () =>
                 {
-                    argument.IsNotNull();
+                    argument.IsNull();
                 },
                 PerformanceConstants.ValidationPredicateExecutionCount,
                 PerformanceConstants.ValidationPredicateTotalExecutionExpectedTime);

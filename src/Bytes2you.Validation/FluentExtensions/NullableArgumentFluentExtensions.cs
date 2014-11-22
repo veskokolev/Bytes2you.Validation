@@ -5,7 +5,7 @@ using Bytes2you.Validation.ValidationPredicates;
 
 namespace Bytes2you.Validation
 {
-    public static class NullableFluentExtensions
+    public static class NullableArgumentFluentExtensions
     {
         public static IValidatableArgument<Nullable<T>> IsNull<T>(this IArgument<Nullable<T>> @argument)
             where T : struct

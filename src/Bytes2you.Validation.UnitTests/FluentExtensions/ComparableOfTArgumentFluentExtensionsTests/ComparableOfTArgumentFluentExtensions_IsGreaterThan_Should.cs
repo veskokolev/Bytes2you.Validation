@@ -11,34 +11,6 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ComparableOfTArgumentF
     public class ComparableOfTArgumentFluentExtensions_IsGreaterThan_Should
     {
         [TestMethod]
-        public void AddGreaterThanValidationPredicate_WhenArgumentIsByte()
-        {
-            // Arrange.
-            ValidatableArgument<byte> argument = new ValidatableArgument<byte>("argument", 3);
-
-            // Act.
-            argument.IsGreaterThan(5);
-
-            // Assert.
-            Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is GreaterThanValidationPredicate<byte>);
-        }
-
-        [TestMethod]
-        public void AddGreaterThanValidationPredicate_WhenArgumentIsShort()
-        {
-            // Arrange.
-            ValidatableArgument<short> argument = new ValidatableArgument<short>("argument", 3);
-
-            // Act.
-            argument.IsGreaterThan(5);
-
-            // Assert.
-            Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is GreaterThanValidationPredicate<short>);
-        }
-
-        [TestMethod]
         public void AddGreaterThanValidationPredicate_WhenArgumentIsInt()
         {
             // Arrange.

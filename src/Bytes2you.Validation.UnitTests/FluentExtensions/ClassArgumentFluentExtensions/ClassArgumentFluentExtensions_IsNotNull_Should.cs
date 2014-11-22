@@ -5,23 +5,23 @@ using Bytes2you.Validation.UnitTests.Testing.Helpers;
 using Bytes2you.Validation.ValidationPredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Bytes2you.Validation.UnitTests.FluentExtensions.ClassFluentExtensions
+namespace Bytes2you.Validation.UnitTests.FluentExtensions.ClassArgumentFluentExtensions
 {
     [TestClass]
-    public class ClassFluentExtensions_IsOfType_Should
+    public class ClassArgumentFluentExtensions_IsNotNull_Should
     {
         [TestMethod]
-        public void AddOfTypeValidationPredicate()
+        public void AddNullValidationPredicate()
         {
             // Arrange.
             ValidatableArgument<object> argument = new ValidatableArgument<object>("argument", new object());
 
             // Act.
-            argument.IsOfType(typeof(string));
+            argument.IsNotNull();
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is OfTypeValidationPredicate<object>);
+            Assert.IsTrue(argument.ValidationPredicates.First() is NotNullValidationPredicate<object>);
         }
 
         [TestMethod]
@@ -32,9 +32,9 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ClassFluentExtensions
 
             // Act & Assert.
             Ensure.ActionRunsInExpectedTime(
-                () =>
+                () => 
                 {
-                    argument.IsOfType(typeof(string));
+                    argument.IsNotNull();
                 },
                 PerformanceConstants.ValidationPredicateExecutionCount,
                 PerformanceConstants.ValidationPredicateTotalExecutionExpectedTime);

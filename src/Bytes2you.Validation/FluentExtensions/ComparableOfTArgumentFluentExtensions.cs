@@ -30,45 +30,5 @@ namespace Bytes2you.Validation
         {
             return @argument.AddValidationPredicate(new GreaterThanOrEqualValidationPredicate<T>(bound));
         }
-
-        public static IValidatableArgument<byte> IsLessThan(this IArgument<byte> @argument, byte bound)
-        {
-            return @argument.AddValidationPredicate(new LessThanValidationPredicate<byte>(bound));
-        }
-
-        public static IValidatableArgument<byte> IsGreaterThan(this IArgument<byte> @argument, byte bound)
-        {
-            return @argument.AddValidationPredicate(new GreaterThanValidationPredicate<byte>(bound));
-        }
-
-        public static IValidatableArgument<byte> IsLessThanOrEqual(this IArgument<byte> @argument, byte bound)
-        {
-            return @argument.AddValidationPredicate(new LessThanOrEqualValidationPredicate<byte>(bound));
-        }
-
-        public static IValidatableArgument<byte> IsGreaterThanOrEqual(this IArgument<byte> @argument, byte bound)
-        {
-            return @argument.AddValidationPredicate(new GreaterThanOrEqualValidationPredicate<byte>(bound));
-        }
-
-        public static IValidatableArgument<short> IsLessThan(this IArgument<short> @argument, short bound)
-        {
-            return @argument.AddValidationPredicate(new LessThanValidationPredicate<short>(bound));
-        }
-
-        public static IValidatableArgument<short> IsGreaterThan(this IArgument<short> @argument, short bound)
-        {
-            return @argument.AddValidationPredicate(new GreaterThanValidationPredicate<short>(bound));
-        }
-
-        public static IValidatableArgument<short> IsLessThanOrEqual(this IArgument<short> @argument, short bound)
-        {
-            return @argument.AddValidationPredicate(new LessThanOrEqualValidationPredicate<short>(bound));
-        }
-
-        public static IValidatableArgument<short> IsGreaterThanOrEqual(this IArgument<short> @argument, short bound)
-        {
-            return @argument.AddValidationPredicate(new GreaterThanOrEqualValidationPredicate<short>(bound));
-        }
     }
 }
