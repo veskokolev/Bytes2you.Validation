@@ -33,7 +33,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.EmptyGuidValidatio
 
             // Assert.
             Assert.IsFalse(result.IsMatch);
-            Assert.AreEqual(string.Format("Argument value '{0}' is not Guid.Empty.", value), result.Message);
+            Assert.AreEqual(string.Format("Argument value {0} is not Guid.Empty.", value), result.Message);
         }
     }
 }

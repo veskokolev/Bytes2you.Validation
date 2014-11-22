@@ -71,7 +71,9 @@
     <Compile Include="FluentExtensions\ByteArgumentFluentExtensionsTests\ByteArgumentFluentExtensions_IsEqual_Should.cs" />
     <Compile Include="FluentExtensions\ByteArgumentFluentExtensionsTests\ByteArgumentFluentExtensions_IsNotEqual_Should.cs" />
     <Compile Include="FluentExtensions\ClassFluentExtensions\ClassFluentExtensions_IsNotNull_Should.cs" />
+    <Compile Include="FluentExtensions\ClassFluentExtensions\ClassFluentExtensions_IsNotOfType_Should.cs" />
     <Compile Include="FluentExtensions\ClassFluentExtensions\ClassFluentExtensions_IsNull_Should.cs" />
+    <Compile Include="FluentExtensions\ClassFluentExtensions\ClassFluentExtensions_IsOfType_Should.cs" />
     <Compile Include="FluentExtensions\ComparableOfTArgumentFluentExtensionsTests\ComparableOfTArgumentFluentExtensions_IsGreaterThanOrEqual_Should.cs" />
     <Compile Include="FluentExtensions\ComparableOfTArgumentFluentExtensionsTests\ComparableOfTArgumentFluentExtensions_IsGreaterThan_Should.cs" />
     <Compile Include="FluentExtensions\ComparableOfTArgumentFluentExtensionsTests\ComparableOfTArgumentFluentExtensions_IsLessThanOrEqual_Should.cs" />
@@ -178,6 +180,8 @@
     <Compile Include="ValidationPredicates\NotNullOrEmptyStringValidationPredicateTests\NotNullOrEmptyStringValidationPredicate_Match_Should.cs" />
     <Compile Include="ValidationPredicates\NotNullValidationPredicateTests\NotNullValidationPredicate_Constructors_Should.cs" />
     <Compile Include="ValidationPredicates\NotNullValidationPredicateTests\NotNullValidationPredicate_Match_Should.cs" />
+    <Compile Include="ValidationPredicates\NotOfTypeValidationPredicateTests\NotOfTypeValidationPredicate_Constructors_Should.cs" />
+    <Compile Include="ValidationPredicates\NotOfTypeValidationPredicateTests\NotOfTypeValidationPredicate_Match_Should.cs" />
     <Compile Include="ValidationPredicates\NullNullableValidationPredicateTests\NullNullableValidationPredicate_Constructors_Should.cs" />
     <Compile Include="ValidationPredicates\NullNullableValidationPredicateTests\NullNullableValidationPredicate_Match_Should.cs" />
     <Compile Include="ValidationPredicates\NullOrEmptyEnumerableValidationPredicateTests\NullOrEmptyEnumerableValidationPredicate_Constructors_Should.cs" />
@@ -186,6 +190,8 @@
     <Compile Include="ValidationPredicates\NullOrEmptyStringValidationPredicateTests\NullOrEmptyStringValidationPredicate_Match_Should.cs" />
     <Compile Include="ValidationPredicates\NullValidationPredicateTests\NullValidationPredicate_Constructors_Should.cs" />
     <Compile Include="ValidationPredicates\NullValidationPredicateTests\NullValidationPredicate_Match_Should.cs" />
+    <Compile Include="ValidationPredicates\OfTypeValidationPredicateTests\OfTypeValidationPredicate_Constructors_Should.cs" />
+    <Compile Include="ValidationPredicates\OfTypeValidationPredicateTests\OfTypeValidationPredicate_Match_Should.cs" />
     <Compile Include="ValidationPredicates\SingletonValidationPredicateTests\SingletonValidationPredicate_Constructors_Should.cs" />
     <Compile Include="ValidationPredicates\TrueValidationPredicateTests\TrueValidationPredicate_Constructors_Should.cs" />
     <Compile Include="ValidationPredicates\TrueValidationPredicateTests\TrueValidationPredicate_Match_Should.cs" />

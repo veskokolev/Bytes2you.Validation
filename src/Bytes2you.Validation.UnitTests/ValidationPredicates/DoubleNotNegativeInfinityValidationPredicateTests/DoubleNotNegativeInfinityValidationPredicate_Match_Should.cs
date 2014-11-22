@@ -19,7 +19,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.DoubleNotNegativeI
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
-            Assert.AreEqual(string.Format("Argument value '{0}' is not NegativeInfinity.", value), result.Message);
+            Assert.AreEqual(string.Format("Argument value {0} is not NegativeInfinity.", value), result.Message);
         }
 
         [TestMethod]
@@ -33,7 +33,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.DoubleNotNegativeI
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
-            Assert.AreEqual(string.Format("Argument value '{0}' is not NegativeInfinity.", value), result.Message);
+            Assert.AreEqual(string.Format("Argument value {0} is not NegativeInfinity.", value), result.Message);
         }
 
         [TestMethod]

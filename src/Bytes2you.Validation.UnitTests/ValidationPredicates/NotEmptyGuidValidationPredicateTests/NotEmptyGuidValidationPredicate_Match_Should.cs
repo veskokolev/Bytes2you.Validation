@@ -19,7 +19,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.NotEmptyGuidValida
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
-            Assert.AreEqual(string.Format("Argument value '{0}' is not Guid.Empty.", value), result.Message);
+            Assert.AreEqual(string.Format("Argument value {0} is not Guid.Empty.", value), result.Message);
         }
 
         [TestMethod]
