@@ -55,6 +55,7 @@
     <Compile Include="FluentExtensions\ClassFluentExtensions.cs" />
     <Compile Include="FluentExtensions\DoubleArgumentFluentExtensions.cs" />
     <Compile Include="FluentExtensions\FloatArgumentFluentExtensions.cs" />
+    <Compile Include="FluentExtensions\NullableFluentExtensions.cs" />
     <Compile Include="FluentExtensions\ShortArgumentFluentExtensions.cs" />
     <Compile Include="Helpers\Comparer.cs" />
     <Compile Include="Extensions\ArgumentExtensions.cs" />
@@ -100,9 +101,11 @@
     <Compile Include="ValidationPredicates\NotEmptyGuidValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\NotEqualValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\DoubleNotNaNValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\NotNullNullableValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\NotNullOrEmptyEnumerableValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\NotNullOrEmptyStringValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\NotNullValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\NullNullableValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\NullOrEmptyEnumerableValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\SingletonValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\TrueValidationPredicate.cs" />
