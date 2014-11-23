@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Bytes2you.Validation.Extensions;
-using Bytes2you.Validation.ValidationPredicates;
+using Bytes2you.Validation.ValidationPredicates.ClassPredicates;
 
 namespace Bytes2you.Validation
 {

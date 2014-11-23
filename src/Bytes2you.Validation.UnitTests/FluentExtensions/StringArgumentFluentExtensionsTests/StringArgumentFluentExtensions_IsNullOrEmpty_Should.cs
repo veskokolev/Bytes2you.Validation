@@ -2,7 +2,7 @@
 using System.Linq;
 using Bytes2you.Validation.UnitTests.Testing;
 using Bytes2you.Validation.UnitTests.Testing.Helpers;
-using Bytes2you.Validation.ValidationPredicates;
+using Bytes2you.Validation.ValidationPredicates.StringPredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Bytes2you.Validation.UnitTests.FluentExtensions.StringArgumentFluentExtensionsTests
@@ -22,7 +22,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.StringArgumentFluentEx
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is NullOrEmptyStringValidationPredicate);
+            Assert.IsTrue(argument.ValidationPredicates.First() is StringNullOrEmptyValidationPredicate);
         }
 
         [TestMethod]

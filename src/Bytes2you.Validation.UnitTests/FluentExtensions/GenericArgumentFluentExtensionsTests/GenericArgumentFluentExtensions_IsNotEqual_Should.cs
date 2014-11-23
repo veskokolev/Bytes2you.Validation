@@ -1,0 +1,113 @@
+﻿using System;
+using System.Linq;
+using Bytes2you.Validation.UnitTests.Testing;
+using Bytes2you.Validation.UnitTests.Testing.Helpers;
+using Bytes2you.Validation.ValidationPredicates.GenericPredicates;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace Bytes2you.Validation.UnitTests.FluentExtensions.GenericArgumentFluentExtensionsTests
+{
+    [TestClass]
+    public class GenericArgumentFluentExtensions_IsNotEqual_Should
+    {
+        [TestMethod]
+        public void AddNotEqualValidationPredicate_WhenArgumentIsInt()
+        {
+            // Arrange.
+            ValidatableArgument<int> argument = new ValidatableArgument<int>("argument", 3);
+
+            // Act.
+            argument.IsNotEqual(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is NotEqualValidationPredicate<int>);
+        }
+
+        [TestMethod]
+        public void AddNotEqualValidationPredicate_WhenArgumentIsLong()
+        {
+            // Arrange.
+            ValidatableArgument<long> argument = new ValidatableArgument<long>("argument", 3);
+
+            // Act.
+            argument.IsNotEqual(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is NotEqualValidationPredicate<long>);
+        }
+
+        [TestMethod]
+        public void AddNotEqualValidationPredicate_WhenArgumentIsFloat()
+        {
+            // Arrange.
+            ValidatableArgument<float> argument = new ValidatableArgument<float>("argument", 3);
+
+            // Act.
+            argument.IsNotEqual(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is NotEqualValidationPredicate<float>);
+        }
+
+        [TestMethod]
+        public void AddNotEqualValidationPredicate_WhenArgumentIsDouble()
+        {
+            // Arrange.
+            ValidatableArgument<double> argument = new ValidatableArgument<double>("argument", 3);
+
+            // Act.
+            argument.IsNotEqual(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is NotEqualValidationPredicate<double>);
+        }
+
+        [TestMethod]
+        public void AddNotEqualValidationPredicate_WhenArgumentIsDecimal()
+        {
+            // Arrange.
+            ValidatableArgument<decimal> argument = new ValidatableArgument<decimal>("argument", 3);
+
+            // Act.
+            argument.IsNotEqual(5);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is NotEqualValidationPredicate<decimal>);
+        }
+
+        [TestMethod]
+        public void AddNotEqualValidationPredicate_WhenArgumentIsDateTime()
+        {
+            // Arrange.
+            ValidatableArgument<DateTime> argument = new ValidatableArgument<DateTime>("argument", DateTime.Now);
+
+            // Act.
+            argument.IsNotEqual(DateTime.Now);
+
+            // Assert.
+            Assert.AreEqual(1, argument.ValidationPredicates.Count());
+            Assert.IsTrue(argument.ValidationPredicates.First() is NotEqualValidationPredicate<DateTime>);
+        }
+
+        [TestMethod]
+        public void RunInExpectedTime()
+        {
+            // Arrange.
+            ValidatableArgument<int> argument = new ValidatableArgument<int>("argument", 3);
+
+            // Act & Assert.
+            Ensure.ActionRunsInExpectedTime(
+                () => 
+                {
+                    argument.IsNotEqual(3);
+                },
+                PerformanceConstants.ValidationPredicateExecutionCount,
+                PerformanceConstants.ValidationPredicateTotalExecutionExpectedTime);
+        }
+    }
+}

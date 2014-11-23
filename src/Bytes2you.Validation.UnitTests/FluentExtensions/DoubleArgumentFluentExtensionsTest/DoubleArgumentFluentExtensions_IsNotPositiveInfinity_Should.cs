@@ -2,7 +2,7 @@
 using System.Linq;
 using Bytes2you.Validation.UnitTests.Testing;
 using Bytes2you.Validation.UnitTests.Testing.Helpers;
-using Bytes2you.Validation.ValidationPredicates;
+using Bytes2you.Validation.ValidationPredicates.DoublePredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Bytes2you.Validation.UnitTests.FluentExtensions.DoubleArgumentFluentExtensionsTest

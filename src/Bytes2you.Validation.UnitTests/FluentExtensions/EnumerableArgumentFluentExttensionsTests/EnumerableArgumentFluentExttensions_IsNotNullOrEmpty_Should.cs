@@ -3,7 +3,7 @@ using System.Collections;
 using System.Linq;
 using Bytes2you.Validation.UnitTests.Testing;
 using Bytes2you.Validation.UnitTests.Testing.Helpers;
-using Bytes2you.Validation.ValidationPredicates;
+using Bytes2you.Validation.ValidationPredicates.EnumerablePredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Bytes2you.Validation.UnitTests.FluentExtensions.EnumerableArgumentFluentExttensionsTests
@@ -23,7 +23,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.EnumerableArgumentFlue
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is NotNullOrEmptyEnumerableValidationPredicate<int[]>);
+            Assert.IsTrue(argument.ValidationPredicates.First() is EnumerableNotNullOrEmptyValidationPredicate<int[]>);
         }
 
         [TestMethod]

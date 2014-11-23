@@ -2,7 +2,7 @@
 using System.Linq;
 using Bytes2you.Validation.UnitTests.Testing;
 using Bytes2you.Validation.UnitTests.Testing.Helpers;
-using Bytes2you.Validation.ValidationPredicates;
+using Bytes2you.Validation.ValidationPredicates.NullablePredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Bytes2you.Validation.UnitTests.FluentExtensions.NullableArgumentFluentExtensionsTests
@@ -21,7 +21,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.NullableArgumentFluent
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is NullNullableValidationPredicate<int>);
+            Assert.IsTrue(argument.ValidationPredicates.First() is NullableNullValidationPredicate<int>);
         }
 
         [TestMethod]
