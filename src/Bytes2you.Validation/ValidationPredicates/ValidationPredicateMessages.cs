@@ -34,11 +34,11 @@ namespace Bytes2you.Validation.ValidationPredicates
         public static readonly string InfinityMessage = "The argument is Infinity.";
         public static readonly string NotInfinityMessage = "Argument value {0} is not Infinity.";
 
-        public static readonly string PositiveInfinityMessage = "The argument is PositiveInfinity.";
-        public static readonly string NotPositiveInfinityMessage = "Argument value {0} is not PositiveInfinity.";
+        public static readonly string PositiveInfinityMessage = "The argument is +Infinity.";
+        public static readonly string NotPositiveInfinityMessage = "Argument value {0} is not +Infinity.";
 
-        public static readonly string NegativeInfinityMessage = "The argument is NegativeInfinity.";
-        public static readonly string NotNegativeInfinityMessage = "Argument value {0} is not NegativeInfinity.";
+        public static readonly string NegativeInfinityMessage = "The argument is -Infinity.";
+        public static readonly string NotNegativeInfinityMessage = "Argument value {0} is not -Infinity.";
 
         public static readonly string OfTypeMessage = "The argument is of type {0}.";
         public static readonly string NotOfTypeMessage = "The argument is not of type {0}.";

@@ -19,7 +19,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.DoublePredicates.D
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
-            Assert.AreEqual(string.Format("Argument value {0} is not Infinity.", value), result.Message);
+            Assert.AreEqual("Argument value 5 is not Infinity.", result.Message);
         }
 
         [TestMethod]

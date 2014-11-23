@@ -26,14 +26,14 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.GuidPredicates.Gui
         public void ReturnFalseAndUnmatchMessage_WhenArgumentIsNotGuidEmpty()
         {
             // Arrange.
-            Guid value = Guid.NewGuid();
+            Guid value = Guid.Parse("ed76438e-58f6-4d26-9067-9839c7c10b22");
 
             // Act.
             IValidationPredicateResult result = GuidEmptyValidationPredicate.Instance.Match(value);
 
             // Assert.
             Assert.IsFalse(result.IsMatch);
-            Assert.AreEqual(string.Format("Argument value {0} is not Guid.Empty.", value), result.Message);
+            Assert.AreEqual("Argument value ed76438e-58f6-4d26-9067-9839c7c10b22 is not Guid.Empty.", result.Message);
         }
     }
 }
