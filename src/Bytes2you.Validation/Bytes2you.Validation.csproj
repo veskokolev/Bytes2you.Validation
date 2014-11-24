@@ -57,7 +57,6 @@
     <Compile Include="FluentExtensions\FloatArgumentFluentExtensions.cs" />
     <Compile Include="FluentExtensions\NullableArgumentFluentExtensions.cs" />
     <Compile Include="FluentExtensions\ShortArgumentFluentExtensions.cs" />
-    <Compile Include="Helpers\Comparer.cs" />
     <Compile Include="Extensions\ArgumentExtensions.cs" />
     <Compile Include="FluentExtensions\GenericArgumentFluentExtensions.cs" />
     <Compile Include="FluentExtensions\BoolArgumentFluentExtensions.cs" />
@@ -65,6 +64,7 @@
     <Compile Include="FluentExtensions\EnumerableArgumentFluentExttensions.cs" />
     <Compile Include="FluentExtensions\GuidArgumentFluentExtensions.cs" />
     <Compile Include="Helpers\EnumerableHelper.cs" />
+    <Compile Include="Helpers\MessageFormatHelper.cs" />
     <Compile Include="IValidationPredicateResult.cs" />
     <Compile Include="IValidationPredicate.cs" />
     <Compile Include="ValidatableArgument.cs" />

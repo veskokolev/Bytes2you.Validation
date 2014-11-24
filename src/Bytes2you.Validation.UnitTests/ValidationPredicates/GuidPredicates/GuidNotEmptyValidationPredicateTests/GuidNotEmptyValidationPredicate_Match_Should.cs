@@ -19,7 +19,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.GuidPredicates.Gui
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
-            Assert.AreEqual("Argument value ed76438e-58f6-4d26-9067-9839c7c10b22 is not Guid.Empty.", result.Message);
+            Assert.AreEqual("Argument value <ed76438e-58f6-4d26-9067-9839c7c10b22> is not Guid.Empty.", result.Message);
         }
 
         [TestMethod]

@@ -21,7 +21,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.ClassPredicates.Of
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
-            Assert.AreEqual("The argument is of type System.String.", result.Message);
+            Assert.AreEqual("The argument is of type <System.String>.", result.Message);
         }
 
         [TestMethod]
@@ -36,7 +36,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.ClassPredicates.Of
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
-            Assert.AreEqual("The argument is of type System.Object.", result.Message);
+            Assert.AreEqual("The argument is of type <System.Object>.", result.Message);
         }
 
         [TestMethod]
@@ -51,7 +51,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.ClassPredicates.Of
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
-            Assert.AreEqual("The argument is of type System.Collections.ArrayList.", result.Message);
+            Assert.AreEqual("The argument is of type <System.Collections.ArrayList>.", result.Message);
         }
 
         [TestMethod]
@@ -66,7 +66,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.ClassPredicates.Of
 
             // Assert.
             Assert.IsFalse(result.IsMatch);
-            Assert.AreEqual("The argument is not of type System.String.", result.Message);
+            Assert.AreEqual("The argument is not of type <System.String>.", result.Message);
         }
     }
 }

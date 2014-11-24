@@ -19,7 +19,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.ClassPredicates.No
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
-            Assert.AreEqual("The argument is not null.", result.Message);
+            Assert.AreEqual("Argument value <System.Object> is not null.", result.Message);
         }
 
         [TestMethod]

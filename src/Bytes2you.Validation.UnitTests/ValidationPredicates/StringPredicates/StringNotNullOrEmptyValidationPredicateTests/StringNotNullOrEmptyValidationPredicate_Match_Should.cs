@@ -19,7 +19,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.StringPredicates.S
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
-            Assert.AreEqual("The argument is neither null nor empty.", result.Message);
+            Assert.AreEqual("Argument value <{0}> is neither null nor empty.", result.Message);
         }
 
         [TestMethod]

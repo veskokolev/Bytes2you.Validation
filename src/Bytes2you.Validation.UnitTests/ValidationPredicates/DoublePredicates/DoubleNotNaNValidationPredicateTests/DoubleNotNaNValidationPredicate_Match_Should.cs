@@ -19,7 +19,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.DoublePredicates.D
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
-            Assert.AreEqual("Argument value 5 is not NaN.", result.Message);
+            Assert.AreEqual("Argument value <5> is not NaN.", result.Message);
             
         }
 

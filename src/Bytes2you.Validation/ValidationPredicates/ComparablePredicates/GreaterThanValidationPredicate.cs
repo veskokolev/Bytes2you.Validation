@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using Bytes2you.Validation.Helpers;
 
 namespace Bytes2you.Validation.ValidationPredicates.ComparablePredicates
 {
@@ -13,17 +15,17 @@ namespace Bytes2you.Validation.ValidationPredicates.ComparablePredicates
 
         protected override string GetMatchMessage(T value)
         {
-            return string.Format(ValidationPredicateMessages.GreaterThanMessage, value, this.Bound);
+            return MessageFormatHelper.Format(ValidationPredicateMessages.GreaterThanMessage, value, this.Bound);
         }
 
         protected override string GetUnmatchMessage(T value)
         {
-            return string.Format(ValidationPredicateMessages.LessThanOrEqualMessage, value, this.Bound);
+            return MessageFormatHelper.Format(ValidationPredicateMessages.LessThanOrEqualMessage, value, this.Bound);
         }
 
         protected override bool IsMatch(T bound, T value)
         {
-            return bound.CompareTo(value) < 0;
+            return Comparer<T>.Default.Compare(bound, value) < 0;
         }
     }
 }

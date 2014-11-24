@@ -116,7 +116,6 @@
     <Compile Include="FluentExtensions\ValidatableArgumentFluentExtensionTests\ValidatableArgumentFluentExtension_Throw_Should.cs" />
     <Compile Include="GuardTests\Guard_Constructors_Should.cs" />
     <Compile Include="GuardTests\Guard_WhenArgument_Should.cs" />
-    <Compile Include="Helpers\ComparerTests\Comparer_EqualsOfT_Should.cs" />
     <Compile Include="Helpers\EnumerableHelperTests\EnumerableHelper_IsNullOrEmpty_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Testing\Helpers\Ensure.cs" />

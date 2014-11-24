@@ -2,6 +2,7 @@
 using System.Linq;
 using Bytes2you.Validation.Extensions;
 using Bytes2you.Validation.ValidationPredicates.DoublePredicates;
+using Bytes2you.Validation.ValidationPredicates.GenericPredicates;
 
 namespace Bytes2you.Validation
 {

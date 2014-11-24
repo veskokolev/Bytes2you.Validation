@@ -20,7 +20,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.ComparablePredicat
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
-            Assert.AreEqual("Argument value 2 is less than 3.", result.Message);
+            Assert.AreEqual("Argument value <2> is less than <3>.", result.Message);
         }
 
         [TestMethod]
@@ -35,7 +35,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.ComparablePredicat
 
             // Assert.
             Assert.IsFalse(result.IsMatch);
-            Assert.AreEqual("Argument value 3 is greater than or equal to 3.", result.Message);
+            Assert.AreEqual("Argument value <3> is greater than or equal to <3>.", result.Message);
         }
 
         [TestMethod]
@@ -50,7 +50,52 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.ComparablePredicat
 
             // Assert.
             Assert.IsFalse(result.IsMatch);
-            Assert.AreEqual("Argument value 4 is greater than or equal to 3.", result.Message);
+            Assert.AreEqual("Argument value <4> is greater than or equal to <3>.", result.Message);
+        }
+
+        [TestMethod]
+        public void ReturnFalseAndUnmatchMessage_WhenBoundIsNullAndArgumentIsNotNull()
+        {
+            // Arrange.
+            string value = "a";
+            LessThanValidationPredicate<string> validationPredicate = new LessThanValidationPredicate<string>(null);
+
+            // Act.
+            IValidationPredicateResult result = validationPredicate.Match(value);
+
+            // Assert.
+            Assert.IsFalse(result.IsMatch);
+            Assert.AreEqual("Argument value <a> is greater than or equal to <null>.", result.Message);
+        }
+
+        [TestMethod]
+        public void ReturnFalseAndUnmatchMessage_WhenBoundIsNullAndArgumentIsNull()
+        {
+            // Arrange.
+            string value = null;
+            LessThanValidationPredicate<string> validationPredicate = new LessThanValidationPredicate<string>(null);
+
+            // Act.
+            IValidationPredicateResult result = validationPredicate.Match(value);
+
+            // Assert.
+            Assert.IsFalse(result.IsMatch);
+            Assert.AreEqual("Argument value <null> is greater than or equal to <null>.", result.Message);
+        }
+
+        [TestMethod]
+        public void ReturnTrueAndMatchMessage_WhenBoundIsNotNullAndArgumentIsNull()
+        {
+            // Arrange.
+            string value = null;
+            LessThanValidationPredicate<string> validationPredicate = new LessThanValidationPredicate<string>("a");
+
+            // Act.
+            IValidationPredicateResult result = validationPredicate.Match(value);
+
+            // Assert.
+            Assert.IsTrue(result.IsMatch);
+            Assert.AreEqual("Argument value <null> is less than <a>.", result.Message);
         }
     }
 }

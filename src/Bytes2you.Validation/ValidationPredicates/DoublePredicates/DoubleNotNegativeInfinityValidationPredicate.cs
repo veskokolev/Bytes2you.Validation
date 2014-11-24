@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Bytes2you.Validation.Helpers;
 
 namespace Bytes2you.Validation.ValidationPredicates.DoublePredicates
 {
@@ -16,7 +17,7 @@ namespace Bytes2you.Validation.ValidationPredicates.DoublePredicates
 
         protected override string GetMatchMessage(double value)
         {
-            return string.Format(ValidationPredicateMessages.NotNegativeInfinityMessage, value);
+            return MessageFormatHelper.Format(ValidationPredicateMessages.NotNegativeInfinityMessage, value);
         }
 
         protected override string GetUnmatchMessage(double value)

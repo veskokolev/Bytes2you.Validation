@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Bytes2you.Validation.Helpers;
 
 namespace Bytes2you.Validation.ValidationPredicates.FloatPredicates
 {
@@ -16,7 +17,7 @@ namespace Bytes2you.Validation.ValidationPredicates.FloatPredicates
 
         protected override string GetMatchMessage(float value)
         {
-            return string.Format(ValidationPredicateMessages.NotNaNMessage, value);
+            return MessageFormatHelper.Format(ValidationPredicateMessages.NotNaNMessage, value);
         }
 
         protected override string GetUnmatchMessage(float value)

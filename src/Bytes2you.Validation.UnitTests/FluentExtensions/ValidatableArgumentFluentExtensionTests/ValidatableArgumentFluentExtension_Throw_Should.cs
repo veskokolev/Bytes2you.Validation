@@ -23,7 +23,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ValidatableArgumentFlu
         }
 
         [TestMethod]
-        public void NotThrowException_WhenArgumentIsInvalid()
+        public void NotThrowException_WhenArgumentHasMatches()
         {
             // Arrange.
             IValidatableArgument<int> validatableArgument = new ValidatableArgument<int>("validatableArgument", 3);
@@ -38,7 +38,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ValidatableArgumentFlu
         }
 
         [TestMethod]
-        public void ThrowException_WhenArgumentIsValid()
+        public void ThrowException_WhenArgumentHasMatches()
         {
             // Arrange.
             IValidatableArgument<int> validatableArgument = new ValidatableArgument<int>("validatableArgument", 3);
@@ -49,7 +49,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ValidatableArgumentFlu
                 () =>
                 {
                     validatableArgument.Throw();
-                }, "validatableArgument", "Invalid argument:\n - Argument value 3 is less than 5.\r\n - Argument value 3 is greater than 2.\r\n\r\nParameter name: validatableArgument");
+                }, "validatableArgument", "Invalid argument:\n - Argument value <3> is less than <5>.\r\n - Argument value <3> is greater than <2>.\r\n\r\nParameter name: validatableArgument");
         }
     }
 }

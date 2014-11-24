@@ -19,7 +19,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.NullablePredicates
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
-            Assert.AreEqual("The argument is not null.", result.Message);
+            Assert.AreEqual("Argument value <5> is not null.", result.Message);
         }
 
         [TestMethod]

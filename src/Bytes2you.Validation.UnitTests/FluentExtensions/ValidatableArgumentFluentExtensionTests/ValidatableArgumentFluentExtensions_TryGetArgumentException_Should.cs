@@ -24,7 +24,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ValidatableArgumentFlu
         }
 
         [TestMethod]
-        public void ReturnFalseAndArgumentExceptionIsNull_WhenArgumentIsInvalid()
+        public void ReturnFalseAndArgumentExceptionIsNull_WhenArgumentDoesNotHaveMatches()
         {
             // Arrange.
             IValidatableArgument<int> validatableArgument = new ValidatableArgument<int>("validatableArgument", 3);
@@ -40,7 +40,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ValidatableArgumentFlu
         }
 
         [TestMethod]
-        public void ReturnTrueAndCreatesArgumentException_WhenArgumentIsValid()
+        public void ReturnTrueAndCreatesArgumentException_WhenArgumentHasMatches()
         {
             // Arrange.
             IValidatableArgument<int> validatableArgument = new ValidatableArgument<int>("validatableArgument", 3);
@@ -54,7 +54,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ValidatableArgumentFlu
             Assert.IsTrue(result);
             Assert.IsNotNull(argumentException);
             Assert.AreEqual("validatableArgument", argumentException.ParamName);
-            Assert.AreEqual("Invalid argument:\n - Argument value 3 is less than 5.\r\n - Argument value 3 is greater than 2.\r\n\r\nParameter name: validatableArgument", argumentException.Message);
+            Assert.AreEqual("Invalid argument:\n - Argument value <3> is less than <5>.\r\n - Argument value <3> is greater than <2>.\r\n\r\nParameter name: validatableArgument", argumentException.Message);
         }
     }
 }

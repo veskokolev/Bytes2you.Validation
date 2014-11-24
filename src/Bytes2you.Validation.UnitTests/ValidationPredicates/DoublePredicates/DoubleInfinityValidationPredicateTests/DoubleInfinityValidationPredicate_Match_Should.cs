@@ -47,7 +47,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.DoublePredicates.D
 
             // Assert.
             Assert.IsFalse(result.IsMatch);
-            Assert.AreEqual("Argument value 5 is not Infinity.", result.Message);
+            Assert.AreEqual("Argument value <5> is not Infinity.", result.Message);
         }
     }
 }

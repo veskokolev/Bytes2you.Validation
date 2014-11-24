@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Bytes2you.Validation.Helpers;
 
 namespace Bytes2you.Validation.ValidationPredicates.ClassPredicates
 {
@@ -28,12 +29,12 @@ namespace Bytes2you.Validation.ValidationPredicates.ClassPredicates
 
         protected override string GetMatchMessage(T value)
         {
-            return string.Format(ValidationPredicateMessages.OfTypeMessage, this.type);
+            return MessageFormatHelper.Format(ValidationPredicateMessages.OfTypeMessage, this.type);
         }
 
         protected override string GetUnmatchMessage(T value)
         {
-            return string.Format(ValidationPredicateMessages.NotOfTypeMessage, this.type);
+            return MessageFormatHelper.Format(ValidationPredicateMessages.NotOfTypeMessage, this.type);
         }
 
         protected override bool IsMatch(T value)
