@@ -2,7 +2,7 @@
 using System.Linq;
 using Bytes2you.Validation.UnitTests.Testing;
 using Bytes2you.Validation.UnitTests.Testing.Helpers;
-using Bytes2you.Validation.ValidationPredicates.DoublePredicates;
+using Bytes2you.Validation.ValidationPredicates.GenericPredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Bytes2you.Validation.UnitTests.FluentExtensions.DoubleArgumentFluentExtensionsTest
@@ -22,7 +22,9 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.DoubleArgumentFluentEx
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is DoubleNotNegativeInfinityValidationPredicate);
+            NotEqualValidationPredicate<double> validationPredicate = argument.ValidationPredicates.First() as NotEqualValidationPredicate<double>;
+            Assert.IsNotNull(validationPredicate);
+            Assert.AreEqual(validationPredicate.Bound, double.NegativeInfinity);
         }
 
         [TestMethod]

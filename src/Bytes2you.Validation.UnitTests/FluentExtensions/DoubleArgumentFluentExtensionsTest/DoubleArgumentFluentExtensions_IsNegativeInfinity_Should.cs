@@ -2,7 +2,7 @@
 using System.Linq;
 using Bytes2you.Validation.UnitTests.Testing;
 using Bytes2you.Validation.UnitTests.Testing.Helpers;
-using Bytes2you.Validation.ValidationPredicates.DoublePredicates;
+using Bytes2you.Validation.ValidationPredicates.GenericPredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Bytes2you.Validation.UnitTests.FluentExtensions.DoubleArgumentFluentExtensionsTest
@@ -11,7 +11,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.DoubleArgumentFluentEx
     public class DoubleArgumentFluentExtensions_IsNegativeInfinity_Should
     {
         [TestMethod]
-        public void AddDoubleNegativeInfinityValidationPredicate()
+        public void AddEqualValidationPredicateWithNegativeInfinityBound()
         {
             // Arrange.
             ValidatableArgument<double> argument =
@@ -22,7 +22,9 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.DoubleArgumentFluentEx
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is DoubleNegativeInfinityValidationPredicate);
+            EqualValidationPredicate<double> validationPredicate = argument.ValidationPredicates.First() as EqualValidationPredicate<double>;
+            Assert.IsNotNull(validationPredicate);
+            Assert.AreEqual(validationPredicate.Bound, double.NegativeInfinity);
         }
 
         [TestMethod]

@@ -19,7 +19,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.DoublePredicates.D
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
-            Assert.AreEqual("Argument value <5> is not Infinity.", result.Message);
+            Assert.AreEqual("Argument value <5> is not infinity.", result.Message);
         }
 
         [TestMethod]
@@ -33,7 +33,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.DoublePredicates.D
 
             // Assert.
             Assert.IsFalse(result.IsMatch);
-            Assert.AreEqual("The argument is Infinity.", result.Message);
+            Assert.AreEqual("The argument is infinity.", result.Message);
         }
 
         [TestMethod]
@@ -47,7 +47,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.DoublePredicates.D
 
             // Assert.
             Assert.IsFalse(result.IsMatch);
-            Assert.AreEqual("The argument is Infinity.", result.Message);
+            Assert.AreEqual("The argument is infinity.", result.Message);
         }
     }
 }

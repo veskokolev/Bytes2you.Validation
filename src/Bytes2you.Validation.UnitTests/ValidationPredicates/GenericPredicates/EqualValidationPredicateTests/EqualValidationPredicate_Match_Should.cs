@@ -77,5 +77,173 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.GenericPredicates.
             Assert.IsFalse(result.IsMatch);
             Assert.AreEqual("Argument value <null> is not equal to <a>.", result.Message);
         }
+
+        [TestMethod]
+        public void ReturnTrueAndMatchMessage_WhenBoundIsDoublePositiveInfinityAndArgumentIsPositiveInfinity()
+        {
+            // Arrange.
+            EqualValidationPredicate<double> validationPredicate = new EqualValidationPredicate<double>(double.PositiveInfinity);
+
+            // Act.
+            IValidationPredicateResult result = validationPredicate.Match(double.PositiveInfinity);
+
+            // Assert.
+            Assert.IsTrue(result.IsMatch);
+            Assert.AreEqual("The argument is equal to <Infinity>.", result.Message);
+        }
+
+        [TestMethod]
+        public void ReturnFalseAndUnmatchMessage_WhenBoundIsDoublePositiveInfinityAndArgumentIsNegativeInfinity()
+        {
+            // Arrange.
+            EqualValidationPredicate<double> validationPredicate = new EqualValidationPredicate<double>(double.PositiveInfinity);
+
+            // Act.
+            IValidationPredicateResult result = validationPredicate.Match(double.NegativeInfinity);
+
+            // Assert.
+            Assert.IsFalse(result.IsMatch);
+            Assert.AreEqual("Argument value <-Infinity> is not equal to <Infinity>.", result.Message);
+        }
+
+        [TestMethod]
+        public void ReturnFalseAndUnmatchMessage_WhenBoundIsDoublePositiveInfinityAndArgumentIsNotInfinity()
+        {
+            // Arrange.
+            EqualValidationPredicate<double> validationPredicate = new EqualValidationPredicate<double>(double.PositiveInfinity);
+
+            // Act.
+            IValidationPredicateResult result = validationPredicate.Match(5);
+
+            // Assert.
+            Assert.IsFalse(result.IsMatch);
+            Assert.AreEqual("Argument value <5> is not equal to <Infinity>.", result.Message);
+        }
+
+        [TestMethod]
+        public void ReturnTrueAndMatchMessage_WhenBoundIsDoubleNegativeInfinityAndArgumentIsNegativeInfinity()
+        {
+            // Arrange.
+            EqualValidationPredicate<double> validationPredicate = new EqualValidationPredicate<double>(double.NegativeInfinity);
+
+            // Act.
+            IValidationPredicateResult result = validationPredicate.Match(double.NegativeInfinity);
+
+            // Assert.
+            Assert.IsTrue(result.IsMatch);
+            Assert.AreEqual("The argument is equal to <-Infinity>.", result.Message);
+        }
+
+        [TestMethod]
+        public void ReturnFalseAndUnmatchMessage_WhenBoundIsDoubleNegativeInfinityAndArgumentIsPositiveInfinity()
+        {
+            // Arrange.
+            EqualValidationPredicate<double> validationPredicate = new EqualValidationPredicate<double>(double.NegativeInfinity);
+
+            // Act.
+            IValidationPredicateResult result = validationPredicate.Match(double.PositiveInfinity);
+
+            // Assert.
+            Assert.IsFalse(result.IsMatch);
+            Assert.AreEqual("Argument value <Infinity> is not equal to <-Infinity>.", result.Message);
+        }
+
+        [TestMethod]
+        public void ReturnFalseAndUnmatchMessage_WhenBoundIsDoubleNegativeInfinityAndArgumentIsNotInfinity()
+        {
+            // Arrange.
+            EqualValidationPredicate<double> validationPredicate = new EqualValidationPredicate<double>(double.NegativeInfinity);
+
+            // Act.
+            IValidationPredicateResult result = validationPredicate.Match(5);
+
+            // Assert.
+            Assert.IsFalse(result.IsMatch);
+            Assert.AreEqual("Argument value <5> is not equal to <-Infinity>.", result.Message);
+        }
+
+        [TestMethod]
+        public void ReturnTrueAndMatchMessage_WhenBoundIsFloatPositiveInfinityAndArgumentIsPositiveInfinity()
+        {
+            // Arrange.
+            EqualValidationPredicate<float> validationPredicate = new EqualValidationPredicate<float>(float.PositiveInfinity);
+
+            // Act.
+            IValidationPredicateResult result = validationPredicate.Match(float.PositiveInfinity);
+
+            // Assert.
+            Assert.IsTrue(result.IsMatch);
+            Assert.AreEqual("The argument is equal to <Infinity>.", result.Message);
+        }
+
+        [TestMethod]
+        public void ReturnFalseAndUnmatchMessage_WhenBoundIsFloatPositiveInfinityAndArgumentIsNegativeInfinity()
+        {
+            // Arrange.
+            EqualValidationPredicate<float> validationPredicate = new EqualValidationPredicate<float>(float.PositiveInfinity);
+
+            // Act.
+            IValidationPredicateResult result = validationPredicate.Match(float.NegativeInfinity);
+
+            // Assert.
+            Assert.IsFalse(result.IsMatch);
+            Assert.AreEqual("Argument value <-Infinity> is not equal to <Infinity>.", result.Message);
+        }
+
+        [TestMethod]
+        public void ReturnFalseAndUnmatchMessage_WhenBoundIsFloatPositiveInfinityAndArgumentIsNotInfinity()
+        {
+            // Arrange.
+            EqualValidationPredicate<float> validationPredicate = new EqualValidationPredicate<float>(float.PositiveInfinity);
+
+            // Act.
+            IValidationPredicateResult result = validationPredicate.Match(5);
+
+            // Assert.
+            Assert.IsFalse(result.IsMatch);
+            Assert.AreEqual("Argument value <5> is not equal to <Infinity>.", result.Message);
+        }
+
+        [TestMethod]
+        public void ReturnTrueAndMatchMessage_WhenBoundIsFloatNegativeInfinityAndArgumentIsNegativeInfinity()
+        {
+            // Arrange.
+            EqualValidationPredicate<float> validationPredicate = new EqualValidationPredicate<float>(float.NegativeInfinity);
+
+            // Act.
+            IValidationPredicateResult result = validationPredicate.Match(float.NegativeInfinity);
+
+            // Assert.
+            Assert.IsTrue(result.IsMatch);
+            Assert.AreEqual("The argument is equal to <-Infinity>.", result.Message);
+        }
+
+        [TestMethod]
+        public void ReturnFalseAndUnmatchMessage_WhenBoundIsFloatNegativeInfinityAndArgumentIsPositiveInfinity()
+        {
+            // Arrange.
+            EqualValidationPredicate<float> validationPredicate = new EqualValidationPredicate<float>(float.NegativeInfinity);
+
+            // Act.
+            IValidationPredicateResult result = validationPredicate.Match(float.PositiveInfinity);
+
+            // Assert.
+            Assert.IsFalse(result.IsMatch);
+            Assert.AreEqual("Argument value <Infinity> is not equal to <-Infinity>.", result.Message);
+        }
+
+        [TestMethod]
+        public void ReturnFalseAndUnmatchMessage_WhenBoundIsFloatNegativeInfinityAndArgumentIsNotInfinity()
+        {
+            // Arrange.
+            EqualValidationPredicate<float> validationPredicate = new EqualValidationPredicate<float>(float.NegativeInfinity);
+
+            // Act.
+            IValidationPredicateResult result = validationPredicate.Match(5);
+
+            // Assert.
+            Assert.IsFalse(result.IsMatch);
+            Assert.AreEqual("Argument value <5> is not equal to <-Infinity>.", result.Message);
+        }
     }
 }
