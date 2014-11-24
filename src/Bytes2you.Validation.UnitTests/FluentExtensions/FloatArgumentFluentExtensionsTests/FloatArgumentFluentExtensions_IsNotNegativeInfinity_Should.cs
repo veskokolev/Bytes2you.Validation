@@ -11,7 +11,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.FloatArgumentFluentExt
     public class FloatArgumentFluentExtensions_IsNotNegativeInfinity_Should
     {
         [TestMethod]
-        public void AddFloatNotNegativeInfinityValidationPredicate()
+        public void AddNotEqualValidationPredicateWithFloatNegativeInfinityBound()
         {
             // Arrange.
             ValidatableArgument<float> argument =

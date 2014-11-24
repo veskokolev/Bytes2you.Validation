@@ -11,7 +11,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.DoubleArgumentFluentEx
     public class DoubleArgumentFluentExtensions_IsPositiveInfinity_Should
     {
         [TestMethod]
-        public void AddDoublePositiveInfinityValidationPredicate()
+        public void AddEqualValidationPredicateWithDoublePositiveInfinityBound()
         {
             // Arrange.
             ValidatableArgument<double> argument =
