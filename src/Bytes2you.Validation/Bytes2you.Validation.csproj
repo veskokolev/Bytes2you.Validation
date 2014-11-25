@@ -87,8 +87,8 @@
     <Compile Include="ValidationPredicates\FloatPredicates\FloatNotNaNValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\ComparablePredicates\GreaterThanOrEqualValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\ComparablePredicates\GreaterThanValidationPredicate.cs" />
-    <Compile Include="ValidationPredicates\ClassPredicates\NotOfTypeValidationPredicate.cs" />
-    <Compile Include="ValidationPredicates\ClassPredicates\OfTypeValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\ClassPredicates\NotInstanceOfTypeValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\ClassPredicates\InstanceOfTypeValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\ComparablePredicates\LessThanOrEqualValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\ComparablePredicates\LessThanValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\DoublePredicates\DoubleNaNValidationPredicate.cs" />

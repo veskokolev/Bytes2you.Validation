@@ -8,20 +8,20 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Bytes2you.Validation.UnitTests.FluentExtensions.ClassArgumentFluentExtensions
 {
     [TestClass]
-    public class ClassFluentExtensions_IsNotOfType_Should
+    public class ClassArgumentFluentExtensions_IsInstanceOfType_Should
     {
         [TestMethod]
-        public void AddNotOfTypeValidationPredicate()
+        public void AddInstanceOfTypeValidationPredicate()
         {
             // Arrange.
             ValidatableArgument<object> argument = new ValidatableArgument<object>("argument", new object());
 
             // Act.
-            argument.IsNotOfType(typeof(string));
+            argument.IsInstanceOfType(typeof(string));
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is NotOfTypeValidationPredicate<object>);
+            Assert.IsTrue(argument.ValidationPredicates.First() is InstanceOfTypeValidationPredicate<object>);
         }
 
         [TestMethod]
@@ -34,7 +34,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ClassArgumentFluentExt
             Ensure.ActionRunsInExpectedTime(
                 () =>
                 {
-                    argument.IsNotOfType(typeof(string));
+                    argument.IsInstanceOfType(typeof(string));
                 },
                 PerformanceConstants.ValidationPredicateExecutionCount,
                 PerformanceConstants.ValidationPredicateTotalExecutionExpectedTime);

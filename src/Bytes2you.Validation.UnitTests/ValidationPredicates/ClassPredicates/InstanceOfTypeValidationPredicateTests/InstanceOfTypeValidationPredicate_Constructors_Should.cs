@@ -4,10 +4,10 @@ using Bytes2you.Validation.UnitTests.Testing.Helpers;
 using Bytes2you.Validation.ValidationPredicates.ClassPredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Bytes2you.Validation.UnitTests.ValidationPredicates.ClassPredicates.NotOfTypeValidationPredicateTests
+namespace Bytes2you.Validation.UnitTests.ValidationPredicates.ClassPredicates.InstanceOfTypeValidationPredicateTests
 {
     [TestClass]
-    public class NotOfTypeValidationPredicate_Constructors_Should
+    public class InstanceOfTypeValidationPredicate_Constructors_Should
     {
         [TestMethod]
         public void ThrowException_WhenTypeArgumentIsNull()
@@ -18,7 +18,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.ClassPredicates.No
             // Act & Assert.
             Ensure.ArgumentNullExceptionIsThrown(() =>
             {
-                new NotOfTypeValidationPredicate<string>(type);
+                new InstanceOfTypeValidationPredicate<string>(type);
             }, "type");
         }
 
@@ -29,7 +29,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.ClassPredicates.No
             Type type = typeof(object);
 
             // Act.
-            NotOfTypeValidationPredicate<string> validationPredicate = new NotOfTypeValidationPredicate<string>(type);
+            InstanceOfTypeValidationPredicate<string> validationPredicate = new InstanceOfTypeValidationPredicate<string>(type);
 
             // Assert.
             Assert.AreEqual(type, validationPredicate.Type);

@@ -8,7 +8,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Bytes2you.Validation.UnitTests.FluentExtensions.ClassArgumentFluentExtensions
 {
     [TestClass]
-    public class ClassFluentExtensions_IsNull_Should
+    public class ClassArgumentFluentExtensions_IsNull_Should
     {
         [TestMethod]
         public void AddNullValidationPredicate()

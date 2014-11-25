@@ -34,7 +34,7 @@ namespace Bytes2you.Validation.ValidationPredicates
         public static readonly string InfinityMessage = "The argument is infinity.";
         public static readonly string NotInfinityMessage = "Argument value <{0}> is not infinity.";
 
-        public static readonly string OfTypeMessage = "The argument is of type <{0}>.";
-        public static readonly string NotOfTypeMessage = "The argument is not of type <{0}>.";
+        public static readonly string InstanceOfTypeMessage = "The argument is instance of type <{0}>.";
+        public static readonly string NotInstanceOfTypeMessage = "The argument is not instance of type <{0}>.";
     }
 }
