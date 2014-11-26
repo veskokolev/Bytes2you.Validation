@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.EnumerablePredicates.EnumerableNullOrEmptyValidationPredicateTests
 {
     [TestClass]
-    public class EnumerableNullOrEmptyValidationPredicate_Constructors_Should
+    public class Constructors_Should
     {
         [TestMethod]
         public void NotBePublic()

@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.ClassPredicates.NullValidationPredicateTests
 {
     [TestClass]
-    public class NullValidationPredicate_Match_Should
+    public class Match_Should
     {
         [TestMethod]
         public void ReturnFalseAndUnmatchMessage_WhenArgumentIsNotNull()

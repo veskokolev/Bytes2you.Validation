@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.Bools.TrueValidationPredicateTests
 {
     [TestClass]
-    public class TrueValidationPredicate_Constructors_Should
+    public class Constructors_Should
     {
         [TestMethod]
         public void NotBePublic()

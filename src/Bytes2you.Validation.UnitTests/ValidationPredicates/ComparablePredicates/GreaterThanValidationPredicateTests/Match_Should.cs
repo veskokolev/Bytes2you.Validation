@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.ComparablePredicates.GreaterThanValidationPredicateTests
 {
     [TestClass]
-    public class GreaterThanValidationPredicate_Match_Should
+    public class Match_Should
     {
         [TestMethod]
         public void ReturnFalseAndUnmatchMessage_WhenArgumentIsLessThanTheBound()

@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Bytes2you.Validation.UnitTests.ValidationPredicates.DoublePredicates.DoubleInfinityValidationPredicateTests
 {
     [TestClass]
-    public class DoubleInfinityValidationPredicate_Constructors_Should
+    public class Constructors_Should
     {
         [TestMethod]
         public void NotBePublic()

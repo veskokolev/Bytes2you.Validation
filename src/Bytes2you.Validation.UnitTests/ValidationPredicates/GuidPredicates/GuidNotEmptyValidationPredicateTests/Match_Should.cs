@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.GuidPredicates.GuidNotEmptyValidationPredicateTests
 {
     [TestClass]
-    public class GuidNotEmptyValidationPredicate_Match_Should
+    public class Match_Should
     {
         [TestMethod]
         public void ReturnTrueAndMatchMessage_WhenArgumentIsNotGuidEmpty()

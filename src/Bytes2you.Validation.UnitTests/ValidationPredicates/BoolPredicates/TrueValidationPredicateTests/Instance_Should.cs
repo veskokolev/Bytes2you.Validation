@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Bytes2you.Validation.UnitTests.ValidationPredicates.BoolPredicates.TrueValidationPredicateTests
 {
     [TestClass]
-    public class TrueValidationPredicate_Instance_Should
+    public class Instance_Should
     {
         [TestMethod]
         public void ReturnNotNull()

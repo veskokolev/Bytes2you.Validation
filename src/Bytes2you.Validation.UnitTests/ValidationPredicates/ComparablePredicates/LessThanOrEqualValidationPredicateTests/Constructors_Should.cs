@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.ComparablePredicates.LessThanOrEqualValidationPredicateTests
 {
     [TestClass]
-    public class LessThanOrEqualValidationPredicate_Constructors_Should
+    public class Constructors_Should
     {
         [TestMethod]
         public void SetTheGivenBoundToTheBoundProperty()
