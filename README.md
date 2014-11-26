@@ -57,6 +57,14 @@ When T is class:
 ```cs
   .IsNull();
   .IsNotNull();
+  .IsInstanceOfType(type);
+  .IsNotInstanceOfType(type);
+```
+
+When T is Nullable:
+```cs
+  .IsNull();
+  .IsNotNull();
 ```
 
 When T is bool:
@@ -89,6 +97,28 @@ When T is string:
 ```cs
   .IsNullOrEmpty();
   .IsNotNullOrEmpty();
+```
+
+When T is float/double:
+```cs
+  .IsNaN();
+  .IsNotNaN();
+  .IsInfinity();
+  .IsNotInfinity();
+  .IsPositiveInfinity();
+  .IsNotPositiveInfinity();
+  .IsNegativeInfinity();
+  .IsNegativeInfinity();
+```
+
+When T is byte/short:
+```cs
+  .IsEqual(value);
+  .IsNotEqual(value);
+  .IsLessThan(bound);
+  .IsGreaterThan(bound);
+  .IsLessThanOrEqual(bound);
+  .IsGreaterThanOrEqual(bound);
 ```
 
 Stable
