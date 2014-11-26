@@ -108,7 +108,7 @@ When T is float/double:
   .IsPositiveInfinity();
   .IsNotPositiveInfinity();
   .IsNegativeInfinity();
-  .IsNegativeInfinity();
+  .IsNotNegativeInfinity();
 ```
 
 When T is byte/short:
