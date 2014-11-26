@@ -1,12 +1,28 @@
 ﻿using System;
 using System.Linq;
+using Bytes2you.Validation.Helpers;
 
 namespace Bytes2you.Validation.ValidationPredicates.BoolPredicates
 {
-    internal class TrueValidationPredicate : SingletonValidationPredicate<TrueValidationPredicate, bool>
+    internal class TrueValidationPredicate : ValidationPredicate<bool>
     {
+        private static readonly Lazy<TrueValidationPredicate> lazyInstance;
+
+        static TrueValidationPredicate()
+        {
+            lazyInstance = new Lazy<TrueValidationPredicate>(() => new TrueValidationPredicate());
+        }
+
         private TrueValidationPredicate()
         {
+        }
+
+        public static TrueValidationPredicate Instance
+        {
+            get
+            {
+                return lazyInstance.Value;
+            }
         }
 
         protected override string GetMatchMessage(bool value)

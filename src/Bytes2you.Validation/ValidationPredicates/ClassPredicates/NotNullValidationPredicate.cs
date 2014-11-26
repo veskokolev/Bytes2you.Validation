@@ -4,11 +4,26 @@ using Bytes2you.Validation.Helpers;
 
 namespace Bytes2you.Validation.ValidationPredicates.ClassPredicates
 {
-    internal class NotNullValidationPredicate<T> : SingletonValidationPredicate<NotNullValidationPredicate<T>, T>
+    internal class NotNullValidationPredicate<T> : ValidationPredicate<T>
         where T : class
     {
+        private static readonly Lazy<NotNullValidationPredicate<T>> lazyInstance;
+
+        static NotNullValidationPredicate()
+        {
+            lazyInstance = new Lazy<NotNullValidationPredicate<T>>(() => new NotNullValidationPredicate<T>());
+        }
+
         private NotNullValidationPredicate()
         {
+        }
+
+        public static NotNullValidationPredicate<T> Instance
+        {
+            get
+            {
+                return lazyInstance.Value;
+            }
         }
 
         protected override string GetMatchMessage(T value)

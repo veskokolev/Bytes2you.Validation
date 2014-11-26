@@ -8,8 +8,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Fast, extensible, intuitive and easy-to-use C# library providing fluent APIs for argument validation. Gives everything you need to implement defensive programming in your .NET application")]
 [assembly: AssemblyCopyright("Copyright bytes2you©  2014")]
 
-[assembly: ComVisible(false)]
-[assembly: Guid("47264e79-a279-4665-8e28-ef617ccb1b8f")]
 [assembly: AssemblyVersion("1.1.0.0")]
 [assembly: AssemblyFileVersion("1.1.0.0")]
 

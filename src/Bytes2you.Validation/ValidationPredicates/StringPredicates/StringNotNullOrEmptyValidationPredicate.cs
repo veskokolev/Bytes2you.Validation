@@ -1,12 +1,28 @@
 ﻿using System;
 using System.Linq;
+using Bytes2you.Validation.Helpers;
 
 namespace Bytes2you.Validation.ValidationPredicates.StringPredicates
 {
-    internal class StringNotNullOrEmptyValidationPredicate : SingletonValidationPredicate<StringNotNullOrEmptyValidationPredicate, string>
+    internal class StringNotNullOrEmptyValidationPredicate : ValidationPredicate<string>
     {
+        private static readonly Lazy<StringNotNullOrEmptyValidationPredicate> lazyInstance;
+
+        static StringNotNullOrEmptyValidationPredicate()
+        {
+            lazyInstance = new Lazy<StringNotNullOrEmptyValidationPredicate>(() => new StringNotNullOrEmptyValidationPredicate());
+        }
+
         private StringNotNullOrEmptyValidationPredicate()
         {
+        }
+
+        public static StringNotNullOrEmptyValidationPredicate Instance
+        {
+            get
+            {
+                return lazyInstance.Value;
+            }
         }
 
         protected override string GetMatchMessage(string value)

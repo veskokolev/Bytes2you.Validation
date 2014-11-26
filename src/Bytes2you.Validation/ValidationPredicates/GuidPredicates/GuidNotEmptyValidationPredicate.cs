@@ -4,10 +4,25 @@ using Bytes2you.Validation.Helpers;
 
 namespace Bytes2you.Validation.ValidationPredicates.GuidPredicates
 {
-    internal class GuidNotEmptyValidationPredicate : SingletonValidationPredicate<GuidNotEmptyValidationPredicate, Guid>
+    internal class GuidNotEmptyValidationPredicate : ValidationPredicate<Guid>
     {
+        private static readonly Lazy<GuidNotEmptyValidationPredicate> lazyInstance;
+
+        static GuidNotEmptyValidationPredicate()
+        {
+            lazyInstance = new Lazy<GuidNotEmptyValidationPredicate>(() => new GuidNotEmptyValidationPredicate());
+        }
+
         private GuidNotEmptyValidationPredicate()
         {
+        }
+
+        public static GuidNotEmptyValidationPredicate Instance
+        {
+            get
+            {
+                return lazyInstance.Value;
+            }
         }
 
         protected override string GetMatchMessage(Guid value)

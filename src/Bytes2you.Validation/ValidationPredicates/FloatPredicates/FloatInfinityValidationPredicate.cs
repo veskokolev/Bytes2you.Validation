@@ -4,10 +4,25 @@ using Bytes2you.Validation.Helpers;
 
 namespace Bytes2you.Validation.ValidationPredicates.FloatPredicates
 {
-    internal class FloatInfinityValidationPredicate : SingletonValidationPredicate<FloatInfinityValidationPredicate, float>
+    internal class FloatInfinityValidationPredicate : ValidationPredicate<float>
     {
+        private static readonly Lazy<FloatInfinityValidationPredicate> lazyInstance;
+
+        static FloatInfinityValidationPredicate()
+        {
+            lazyInstance = new Lazy<FloatInfinityValidationPredicate>(() => new FloatInfinityValidationPredicate());
+        }
+
         private FloatInfinityValidationPredicate()
         {
+        }
+
+        public static FloatInfinityValidationPredicate Instance
+        {
+            get
+            {
+                return lazyInstance.Value;
+            }
         }
 
         protected override bool IsMatch(float value)

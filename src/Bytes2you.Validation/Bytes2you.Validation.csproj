@@ -5,13 +5,15 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9BF2536B-BD3E-4597-9AF5-1BD880A05727}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Bytes2you.Validation</RootNamespace>
     <AssemblyName>Bytes2you.Validation</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <TargetFrameworkProfile>Profile1</TargetFrameworkProfile>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,10 +45,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +62,7 @@
     <Compile Include="FluentExtensions\EnumerableArgumentFluentExttensions.cs" />
     <Compile Include="FluentExtensions\GuidArgumentFluentExtensions.cs" />
     <Compile Include="Helpers\EnumerableHelper.cs" />
+    <Compile Include="Helpers\Lazy.cs" />
     <Compile Include="Helpers\MessageFormatHelper.cs" />
     <Compile Include="IValidationPredicateResult.cs" />
     <Compile Include="IValidationPredicate.cs" />
@@ -101,7 +100,6 @@
     <Compile Include="ValidationPredicates\ClassPredicates\NotNullValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\NullablePredicates\NullableNullValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\EnumerablePredicates\EnumerableNullOrEmptyValidationPredicate.cs" />
-    <Compile Include="ValidationPredicates\SingletonValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\BoolPredicates\TrueValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\ValidationPredicate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,7 +114,7 @@
   <!--<ItemGroup>
     <None Include="bytes2you.pfx" />
   </ItemGroup>-->
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

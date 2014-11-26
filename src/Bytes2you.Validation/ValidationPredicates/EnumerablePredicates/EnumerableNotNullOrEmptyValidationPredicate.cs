@@ -5,11 +5,26 @@ using Bytes2you.Validation.Helpers;
 
 namespace Bytes2you.Validation.ValidationPredicates.EnumerablePredicates
 {
-    internal class EnumerableNotNullOrEmptyValidationPredicate<T> : SingletonValidationPredicate<EnumerableNotNullOrEmptyValidationPredicate<T>, T>
+    internal class EnumerableNotNullOrEmptyValidationPredicate<T> : ValidationPredicate<T>
         where T : IEnumerable
     {
+        private static readonly Lazy<EnumerableNotNullOrEmptyValidationPredicate<T>> lazyInstance;
+
+        static EnumerableNotNullOrEmptyValidationPredicate()
+        {
+            lazyInstance = new Lazy<EnumerableNotNullOrEmptyValidationPredicate<T>>(() => new EnumerableNotNullOrEmptyValidationPredicate<T>());
+        }
+
         private EnumerableNotNullOrEmptyValidationPredicate()
         {
+        }
+
+        public static EnumerableNotNullOrEmptyValidationPredicate<T> Instance
+        {
+            get
+            {
+                return lazyInstance.Value;
+            }
         }
 
         protected override string GetMatchMessage(T value)
