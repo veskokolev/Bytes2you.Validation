@@ -1,6 +1,15 @@
 Bytes2you.Validation
 ==============
-Fast, extensible, intuitive and easy-to-use C# library providing fluent APIs for argument validation. Gives everything you need to implement defensive programming (http://veskokolev.com/2014/04/27/defensive-programming-technique-the-way-to-fast-failure/) in your .NET applicatinos.
+Fast, extensible, intuitive and easy-to-use C# portable library providing fluent APIs for argument validation. Gives everything you need to implement defensive programming (http://veskokolev.com/2014/04/27/defensive-programming-technique-the-way-to-fast-failure/) in your .NET applicatinos. 
+
+Supported Frameworks
+==============
+The supported frameworks are:
+    - .NET Framework 4 and higher; 
+    - Silverlight 4 and higher; 
+    - Windows Phone 7 and higher; 
+    - .NET for Windows Store apps; 
+    - Xbox 360.
 
 Installation
 ==============
