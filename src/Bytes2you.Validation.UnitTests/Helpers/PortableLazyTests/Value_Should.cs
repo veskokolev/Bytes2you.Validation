@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Bytes2you.Validation.Helpers;
 
 namespace Bytes2you.Validation.UnitTests.Helpers.PortableLazyTests
 {
@@ -14,8 +15,8 @@ namespace Bytes2you.Validation.UnitTests.Helpers.PortableLazyTests
             int valueFactoryCallCount = 0;
             object value = new object();
 
-            Lazy<object> lazy = 
-                new Lazy<object>(
+            PortableLazy<object> lazy =
+                new PortableLazy<object>(
                 () => 
                 {
                     valueFactoryCallCount++; 
