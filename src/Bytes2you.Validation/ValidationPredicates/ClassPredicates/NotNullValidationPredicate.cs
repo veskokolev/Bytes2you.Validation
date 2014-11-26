@@ -7,11 +7,11 @@ namespace Bytes2you.Validation.ValidationPredicates.ClassPredicates
     internal class NotNullValidationPredicate<T> : ValidationPredicate<T>
         where T : class
     {
-        private static readonly Lazy<NotNullValidationPredicate<T>> lazyInstance;
+        private static readonly PortableLazy<NotNullValidationPredicate<T>> lazyInstance;
 
         static NotNullValidationPredicate()
         {
-            lazyInstance = new Lazy<NotNullValidationPredicate<T>>(() => new NotNullValidationPredicate<T>());
+            lazyInstance = new PortableLazy<NotNullValidationPredicate<T>>(() => new NotNullValidationPredicate<T>());
         }
 
         private NotNullValidationPredicate()

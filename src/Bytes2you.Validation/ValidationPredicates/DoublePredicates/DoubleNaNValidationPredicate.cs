@@ -6,11 +6,11 @@ namespace Bytes2you.Validation.ValidationPredicates.DoublePredicates
 {
     internal class DoubleNaNValidationPredicate : ValidationPredicate<double>
     {
-        private static readonly Lazy<DoubleNaNValidationPredicate> lazyInstance;
+        private static readonly PortableLazy<DoubleNaNValidationPredicate> lazyInstance;
 
         static DoubleNaNValidationPredicate()
         {
-            lazyInstance = new Lazy<DoubleNaNValidationPredicate>(() => new DoubleNaNValidationPredicate());
+            lazyInstance = new PortableLazy<DoubleNaNValidationPredicate>(() => new DoubleNaNValidationPredicate());
         }
 
         private DoubleNaNValidationPredicate()

@@ -6,11 +6,11 @@ namespace Bytes2you.Validation.ValidationPredicates.BoolPredicates
 {
     internal class TrueValidationPredicate : ValidationPredicate<bool>
     {
-        private static readonly Lazy<TrueValidationPredicate> lazyInstance;
+        private static readonly PortableLazy<TrueValidationPredicate> lazyInstance;
 
         static TrueValidationPredicate()
         {
-            lazyInstance = new Lazy<TrueValidationPredicate>(() => new TrueValidationPredicate());
+            lazyInstance = new PortableLazy<TrueValidationPredicate>(() => new TrueValidationPredicate());
         }
 
         private TrueValidationPredicate()

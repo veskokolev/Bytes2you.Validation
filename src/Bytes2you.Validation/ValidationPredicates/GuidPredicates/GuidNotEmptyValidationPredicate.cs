@@ -6,11 +6,11 @@ namespace Bytes2you.Validation.ValidationPredicates.GuidPredicates
 {
     internal class GuidNotEmptyValidationPredicate : ValidationPredicate<Guid>
     {
-        private static readonly Lazy<GuidNotEmptyValidationPredicate> lazyInstance;
+        private static readonly PortableLazy<GuidNotEmptyValidationPredicate> lazyInstance;
 
         static GuidNotEmptyValidationPredicate()
         {
-            lazyInstance = new Lazy<GuidNotEmptyValidationPredicate>(() => new GuidNotEmptyValidationPredicate());
+            lazyInstance = new PortableLazy<GuidNotEmptyValidationPredicate>(() => new GuidNotEmptyValidationPredicate());
         }
 
         private GuidNotEmptyValidationPredicate()

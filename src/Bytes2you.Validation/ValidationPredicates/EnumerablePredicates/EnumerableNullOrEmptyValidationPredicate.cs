@@ -8,11 +8,11 @@ namespace Bytes2you.Validation.ValidationPredicates.EnumerablePredicates
     internal class EnumerableNullOrEmptyValidationPredicate<T> : ValidationPredicate<T>
         where T : IEnumerable
     {
-        private static readonly Lazy<EnumerableNullOrEmptyValidationPredicate<T>> lazyInstance;
+        private static readonly PortableLazy<EnumerableNullOrEmptyValidationPredicate<T>> lazyInstance;
 
         static EnumerableNullOrEmptyValidationPredicate()
         {
-            lazyInstance = new Lazy<EnumerableNullOrEmptyValidationPredicate<T>>(() => new EnumerableNullOrEmptyValidationPredicate<T>());
+            lazyInstance = new PortableLazy<EnumerableNullOrEmptyValidationPredicate<T>>(() => new EnumerableNullOrEmptyValidationPredicate<T>());
         }
 
         private EnumerableNullOrEmptyValidationPredicate()

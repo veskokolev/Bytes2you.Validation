@@ -6,11 +6,11 @@ namespace Bytes2you.Validation.ValidationPredicates.StringPredicates
 {
     internal class StringNullOrEmptyValidationPredicate : ValidationPredicate<string>
     {
-        private static readonly Lazy<StringNullOrEmptyValidationPredicate> lazyInstance;
+        private static readonly PortableLazy<StringNullOrEmptyValidationPredicate> lazyInstance;
 
         static StringNullOrEmptyValidationPredicate()
         {
-            lazyInstance = new Lazy<StringNullOrEmptyValidationPredicate>(() => new StringNullOrEmptyValidationPredicate());
+            lazyInstance = new PortableLazy<StringNullOrEmptyValidationPredicate>(() => new StringNullOrEmptyValidationPredicate());
         }
 
         private StringNullOrEmptyValidationPredicate()

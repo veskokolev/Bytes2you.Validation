@@ -117,8 +117,8 @@
     <Compile Include="GuardTests\Constructors_Should.cs" />
     <Compile Include="GuardTests\WhenArgument_Should.cs" />
     <Compile Include="Helpers\EnumerableHelperTests\IsNullOrEmpty_Should.cs" />
-    <Compile Include="Helpers\LazyTests\Constructors_Should.cs" />
-    <Compile Include="Helpers\LazyTests\Value_Should.cs" />
+    <Compile Include="Helpers\PortableLazyTests\Constructors_Should.cs" />
+    <Compile Include="Helpers\PortableLazyTests\Value_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Testing\Helpers\Ensure.cs" />
     <Compile Include="Testing\Mocks\ArgumentMock.cs" />

@@ -2,7 +2,7 @@
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Bytes2you.Validation.UnitTests.Helpers.LazyTests
+namespace Bytes2you.Validation.UnitTests.Helpers.PortableLazyTests
 {
     [TestClass]
     public class Value_Should

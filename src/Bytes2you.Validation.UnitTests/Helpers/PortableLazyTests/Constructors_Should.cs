@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Linq;
+using Bytes2you.Validation.Helpers;
 using Bytes2you.Validation.UnitTests.Testing.Helpers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Bytes2you.Validation.UnitTests.Helpers.LazyTests
+namespace Bytes2you.Validation.UnitTests.Helpers.PortableLazyTests
 {
     [TestClass]
     public class Constructors_Should
@@ -14,7 +15,7 @@ namespace Bytes2you.Validation.UnitTests.Helpers.LazyTests
             // Act & Assert.
             Ensure.ArgumentExceptionIsThrown(() =>
             {
-                Lazy<object> lazy = new Lazy<object>(null);
+                PortableLazy<object> lazy = new PortableLazy<object>(null);
             }, "valueFactory");
         }
     }

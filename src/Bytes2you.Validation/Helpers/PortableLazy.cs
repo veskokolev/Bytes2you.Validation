@@ -3,14 +3,14 @@ using System.Linq;
 
 namespace Bytes2you.Validation.Helpers
 {
-    internal class Lazy<T>
+    internal class PortableLazy<T>
     {
         private readonly object lockObject;
         private readonly Func<T> valueFactory;
         private bool isValueCreated;
         private T value;
 
-        public Lazy(Func<T> valueFactory)
+        public PortableLazy(Func<T> valueFactory)
         {
             if (valueFactory == null)
             {

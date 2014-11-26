@@ -6,11 +6,11 @@ namespace Bytes2you.Validation.ValidationPredicates.FloatPredicates
 {
     internal class FloatInfinityValidationPredicate : ValidationPredicate<float>
     {
-        private static readonly Lazy<FloatInfinityValidationPredicate> lazyInstance;
+        private static readonly PortableLazy<FloatInfinityValidationPredicate> lazyInstance;
 
         static FloatInfinityValidationPredicate()
         {
-            lazyInstance = new Lazy<FloatInfinityValidationPredicate>(() => new FloatInfinityValidationPredicate());
+            lazyInstance = new PortableLazy<FloatInfinityValidationPredicate>(() => new FloatInfinityValidationPredicate());
         }
 
         private FloatInfinityValidationPredicate()
