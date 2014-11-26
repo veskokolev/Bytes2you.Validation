@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Bytes2you.Validation")]
 [assembly: AssemblyCompany("bytes2you")]
 [assembly: AssemblyProduct("Bytes2you.Validation")]
-[assembly: AssemblyDescription("Fast, extensible, intuitive and easy-to-use C# library providing fluent APIs for argument validation. Gives everything you need to implement defensive programming in your .NET application")]
+[assembly: AssemblyDescription("Fast, extensible, intuitive and easy-to-use C# portable library providing fluent APIs for argument validation. Gives everything you need to implement defensive programming in your .NET application")]
 [assembly: AssemblyCopyright("Copyright bytes2you©  2014")]
 
 [assembly: AssemblyVersion("1.2.0.1")]
