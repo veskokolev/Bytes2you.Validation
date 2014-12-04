@@ -56,7 +56,7 @@ Rules List
 Guard.WhenArgument<T>(argument, "argument")
 ```
 
-Wor all T:
+For all T:
 ```cs
   .IsEqual(value);
   .IsNotEqual(value);
