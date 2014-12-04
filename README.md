@@ -136,4 +136,4 @@ The codebase is fully covered with unit tests (100% code coverage). Performance 
 
 Extensibility
 ==============
-One can easily add new rules (see ValidationRules namespace) and expose them trugh fulent API extensions (see FluentExtensions namespace).
+One can easily add new rules (see ValidationRules namespace) and expose them thought fluent API extensions (see FluentExtensions namespace).
