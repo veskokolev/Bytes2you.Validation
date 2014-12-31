@@ -36,7 +36,7 @@ public void SomeMethod(string stringArgument)
     
     if (stringArgument == "xxx")
     {
-        throw new ArgumentException("Argument is equal to \"xxx\"", "stringArgument);
+        throw new ArgumentException("Argument is equal to \"xxx\"", "stringArgument");
     }
 }
 ```
