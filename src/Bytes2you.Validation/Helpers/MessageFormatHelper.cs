@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Bytes2you.Validation.Helpers
 {
-    internal static class MessageFormatHelper
+    public static class MessageFormatHelper
     {
         public static string Format(string format, params object[] args)
         {

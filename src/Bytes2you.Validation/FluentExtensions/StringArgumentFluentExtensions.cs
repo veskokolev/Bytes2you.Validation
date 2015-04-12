@@ -16,5 +16,15 @@ namespace Bytes2you.Validation
         {
             return @argument.AddValidationPredicate(StringNotNullOrEmptyValidationPredicate.Instance);
         }
+
+        public static IValidatableArgument<string> IsEqual(this IArgument<string> @argument, string bound, StringComparison comparisonType)
+        {
+            return @argument.AddValidationPredicate(new StringEqualValidationPredicate(bound, comparisonType));
+        }
+
+        public static IValidatableArgument<string> IsNotEqual(this IArgument<string> @argument, string bound, StringComparison comparisonType)
+        {
+            return @argument.AddValidationPredicate(new StringNotEqualValidationPredicate(bound, comparisonType));
+        }
     }
 }

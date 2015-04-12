@@ -96,6 +96,8 @@
     <Compile Include="ValidationPredicates\DoublePredicates\DoubleNotNaNValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\NullablePredicates\NullableNotNullValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\EnumerablePredicates\EnumerableNotNullOrEmptyValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\StringPredicates\StringEqualValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\StringPredicates\StringNotEqualValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\StringPredicates\StringNotNullOrEmptyValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\ClassPredicates\NotNullValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\NullablePredicates\NullableNullValidationPredicate.cs" />

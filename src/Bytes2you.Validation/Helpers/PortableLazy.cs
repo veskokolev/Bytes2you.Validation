@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Bytes2you.Validation.Helpers
 {
-    internal class PortableLazy<T>
+    public class PortableLazy<T>
     {
         private readonly object lockObject;
         private readonly Func<T> valueFactory;

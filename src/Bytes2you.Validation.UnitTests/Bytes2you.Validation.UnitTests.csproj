@@ -110,6 +110,8 @@
     <Compile Include="FluentExtensions\ShortArgumentFluentExtensionsTests\IsLessThanOrEqual_Should.cs" />
     <Compile Include="FluentExtensions\ShortArgumentFluentExtensionsTests\IsLessThan_Should.cs" />
     <Compile Include="FluentExtensions\ShortArgumentFluentExtensionsTests\IsNotEqual_Should.cs" />
+    <Compile Include="FluentExtensions\StringArgumentFluentExtensionsTests\IsEqual_Should.cs" />
+    <Compile Include="FluentExtensions\StringArgumentFluentExtensionsTests\IsNotEqual_Should.cs" />
     <Compile Include="FluentExtensions\StringArgumentFluentExtensionsTests\IsNotNullOrEmpty_Should.cs" />
     <Compile Include="FluentExtensions\StringArgumentFluentExtensionsTests\IsNullOrEmpty_Should.cs" />
     <Compile Include="FluentExtensions\ValidatableArgumentFluentExtensionTests\TryGetArgumentException_Should.cs" />
@@ -186,6 +188,10 @@
     <Compile Include="ValidationPredicates\EnumerablePredicates\EnumerableNotNullOrEmptyValidationPredicateTests\Constructors_Should.cs" />
     <Compile Include="ValidationPredicates\EnumerablePredicates\EnumerableNotNullOrEmptyValidationPredicateTests\Match_Should.cs" />
     <Compile Include="ValidationPredicates\NullablePredicates\NullableNullValidationPredicateTests\Instance_Should.cs" />
+    <Compile Include="ValidationPredicates\StringPredicates\StringEqualValidationPredicateTests\Constructors_Should.cs" />
+    <Compile Include="ValidationPredicates\StringPredicates\StringEqualValidationPredicateTests\Match_Should.cs" />
+    <Compile Include="ValidationPredicates\StringPredicates\StringNotEqualValidationPredicateTests\Constructors_Should.cs" />
+    <Compile Include="ValidationPredicates\StringPredicates\StringNotEqualValidationPredicateTests\Match_Should.cs" />
     <Compile Include="ValidationPredicates\StringPredicates\StringNotNullOrEmptyValidationPredicateTests\Constructors_Should.cs" />
     <Compile Include="ValidationPredicates\StringPredicates\StringNotNullOrEmptyValidationPredicateTests\Instance_Should.cs" />
     <Compile Include="ValidationPredicates\StringPredicates\StringNotNullOrEmptyValidationPredicateTests\Match_Should.cs" />

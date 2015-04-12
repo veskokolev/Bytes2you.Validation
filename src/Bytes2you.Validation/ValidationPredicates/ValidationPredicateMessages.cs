@@ -21,6 +21,8 @@ namespace Bytes2you.Validation.ValidationPredicates
 
         public static readonly string NullOrEmptyStringMessage = "The argument is null or empty.";
         public static readonly string NotNullOrEmptyStringMessage = "Argument value <{0}> is neither null nor empty.";
+        public static readonly string EqualStringMessage = "Argument value <{0}> is equal to <{1}>. StringComparison <{2}>.";
+        public static readonly string NotEqualStringMessage = "Argument value <{0}> is not equal to <{1}>. StringComparison <{2}>.";
 
         public static readonly string TrueMessage = "The argument is true.";
         public static readonly string FalseMessage = "The argument is false.";

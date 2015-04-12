@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Bytes2you.Validation.Extensions
 {
-    internal static class ArgumentExtensions
+    public static class ArgumentExtensions
     {
-        public static ValidatableArgument<T> ToValidatableArgument<T>(this IArgument<T> @argument)
+        internal static IValidatableArgument<T> ToValidatableArgument<T>(this IArgument<T> @argument)
         {
             if (@argument == null)
             {
@@ -21,7 +21,7 @@ namespace Bytes2you.Validation.Extensions
             return validatableArgument;
         }
 
-        public static ValidatableArgument<T> AddValidationPredicate<T>(this IArgument<T> @argument, IValidationPredicate<T> validationPredicate)
+        public static IValidatableArgument<T> AddValidationPredicate<T>(this IArgument<T> @argument, IValidationPredicate<T> validationPredicate)
         {
             if (@argument == null)
             {
@@ -33,7 +33,7 @@ namespace Bytes2you.Validation.Extensions
                 throw new ArgumentNullException("validationPredicate");
             }
 
-            ValidatableArgument<T> validatableArgument = @argument.ToValidatableArgument();
+            IValidatableArgument<T> validatableArgument = @argument.ToValidatableArgument();
             validatableArgument.AddValidationPredicate(validationPredicate);
 
             return validatableArgument;

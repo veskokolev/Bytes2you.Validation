@@ -30,7 +30,7 @@ namespace Bytes2you.Validation.UnitTests.Extensions.ArgumentExtensionsTests
             IArgument<int> argument = new ValidatableArgument<int>("argument", 3);
 
             // Act.
-            ValidatableArgument<int> validatableArgument = argument.ToValidatableArgument();
+            IValidatableArgument<int> validatableArgument = argument.ToValidatableArgument();
 
             // Assert.
             Assert.AreSame(argument, validatableArgument);
@@ -43,7 +43,7 @@ namespace Bytes2you.Validation.UnitTests.Extensions.ArgumentExtensionsTests
             IArgument<int> argument = new IntArgumentMock();
 
             // Act.
-            ValidatableArgument<int> validatableArgument = argument.ToValidatableArgument();
+            IValidatableArgument<int> validatableArgument = argument.ToValidatableArgument();
 
             // Assert.
             Assert.AreNotSame(argument, validatableArgument);
