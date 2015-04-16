@@ -21,7 +21,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ComparableOfTArgumentF
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is LessThanValidationPredicate<int>);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(LessThanValidationPredicate<int>));
         }
 
         [TestMethod]
@@ -35,7 +35,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ComparableOfTArgumentF
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is LessThanValidationPredicate<long>);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(LessThanValidationPredicate<long>));
         }
 
         [TestMethod]
@@ -49,7 +49,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ComparableOfTArgumentF
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is LessThanValidationPredicate<float>);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(LessThanValidationPredicate<float>));
         }
 
         [TestMethod]
@@ -63,7 +63,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ComparableOfTArgumentF
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is LessThanValidationPredicate<double>);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(LessThanValidationPredicate<double>));
         }
 
         [TestMethod]
@@ -77,7 +77,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ComparableOfTArgumentF
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is LessThanValidationPredicate<decimal>);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(LessThanValidationPredicate<decimal>));
         }
 
         [TestMethod]
@@ -91,7 +91,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ComparableOfTArgumentF
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is LessThanValidationPredicate<DateTime>);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(LessThanValidationPredicate<DateTime>));
         }
 
         [TestMethod]

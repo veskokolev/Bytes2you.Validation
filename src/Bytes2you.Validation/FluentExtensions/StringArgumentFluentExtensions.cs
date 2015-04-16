@@ -7,6 +7,16 @@ namespace Bytes2you.Validation
 {
     public static class StringArgumentFluentExtensions
     {
+        public static IValidatableArgument<string> IsEmpty(this IArgument<string> @argument)
+        {
+            return @argument.AddValidationPredicate(StringEmptyValidationPredicate.Instance);
+        }
+
+        public static IValidatableArgument<string> IsNotEmpty(this IArgument<string> @argument)
+        {
+            return @argument.AddValidationPredicate(StringNotEmptyValidationPredicate.Instance);
+        }
+
         public static IValidatableArgument<string> IsNullOrEmpty(this IArgument<string> @argument)
         {
             return @argument.AddValidationPredicate(StringNullOrEmptyValidationPredicate.Instance);
@@ -15,6 +25,16 @@ namespace Bytes2you.Validation
         public static IValidatableArgument<string> IsNotNullOrEmpty(this IArgument<string> @argument)
         {
             return @argument.AddValidationPredicate(StringNotNullOrEmptyValidationPredicate.Instance);
+        }
+
+        public static IValidatableArgument<string> IsNullOrWhiteSpace(this IArgument<string> @argument)
+        {
+            return @argument.AddValidationPredicate(StringNullOrWhiteSpaceValidationPredicate.Instance);
+        }
+
+        public static IValidatableArgument<string> IsNotNullOrWhiteSpace(this IArgument<string> @argument)
+        {
+            return @argument.AddValidationPredicate(StringNotNullOrWhiteSpaceValidationPredicate.Instance);
         }
 
         public static IValidatableArgument<string> IsEqual(this IArgument<string> @argument, string value, StringComparison comparisonType)

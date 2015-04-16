@@ -19,7 +19,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.StringPredicates.S
 
             // Assert.
             Assert.IsFalse(result.IsMatch);
-            Assert.AreEqual("Argument value <asdf> is neither null nor empty.", result.Message);
+            Assert.AreEqual("Argument value <asdf> is neither null nor an empty string.", result.Message);
         }
 
         [TestMethod]
@@ -33,7 +33,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.StringPredicates.S
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
-            Assert.AreEqual("The argument is null or empty.", result.Message);
+            Assert.AreEqual("The argument is null or an empty string.", result.Message);
         }
 
         [TestMethod]
@@ -47,7 +47,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.StringPredicates.S
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
-            Assert.AreEqual("The argument is null or empty.", result.Message);
+            Assert.AreEqual("The argument is null or an empty string.", result.Message);
         }
     }
 }

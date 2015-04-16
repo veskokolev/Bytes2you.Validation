@@ -17,7 +17,7 @@ namespace Bytes2you.Validation
                 throw new ArgumentNullException("message");
             }
 
-            if (message == string.Empty)
+            if (message.Length == 0)
             {
                 throw new ArgumentException(ValidationPredicateMessages.NullOrEmptyStringMessage, "message");
             }

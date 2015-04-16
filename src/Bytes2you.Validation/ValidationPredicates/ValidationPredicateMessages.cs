@@ -19,8 +19,12 @@ namespace Bytes2you.Validation.ValidationPredicates
         public static readonly string NullOrEmptyEnumerableMessage = "The argument is null or empty.";
         public static readonly string NotNullOrEmptyEnumerableMessage = "The argument has elements.";
 
-        public static readonly string NullOrEmptyStringMessage = "The argument is null or empty.";
-        public static readonly string NotNullOrEmptyStringMessage = "Argument value <{0}> is neither null nor empty.";
+        public static readonly string EmptyStringMessage = "The argument is an empty string.";
+        public static readonly string NotEmptyStringMessage = "Argument value <{0}> is not an empty string.";
+        public static readonly string NullOrWhiteSpaceStringMessage = "The argument is null, an empty string or contains only white space characters.";
+        public static readonly string NotNullOrWhiteSpaceStringMessage = "Argument value <{0}> is neither null nor an empty string, nor contains only of white space characters.";
+        public static readonly string NullOrEmptyStringMessage = "The argument is null or an empty string.";
+        public static readonly string NotNullOrEmptyStringMessage = "Argument value <{0}> is neither null nor an empty string.";
         public static readonly string EqualStringMessage = "Argument value <{0}> is equal to <{1}>. StringComparison <{2}>.";
         public static readonly string NotEqualStringMessage = "Argument value <{0}> is not equal to <{1}>. StringComparison <{2}>.";
 

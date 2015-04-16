@@ -21,7 +21,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.NullableArgumentFluent
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is NullableNotNullValidationPredicate<int>);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(NullableNotNullValidationPredicate<int>));
         }
 
         [TestMethod]

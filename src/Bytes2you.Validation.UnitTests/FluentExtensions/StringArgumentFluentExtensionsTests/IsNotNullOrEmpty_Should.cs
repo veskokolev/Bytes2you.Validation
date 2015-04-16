@@ -22,7 +22,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.StringArgumentFluentEx
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is StringNotNullOrEmptyValidationPredicate);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(StringNotNullOrEmptyValidationPredicate));
         }
 
         [TestMethod]

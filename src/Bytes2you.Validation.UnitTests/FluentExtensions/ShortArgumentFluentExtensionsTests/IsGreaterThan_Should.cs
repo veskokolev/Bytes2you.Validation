@@ -19,7 +19,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ShortArgumentFluentExt
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is GreaterThanValidationPredicate<short>);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(GreaterThanValidationPredicate<short>));
         }
     }
 }

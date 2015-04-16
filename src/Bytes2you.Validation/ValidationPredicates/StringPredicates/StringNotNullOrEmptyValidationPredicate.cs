@@ -35,7 +35,7 @@ namespace Bytes2you.Validation.ValidationPredicates.StringPredicates
 
         protected override string GetMatchMessage(string value)
         {
-            return ValidationPredicateMessages.NotNullOrEmptyStringMessage;
+            return MessageFormatHelper.Format(ValidationPredicateMessages.NotNullOrEmptyStringMessage, value);
         }
 
         protected override string GetUnmatchMessage(string value)

@@ -22,7 +22,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.GuidArgumentFluentExte
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is GuidEmptyValidationPredicate);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(GuidEmptyValidationPredicate));
         }
 
         [TestMethod]

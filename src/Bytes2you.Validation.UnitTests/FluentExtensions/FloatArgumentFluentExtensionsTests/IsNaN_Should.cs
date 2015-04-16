@@ -22,7 +22,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.FloatArgumentFluentExt
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is FloatNaNValidationPredicate);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(FloatNaNValidationPredicate));
         }
 
         [TestMethod]

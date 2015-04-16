@@ -21,7 +21,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.BoolArgumentFluentExte
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is TrueValidationPredicate);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(TrueValidationPredicate));
         }
 
         [TestMethod]

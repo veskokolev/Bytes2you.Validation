@@ -35,7 +35,7 @@ namespace Bytes2you.Validation.UnitTests.ValidatableArgumentTests
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is LessThanValidationPredicate<int>);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(LessThanValidationPredicate<int>));
         }
     }
 }

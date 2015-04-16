@@ -23,7 +23,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.EnumerableArgumentFlue
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is EnumerableNotNullOrEmptyValidationPredicate<int[]>);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(EnumerableNotNullOrEmptyValidationPredicate<int[]>));
         }
 
         [TestMethod]

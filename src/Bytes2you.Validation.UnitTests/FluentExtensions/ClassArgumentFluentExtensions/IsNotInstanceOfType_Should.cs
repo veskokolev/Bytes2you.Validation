@@ -21,7 +21,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ClassArgumentFluentExt
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is NotInstanceOfTypeValidationPredicate<object>);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(NotInstanceOfTypeValidationPredicate<object>));
         }
 
         [TestMethod]

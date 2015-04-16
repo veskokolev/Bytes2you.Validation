@@ -21,7 +21,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.GenericArgumentFluentE
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is EqualValidationPredicate<int>);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(EqualValidationPredicate<int>));
         }
 
         [TestMethod]
@@ -35,7 +35,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.GenericArgumentFluentE
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is EqualValidationPredicate<long>);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(EqualValidationPredicate<long>));
         }
 
         [TestMethod]
@@ -49,7 +49,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.GenericArgumentFluentE
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is EqualValidationPredicate<float>);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(EqualValidationPredicate<float>));
         }
 
         [TestMethod]
@@ -63,7 +63,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.GenericArgumentFluentE
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is EqualValidationPredicate<double>);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(EqualValidationPredicate<double>));
         }
 
         [TestMethod]
@@ -77,7 +77,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.GenericArgumentFluentE
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is EqualValidationPredicate<decimal>);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(EqualValidationPredicate<decimal>));
         }
 
         [TestMethod]
@@ -91,7 +91,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.GenericArgumentFluentE
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is EqualValidationPredicate<DateTime>);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(EqualValidationPredicate<DateTime>));
         }
 
         [TestMethod]

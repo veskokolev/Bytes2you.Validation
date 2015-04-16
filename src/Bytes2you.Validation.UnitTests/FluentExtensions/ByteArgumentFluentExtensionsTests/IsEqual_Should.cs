@@ -19,7 +19,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ByteArgumentFluentExte
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsTrue(argument.ValidationPredicates.First() is EqualValidationPredicate<byte>);
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(EqualValidationPredicate<byte>));
         }
     }
 }
