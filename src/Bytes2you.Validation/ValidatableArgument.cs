@@ -13,9 +13,14 @@ namespace Bytes2you.Validation
 
         public ValidatableArgument(string name, T value)
         {
-            if (string.IsNullOrEmpty(name))
+            if (name == null)
             {
-                throw new ArgumentException(ValidationPredicateMessages.NullMessage, "name");
+                throw new ArgumentNullException("name");
+            }
+
+            if (name == string.Empty)
+            {
+                throw new ArgumentException(ValidationPredicateMessages.NullOrEmptyStringMessage, "name");
             }
 
             this.name = name;
@@ -56,7 +61,7 @@ namespace Bytes2you.Validation
         {
             if (validationPredicate == null)
             {
-                throw new ArgumentException(ValidationPredicateMessages.NullMessage, "validationPredicate");
+                throw new ArgumentNullException("validationPredicate");
             }
 
             this.validationPredicates.Add(validationPredicate);

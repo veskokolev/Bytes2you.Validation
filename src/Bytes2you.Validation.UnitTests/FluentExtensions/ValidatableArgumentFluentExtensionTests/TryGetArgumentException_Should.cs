@@ -16,7 +16,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ValidatableArgumentFlu
 
             // Act & Assert.
             ArgumentException argumentException;
-            Ensure.ArgumentExceptionIsThrown(
+            Ensure.ArgumentNullExceptionIsThrown(
                 () =>
                 {
                     validatableArgument.TryGetArgumentException(out argumentException);
@@ -40,7 +40,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ValidatableArgumentFlu
         }
 
         [TestMethod]
-        public void ReturnTrueAndCreatesArgumentException_WhenArgumentHasMatches()
+        public void ReturnTrueAndCreatesArgumentOutOfRangeException_WhenArgumentHasMatchesOfRangeValidationType()
         {
             // Arrange.
             IValidatableArgument<int> validatableArgument = new ValidatableArgument<int>("validatableArgument", 3);
@@ -53,8 +53,47 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ValidatableArgumentFlu
             // Assert.
             Assert.IsTrue(result);
             Assert.IsNotNull(argumentException);
+            Assert.IsInstanceOfType(argumentException, typeof(ArgumentOutOfRangeException));
             Assert.AreEqual("validatableArgument", argumentException.ParamName);
-            Assert.AreEqual("Invalid argument:\n - Argument value <3> is less than <5>.\r\n - Argument value <3> is greater than <2>.\r\n\r\nParameter name: validatableArgument", argumentException.Message);
+            Assert.AreEqual("Argument value <3> is less than <5>.\r\nParameter name: validatableArgument", argumentException.Message);
+        }
+
+        [TestMethod]
+        public void ReturnTrueAndCreatesArgumentNullException_WhenArgumentIsNullAndHasMatchesOfDefaultValidationType()
+        {
+            // Arrange.
+            IValidatableArgument<string> validatableArgument = new ValidatableArgument<string>("validatableArgument", null);
+            validatableArgument.IsNotEqual("asdf");
+
+            // Act.
+            ArgumentException argumentException;
+            bool result = validatableArgument.TryGetArgumentException(out argumentException);
+
+            // Assert.
+            Assert.IsTrue(result);
+            Assert.IsNotNull(argumentException);
+            Assert.IsInstanceOfType(argumentException, typeof(ArgumentNullException));
+            Assert.AreEqual("validatableArgument", argumentException.ParamName);
+            Assert.AreEqual("Argument value <null> is not equal to <asdf>.\r\nParameter name: validatableArgument", argumentException.Message);
+        }
+
+        [TestMethod]
+        public void ReturnTrueAndCreatesArgumentException_WhenArgumentIsNotNullAndHasMatchesOfDefaultValidationType()
+        {
+            // Arrange.
+            IValidatableArgument<string> validatableArgument = new ValidatableArgument<string>("validatableArgument", "xxx");
+            validatableArgument.IsNotEqual("asdf");
+
+            // Act.
+            ArgumentException argumentException;
+            bool result = validatableArgument.TryGetArgumentException(out argumentException);
+
+            // Assert.
+            Assert.IsTrue(result);
+            Assert.IsNotNull(argumentException);
+            Assert.IsInstanceOfType(argumentException, typeof(ArgumentException));
+            Assert.AreEqual("validatableArgument", argumentException.ParamName);
+            Assert.AreEqual("Argument value <xxx> is not equal to <asdf>.\r\nParameter name: validatableArgument", argumentException.Message);
         }
     }
 }

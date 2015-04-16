@@ -26,6 +26,14 @@ namespace Bytes2you.Validation.ValidationPredicates.NullablePredicates
             }
         }
 
+        public override ValidationType ValidationType
+        {
+            get
+            {
+                return ValidationType.Default;
+            }
+        }
+
         protected override string GetMatchMessage(Nullable<T> value)
         {
             return ValidationPredicateMessages.NullMessage;

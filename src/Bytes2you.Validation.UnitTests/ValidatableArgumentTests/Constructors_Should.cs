@@ -9,17 +9,17 @@ namespace Bytes2you.Validation.UnitTests.ValidatableArgumentTests
     public class Constructors_Should
     {
         [TestMethod]
-        public void ThrowException_WhenNameArgumentIsNull()
+        public void ThrowArgumentNullException_WhenNameArgumentIsNull()
         {
             // Act & Assert.
-            Ensure.ArgumentExceptionIsThrown(() =>
+            Ensure.ArgumentNullExceptionIsThrown(() =>
             {
                 ValidatableArgument<int> argument = new ValidatableArgument<int>(null, 3);
             }, "name");
         }
 
         [TestMethod]
-        public void ThrowException_WhenNameIsEmpty()
+        public void ThrowArgumentException_WhenNameIsEmpty()
         {
             // Act & Assert.
             Ensure.ArgumentExceptionIsThrown(() =>

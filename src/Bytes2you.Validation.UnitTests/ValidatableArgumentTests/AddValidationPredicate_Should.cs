@@ -10,13 +10,15 @@ namespace Bytes2you.Validation.UnitTests.ValidatableArgumentTests
     public class AddValidationPredicate_Should
     {
         [TestMethod]
-        public void ThrowException_WhenValidationPredicateArgumentIsNull()
+        public void ThrowArgumentNullException_WhenValidationPredicateArgumentIsNull()
         {
+            // Arrange.
+            ValidatableArgument<int> argument = new ValidatableArgument<int>("argument", 5);
+
             // Act & Assert.
-            Ensure.ArgumentExceptionIsThrown(
+            Ensure.ArgumentNullExceptionIsThrown(
                 () =>
                 {
-                    ValidatableArgument<int> argument = new ValidatableArgument<int>("argument", 5);
                     argument.AddValidationPredicate(null);
                 }, "validationPredicate");
         }

@@ -9,13 +9,13 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ValidatableArgumentFlu
     public class Throw_Should
     {
         [TestMethod]
-        public void ThrowException_WhenValidatableArgumentIsNull()
+        public void ThrowArgumentNullException_WhenValidatableArgumentIsNull()
         {
             // Arrange.
             IValidatableArgument<int> validatableArgument = null;
 
             // Act & Assert.
-            Ensure.ArgumentExceptionIsThrown(
+            Ensure.ArgumentNullExceptionIsThrown(
                 () =>
                 {
                     validatableArgument.Throw();
@@ -23,7 +23,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ValidatableArgumentFlu
         }
 
         [TestMethod]
-        public void NotThrowException_WhenArgumentHasMatches()
+        public void NotThrowAnyException_WhenArgumentHasNoMatches()
         {
             // Arrange.
             IValidatableArgument<int> validatableArgument = new ValidatableArgument<int>("validatableArgument", 3);
@@ -38,18 +38,48 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ValidatableArgumentFlu
         }
 
         [TestMethod]
-        public void ThrowException_WhenArgumentHasMatches()
+        public void ThrowArgumentNullException_WhenTheFirstMachingValidationRuleIsNull()
         {
             // Arrange.
-            IValidatableArgument<int> validatableArgument = new ValidatableArgument<int>("validatableArgument", 3);
-            validatableArgument.IsLessThan(5).IsGreaterThan(2);
+            IValidatableArgument<string> argument = new ValidatableArgument<string>("argument", null);
+            argument.IsEqual("asdf").IsNull();
+
+            // Act & Assert.
+            Ensure.ArgumentNullExceptionIsThrown(
+                () =>
+                {
+                    argument.Throw();
+                }, "argument");
+        }
+
+        [TestMethod]
+        public void ThrowArgumentException_WhenTheFirstMachingValidationRuleIsEqual()
+        {
+            // Arrange.
+            IValidatableArgument<string> argument = new ValidatableArgument<string>("argument", "asdf");
+            argument.IsNotEqual("asdf").IsEqual("asdf").IsNotNull();
 
             // Act & Assert.
             Ensure.ArgumentExceptionIsThrown(
                 () =>
                 {
-                    validatableArgument.Throw();
-                }, "validatableArgument", "Invalid argument:\n - Argument value <3> is less than <5>.\r\n - Argument value <3> is greater than <2>.\r\n\r\nParameter name: validatableArgument");
+                    argument.Throw();
+                }, "argument");
+        }
+
+        [TestMethod]
+        public void ThrowArgumentOutOfRangeException_WhenTheFirstMatchingValidationRuleIsRangeRule()
+        {
+            // Arrange.
+            IValidatableArgument<int> argument = new ValidatableArgument<int>("argument", 5);
+            argument.IsEqual(3).IsLessThan(10);
+
+            // Act & Assert.
+            Ensure.ArgumentOutOfRangeExceptionIsThrown(
+                () =>
+                {
+                    argument.Throw();
+                }, "argument");
         }
     }
 }

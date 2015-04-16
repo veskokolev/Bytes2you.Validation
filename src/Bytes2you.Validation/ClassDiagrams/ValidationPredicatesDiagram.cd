@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Bytes2you.Validation.ValidationPredicates.BoolPredicates.FalseValidationPredicate" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\BoolPredicates\FalseValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.BoolPredicates.TrueValidationPredicate" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\BoolPredicates\TrueValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.BoundedArgumentValidationPredicate&lt;T&gt;" Collapsed="true">
+    <Position X="31.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAgA=</HashCode>
+      <FileName>ValidationPredicates\BoundedArgumentValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.ValidationPredicate&lt;T&gt;" Collapsed="true">
+    <Position X="35.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAgAAAAAAAAAAAAAAAIQAAAEEAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>ValidationPredicates\ValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.ValidationPredicateMessages" Collapsed="true">
+    <Position X="71" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAACkAQCAQAABQAAAIAWICAAACAACAQAABAAIIAgA=</HashCode>
+      <FileName>ValidationPredicates\ValidationPredicateMessages.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.ClassPredicates.InstanceOfTypeValidationPredicate&lt;T&gt;" Collapsed="true">
+    <Position X="66.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEBAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ValidationPredicates\ClassPredicates\InstanceOfTypeValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.ClassPredicates.NotInstanceOfTypeValidationPredicate&lt;T&gt;" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEBAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ValidationPredicates\ClassPredicates\NotInstanceOfTypeValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.ClassPredicates.NotNullValidationPredicate&lt;T&gt;" Collapsed="true">
+    <Position X="12.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\ClassPredicates\NotNullValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.ClassPredicates.NullValidationPredicate&lt;T&gt;" Collapsed="true">
+    <Position X="41.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\ClassPredicates\NullValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.ComparablePredicates.GreaterThanOrEqualValidationPredicate&lt;T&gt;" Collapsed="true">
+    <Position X="30.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ValidationPredicates\ComparablePredicates\GreaterThanOrEqualValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.ComparablePredicates.GreaterThanValidationPredicate&lt;T&gt;" Collapsed="true">
+    <Position X="32.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ValidationPredicates\ComparablePredicates\GreaterThanValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.ComparablePredicates.LessThanOrEqualValidationPredicate&lt;T&gt;" Collapsed="true">
+    <Position X="34.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ValidationPredicates\ComparablePredicates\LessThanOrEqualValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.ComparablePredicates.LessThanValidationPredicate&lt;T&gt;" Collapsed="true">
+    <Position X="23.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ValidationPredicates\ComparablePredicates\LessThanValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.DoublePredicates.DoubleInfinityValidationPredicate" Collapsed="true">
+    <Position X="14.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\DoublePredicates\DoubleInfinityValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.DoublePredicates.DoubleNaNValidationPredicate" Collapsed="true">
+    <Position X="43.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\DoublePredicates\DoubleNaNValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.DoublePredicates.DoubleNotInfinityValidationPredicate" Collapsed="true">
+    <Position X="52.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\DoublePredicates\DoubleNotInfinityValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.DoublePredicates.DoubleNotNaNValidationPredicate" Collapsed="true">
+    <Position X="59.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\DoublePredicates\DoubleNotNaNValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.EnumerablePredicates.EnumerableNotNullOrEmptyValidationPredicate&lt;T&gt;" Collapsed="true">
+    <Position X="68.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\EnumerablePredicates\EnumerableNotNullOrEmptyValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.EnumerablePredicates.EnumerableNullOrEmptyValidationPredicate&lt;T&gt;" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\EnumerablePredicates\EnumerableNullOrEmptyValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.FloatPredicates.FloatInfinityValidationPredicate" Collapsed="true">
+    <Position X="16.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\FloatPredicates\FloatInfinityValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.FloatPredicates.FloatNaNValidationPredicate" Collapsed="true">
+    <Position X="46" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\FloatPredicates\FloatNaNValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.FloatPredicates.FloatNotInfinityValidationPredicate" Collapsed="true">
+    <Position X="55" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\FloatPredicates\FloatNotInfinityValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.FloatPredicates.FloatNotNaNValidationPredicate" Collapsed="true">
+    <Position X="61.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\FloatPredicates\FloatNotNaNValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.GenericPredicates.EqualValidationPredicate&lt;T&gt;" Collapsed="true">
+    <Position X="37" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ValidationPredicates\GenericPredicates\EqualValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.GenericPredicates.NotEqualValidationPredicate&lt;T&gt;" Collapsed="true">
+    <Position X="25.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ValidationPredicates\GenericPredicates\NotEqualValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.GuidPredicates.GuidEmptyValidationPredicate" Collapsed="true">
+    <Position X="19" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\GuidPredicates\GuidEmptyValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.GuidPredicates.GuidNotEmptyValidationPredicate" Collapsed="true">
+    <Position X="48.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\GuidPredicates\GuidNotEmptyValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.NullablePredicates.NullableNotNullValidationPredicate&lt;T&gt;" Collapsed="true">
+    <Position X="57.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\NullablePredicates\NullableNotNullValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.NullablePredicates.NullableNullValidationPredicate&lt;T&gt;" Collapsed="true">
+    <Position X="64" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\NullablePredicates\NullableNullValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.StringPredicates.StringEqualValidationPredicate" Collapsed="true">
+    <Position X="39.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACAABAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ValidationPredicates\StringPredicates\StringEqualValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.StringPredicates.StringNotEqualValidationPredicate" Collapsed="true">
+    <Position X="28" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACAABAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ValidationPredicates\StringPredicates\StringNotEqualValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.StringPredicates.StringNotNullOrEmptyValidationPredicate" Collapsed="true">
+    <Position X="21.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\StringPredicates\StringNotNullOrEmptyValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytes2you.Validation.ValidationPredicates.StringPredicates.StringNullOrEmptyValidationPredicate" Collapsed="true">
+    <Position X="50.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAEAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ValidationPredicates\StringPredicates\StringNullOrEmptyValidationPredicate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

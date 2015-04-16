@@ -20,6 +20,8 @@ namespace Bytes2you.Validation.ValidationPredicates
             }
         }
 
+        public abstract ValidationType ValidationType { get; }
+
         public IValidationPredicateResult Match(T value)
         {
             bool isMatch = this.IsMatch(value);
@@ -34,7 +36,7 @@ namespace Bytes2you.Validation.ValidationPredicates
                 message = this.GetUnmatchMessage(value);
             }
 
-            return new ValidationPredicateResult(isMatch, message);
+            return new ValidationPredicateResult(isMatch, message, this.ValidationType);
         }
 
         protected abstract bool IsMatch(T value);

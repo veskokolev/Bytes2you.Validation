@@ -10,7 +10,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.ClassPredicates.In
     public class Constructors_Should
     {
         [TestMethod]
-        public void ThrowException_WhenTypeArgumentIsNull()
+        public void ThrowArgumentNullException_WhenTypeArgumentIsNull()
         {
             // Arrange.
             Type type = null;

@@ -10,10 +10,10 @@ namespace Bytes2you.Validation.UnitTests.Helpers.PortableLazyTests
     public class Constructors_Should
     {
         [TestMethod]
-        public void ThrowException_WhenNameArgumentIsNull()
+        public void ThrowArgumentNullException_WhenNameArgumentIsNull()
         {
             // Act & Assert.
-            Ensure.ArgumentExceptionIsThrown(() =>
+            Ensure.ArgumentNullExceptionIsThrown(() =>
             {
                 PortableLazy<object> lazy = new PortableLazy<object>(null);
             }, "valueFactory");

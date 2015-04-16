@@ -12,6 +12,14 @@ namespace Bytes2you.Validation.ValidationPredicates.GenericPredicates
         {
         }
 
+        public override ValidationType ValidationType
+        {
+            get
+            {
+                return ValidationType.Default;
+            }
+        }
+
         protected override string GetMatchMessage(T value)
         {
             return MessageFormatHelper.Format(ValidationPredicateMessages.NotEqualMessage, value, this.Bound);

@@ -11,7 +11,7 @@ namespace Bytes2you.Validation.UnitTests.Extensions.ArgumentExtensionsTests
     public class ToValidatableArgument_Should
     {
         [TestMethod]
-        public void ThrowException_WhenArgumentIsNull()
+        public void ThrowArgumentNullException_WhenArgumentIsNull()
         {
             // Arrange.
             IArgument<int> argument = null;

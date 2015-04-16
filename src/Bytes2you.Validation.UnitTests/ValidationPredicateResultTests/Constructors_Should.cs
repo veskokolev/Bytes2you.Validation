@@ -9,22 +9,22 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicateResultTests
     public class Constructors_Should
     {
         [TestMethod]
-        public void ThrowException_WhenMessageIsNull()
+        public void ThrowArgumentNullException_WhenMessageIsNull()
         {
             // Act & Assert.
-            Ensure.ArgumentExceptionIsThrown(() =>
+            Ensure.ArgumentNullExceptionIsThrown(() =>
             {
-                ValidationPredicateResult result = new ValidationPredicateResult(true, null);
+                ValidationPredicateResult result = new ValidationPredicateResult(true, null, ValidationType.Default);
             }, "message");
         }
 
         [TestMethod]
-        public void ThrowException_WhenMessageIsEmpty()
+        public void ThrowArgumentException_WhenMessageIsEmpty()
         {
             // Act & Assert.
             Ensure.ArgumentExceptionIsThrown(() =>
             {
-                ValidationPredicateResult result = new ValidationPredicateResult(true, string.Empty);
+                ValidationPredicateResult result = new ValidationPredicateResult(true, string.Empty, ValidationType.Default);
             }, "message");
         }
 
@@ -34,13 +34,15 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicateResultTests
             // Arrange.
             bool isMatch = true;
             string message = "message";
+            ValidationType validationType = ValidationType.Range;
 
             // Act.
-            ValidationPredicateResult result = new ValidationPredicateResult(isMatch, message);
+            ValidationPredicateResult result = new ValidationPredicateResult(isMatch, message, validationType);
 
             // Assert.
             Assert.AreEqual(isMatch, result.IsMatch);
             Assert.AreEqual(message, result.Message);
+            Assert.AreEqual(validationType, result.ValidationType);
         }
     }
 }

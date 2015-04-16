@@ -11,7 +11,7 @@ namespace Bytes2you.Validation.UnitTests.Extensions.TypeExtensionsTests
     public class HasPublicConstructors_Should
     {
         [TestMethod]
-        public void ThrowException_WhenTypeArgumentIsNull()
+        public void ThrowArgumentNullException_WhenTypeArgumentIsNull()
         {
             // Arrange.
             Type type = null;

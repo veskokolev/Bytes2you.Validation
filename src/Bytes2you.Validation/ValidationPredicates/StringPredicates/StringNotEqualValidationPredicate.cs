@@ -14,6 +14,14 @@ namespace Bytes2you.Validation.ValidationPredicates.StringPredicates
             this.comparisonType = comparisonType;
         }
 
+        public override ValidationType ValidationType
+        {
+            get
+            {
+                return ValidationType.Default;
+            }
+        }
+
         public StringComparison ComparisonType
         {
             get

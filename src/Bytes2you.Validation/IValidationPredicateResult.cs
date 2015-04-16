@@ -7,5 +7,6 @@ namespace Bytes2you.Validation
     {
         bool IsMatch { get; }
         string Message { get; }
+        ValidationType ValidationType { get; }
     }
 }

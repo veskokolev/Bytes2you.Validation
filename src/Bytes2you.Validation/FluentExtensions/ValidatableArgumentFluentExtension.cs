@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Bytes2you.Validation
 {
@@ -14,26 +12,32 @@ namespace Bytes2you.Validation
                 throw new ArgumentNullException("@validatableArgument");
             }
 
-            IEnumerable<IValidationPredicateResult> matchingValidationPredicateResults = 
-                validatableArgument.MatchValidationPredicates().Where(vp => vp.IsMatch);
+            IValidationPredicateResult firstPredicateMatch =
+                validatableArgument.MatchValidationPredicates().Where(vp => vp.IsMatch).FirstOrDefault();
 
-            if (matchingValidationPredicateResults.Any())
+            if (firstPredicateMatch == null)
             {
-                StringBuilder messageBuilder = new StringBuilder("Invalid argument:\n");
+                argumentException = null;
+                return false;
+            }
 
-                foreach (IValidationPredicateResult validationPredicateResult in matchingValidationPredicateResults)
-                {
-                    messageBuilder.AppendLine(string.Format(" - {0}", validationPredicateResult.Message));
-                }
-
-                argumentException = new ArgumentException(messageBuilder.ToString(), validatableArgument.Name);
+            if (firstPredicateMatch.ValidationType == ValidationType.Range)
+            {
+                argumentException = new ArgumentOutOfRangeException(@validatableArgument.Name, firstPredicateMatch.Message);
             }
             else
             {
-                argumentException = null;
+                if (validatableArgument.Value == null)
+                {
+                    argumentException = new ArgumentNullException(@validatableArgument.Name, firstPredicateMatch.Message);
+                }
+                else
+                {
+                    argumentException = new ArgumentException(firstPredicateMatch.Message, @validatableArgument.Name);
+                }
             }
 
-            return argumentException != null;
+            return true;
         }
 
         public static void Throw<T>(this IValidatableArgument<T> @validatableArgument)

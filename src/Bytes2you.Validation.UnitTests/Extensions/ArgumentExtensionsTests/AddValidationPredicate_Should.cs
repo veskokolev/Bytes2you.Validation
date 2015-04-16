@@ -12,7 +12,7 @@ namespace Bytes2you.Validation.UnitTests.Extensions.ArgumentExtensionsTests
     public class AddValidationPredicate_Should
     {
         [TestMethod]
-        public void ThrowException_WhenArgumentIsNull()
+        public void ThrowArgumentNullException_WhenArgumentIsNull()
         {
             // Arrange.
             IArgument<int> argument = null;
@@ -25,7 +25,7 @@ namespace Bytes2you.Validation.UnitTests.Extensions.ArgumentExtensionsTests
         }
 
         [TestMethod]
-        public void ThrowException_WhenValidationPredicateArgumentIsNull()
+        public void ThrowArgumentNullException_WhenValidationPredicateArgumentIsNull()
         {
             // Arrange.
             IArgument<int> argument = new ValidatableArgument<int>("argument", 3);

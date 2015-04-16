@@ -25,6 +25,14 @@ namespace Bytes2you.Validation.ValidationPredicates.FloatPredicates
             }
         }
 
+        public override ValidationType ValidationType
+        {
+            get
+            {
+                return ValidationType.Default;
+            }
+        }
+
         protected override bool IsMatch(float value)
         {
             return !float.IsNaN(value);

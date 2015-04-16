@@ -15,6 +15,14 @@ namespace Bytes2you.Validation.UnitTests.Testing.Mocks
             this.isMatchCalls = new List<int>();
         }
 
+        public override ValidationType ValidationType
+        {
+            get
+            {
+                return ValidationType.Default;
+            }
+        }
+
         public void AssertIsMatchCalls(params int[] expectedValues)
         {
             bool areEqual = Enumerable.SequenceEqual(expectedValues, this.isMatchCalls);

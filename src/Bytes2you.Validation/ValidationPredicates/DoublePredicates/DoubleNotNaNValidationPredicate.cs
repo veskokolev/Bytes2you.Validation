@@ -25,6 +25,14 @@ namespace Bytes2you.Validation.ValidationPredicates.DoublePredicates
             }
         }
 
+        public override ValidationType ValidationType
+        {
+            get
+            {
+                return ValidationType.Default;
+            }
+        }
+
         protected override bool IsMatch(double value)
         {
             return !double.IsNaN(value);

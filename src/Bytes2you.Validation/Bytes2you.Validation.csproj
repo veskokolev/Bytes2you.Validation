@@ -108,9 +108,11 @@
     <Compile Include="ValidationPredicates\StringPredicates\StringNullOrEmptyValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\ClassPredicates\NullValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\ValidationPredicateMessages.cs" />
+    <Compile Include="ValidationType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Bytes2you.Validation.nuspec" />
+    <None Include="ClassDiagrams\ValidationPredicatesDiagram.cd" />
   </ItemGroup>
   <ItemGroup />
   <!--<ItemGroup>

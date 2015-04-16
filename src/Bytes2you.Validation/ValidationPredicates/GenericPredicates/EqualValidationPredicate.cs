@@ -11,6 +11,14 @@ namespace Bytes2you.Validation.ValidationPredicates.GenericPredicates
         {
         }
 
+        public override ValidationType ValidationType
+        {
+            get
+            {
+                return ValidationType.Default;
+            }
+        }
+
         protected override bool IsMatch(T bound, T value)
         {
             return Comparer<T>.Default.Compare(bound, value) == 0;

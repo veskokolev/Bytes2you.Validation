@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Bytes2you.Validation.UnitTests.ValidatoinPredicates.BoolsPredicates.FalseValidationPredicateTests
 {
     [TestClass]
-    public class FalseValidationPredicate_Match_Should
+    public class Match_Should
     {
         [TestMethod]
         public void ReturnTrueAndMatchMessage_WhenArgumentIsFalse()

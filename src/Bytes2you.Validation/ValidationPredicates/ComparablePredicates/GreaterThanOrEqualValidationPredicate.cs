@@ -13,6 +13,14 @@ namespace Bytes2you.Validation.ValidationPredicates.ComparablePredicates
         {
         }
 
+        public override ValidationType ValidationType
+        {
+            get
+            {
+                return ValidationType.Range;
+            }
+        }
+
         protected override string GetMatchMessage(T value)
         {
             return MessageFormatHelper.Format(ValidationPredicateMessages.GreaterThanOrEqualMessage, value, this.Bound);

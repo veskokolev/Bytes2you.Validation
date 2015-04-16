@@ -25,6 +25,14 @@ namespace Bytes2you.Validation.ValidationPredicates.GuidPredicates
             }
         }
 
+        public override ValidationType ValidationType
+        {
+            get
+            {
+                return ValidationType.Default;
+            }
+        }
+
         protected override bool IsMatch(Guid value)
         {
             return value == Guid.Empty;

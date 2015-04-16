@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
+using Bytes2you.Validation.ValidationPredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Bytes2you.Validation.UnitTests.Testing.Helpers
@@ -14,9 +15,14 @@ namespace Bytes2you.Validation.UnitTests.Testing.Helpers
                 throw new ArgumentNullException("method");
             }
 
-            if (string.IsNullOrEmpty(expectedArgumentName))
+            if (expectedArgumentName == null)
             {
-                throw new ArgumentException("expectedArgumentName");
+                throw new ArgumentNullException("expectedArgumentName");
+            }
+
+            if (expectedArgumentName == string.Empty)
+            {
+                throw new ArgumentException(ValidationPredicateMessages.NullOrEmptyStringMessage, "expectedArgumentName");
             }
 
             ArgumentException ex = null;
@@ -29,6 +35,7 @@ namespace Bytes2you.Validation.UnitTests.Testing.Helpers
                 ex = e;
             }
 
+            Assert.AreEqual(typeof(ArgumentException), ex.GetType());
             Assert.IsNotNull(ex);
             Assert.AreEqual(expectedArgumentName, ex.ParamName);
 
@@ -45,9 +52,14 @@ namespace Bytes2you.Validation.UnitTests.Testing.Helpers
                 throw new ArgumentNullException("method");
             }
 
-            if (string.IsNullOrEmpty(expectedArgumentName))
+            if (expectedArgumentName == null)
             {
-                throw new ArgumentException("expectedArgumentName");
+                throw new ArgumentNullException("expectedArgumentName");
+            }
+
+            if (expectedArgumentName == string.Empty)
+            {
+                throw new ArgumentException(ValidationPredicateMessages.NullOrEmptyStringMessage, "expectedArgumentName");
             }
 
             ArgumentNullException ex = null;
@@ -60,6 +72,39 @@ namespace Bytes2you.Validation.UnitTests.Testing.Helpers
                 ex = e;
             }
 
+            Assert.AreEqual(typeof(ArgumentNullException), ex.GetType());
+            Assert.IsNotNull(ex);
+            Assert.AreEqual(expectedArgumentName, ex.ParamName);
+        }
+
+        public static void ArgumentOutOfRangeExceptionIsThrown(Action action, string expectedArgumentName)
+        {
+            if (action == null)
+            {
+                throw new ArgumentNullException("method");
+            }
+
+            if (expectedArgumentName == null)
+            {
+                throw new ArgumentNullException("expectedArgumentName");
+            }
+
+            if (expectedArgumentName == string.Empty)
+            {
+                throw new ArgumentException(ValidationPredicateMessages.NullOrEmptyStringMessage, "expectedArgumentName");
+            }
+
+            ArgumentOutOfRangeException ex = null;
+            try
+            {
+                action();
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                ex = e;
+            }
+
+            Assert.AreEqual(typeof(ArgumentOutOfRangeException), ex.GetType());
             Assert.IsNotNull(ex);
             Assert.AreEqual(expectedArgumentName, ex.ParamName);
         }
@@ -90,12 +135,12 @@ namespace Bytes2you.Validation.UnitTests.Testing.Helpers
 
             if (repeatCount <= 0)
             {
-                throw new ArgumentException("repeatCount");
+                throw new ArgumentException("The argument is less than or equal to 0.", "repeatCount");
             }
 
             if (expectedTimeInMilliseconds <= 0)
             {
-                throw new ArgumentException("expectedTimeInMilliseconds");
+                throw new ArgumentException("The argument is less than or equal to 0.", "expectedTimeInMilliseconds");
             }
 
             Stopwatch watch = new Stopwatch();
