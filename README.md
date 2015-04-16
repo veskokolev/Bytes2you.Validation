@@ -106,6 +106,8 @@ When T is string:
 ```cs
   .IsNullOrEmpty();
   .IsNotNullOrEmpty();
+  .IsEqual(value, comparisonType);
+  .IsNotEqual(value, comparisonType);
 ```
 
 When T is float/double:
