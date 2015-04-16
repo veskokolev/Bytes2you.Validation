@@ -21,7 +21,7 @@ API
 ```cs
 Guard.WhenArgument(argument, "argument").Rule1().Rule2()...RuleN().Throw();
 ```
-Based on the argument type there are different things that we can validate that make sense for that type (such as IsEmpty validation for string/guid/collection, etc.).
+Based on the argument type there are different things that we can validate that make sense for that type (such as IsEmpty validation for string/guid/collection, etc.) and the library throws the right excpetion (ArgumentException, ArgumentNullException, ArgumentOutOfRangeException) following the best practicies.
 
 Examples:
 Instead of...
@@ -29,14 +29,14 @@ Instead of...
 ```cs
 public void SomeMethod(string stringArgument)
 {
-    if (string.IsNullOrEmpty(stringArgument))
+    if (stringArgument == null)
     {
-        throw new ArgumentException("Argument is null or empty string.", "stringArgument");
+        throw new ArgumentNullException("stringArgument");
     }
     
-    if (stringArgument == "xxx")
+    if (stringArgument == string.Empty)
     {
-        throw new ArgumentException("Argument is equal to \"xxx\"", "stringArgument");
+        throw new ArgumentException("Argument is an empty string.", "stringArgument");
     }
 }
 ```
@@ -104,8 +104,12 @@ When T is Guid:
 
 When T is string:
 ```cs
+  .IsEmpty();
+  .IsNotEmpty();
   .IsNullOrEmpty();
   .IsNotNullOrEmpty();
+  .IsNullOrWhiteSpace();
+  .IsNotNullOrWhiteSpace();
   .IsEqual(value, comparisonType);
   .IsNotEqual(value, comparisonType);
 ```
