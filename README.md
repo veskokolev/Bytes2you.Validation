@@ -34,9 +34,9 @@ public void SomeMethod(string stringArgument)
         throw new ArgumentNullException("stringArgument");
     }
     
-    if (stringArgument == string.Empty)
+    if (stringArgument == "xxx")
     {
-        throw new ArgumentException("Argument is an empty string.", "stringArgument");
+        throw new ArgumentException("Argument is equal to <xxx>.", "stringArgument");
     }
 }
 ```
@@ -46,7 +46,7 @@ public void SomeMethod(string stringArgument)
 public void SomeMethod(string stringArgument)
 {
     Guard.WhenArgument(stringArgument, "stringArgument").IsNullOrEmpty().IsEqual("xxx").Throw();
-    // Which means - when stringArgument is null or empty OR is equal to "xxx" we should throw exception.
+    // Which means - when stringArgument is null or empty OR is equal to "xxx" we will throw exception. If it is null, we will throw ArgumentNullException. If it is equal to "xxx", we will throw ArgumentException.
 }
 ```
 
