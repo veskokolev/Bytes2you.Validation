@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Linq;
 
 namespace Bytes2you.Validation.Helpers
@@ -12,7 +13,7 @@ namespace Bytes2you.Validation.Helpers
                 args[i] = args[i] ?? "null";
             }
 
-            return string.Format(format, args);
+            return string.Format(CultureInfo.InvariantCulture, format, args);
         }
     }
 }

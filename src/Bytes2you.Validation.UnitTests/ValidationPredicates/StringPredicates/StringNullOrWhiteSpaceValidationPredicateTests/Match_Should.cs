@@ -19,7 +19,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.StringPredicates.S
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
-            Assert.AreEqual("The argument is null, an empty string or contains only white space characters.", result.Message);
+            Assert.AreEqual("The argument is null, an empty string or consists only of white space characters.", result.Message);
         }
 
         [TestMethod]
@@ -33,7 +33,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.StringPredicates.S
 
             // Assert.
             Assert.IsTrue(result.IsMatch);
-            Assert.AreEqual("The argument is null, an empty string or contains only white space characters.", result.Message);
+            Assert.AreEqual("The argument is null, an empty string or consists only of white space characters.", result.Message);
         }
 
         [TestMethod]
@@ -47,7 +47,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.StringPredicates.S
 
             // Assert.
             Assert.IsFalse(result.IsMatch);
-            Assert.AreEqual("Argument value <asdf> is neither null nor an empty string, nor contains only of white space characters.", result.Message);
+            Assert.AreEqual("Argument value <asdf> is neither null nor an empty string, nor consists only of white space characters.", result.Message);
         }
 
         [TestMethod]
@@ -61,7 +61,7 @@ namespace Bytes2you.Validation.UnitTests.ValidationPredicates.StringPredicates.S
 
             // Assert.
             Assert.IsFalse(result.IsMatch);
-            Assert.AreEqual("Argument value <     \r\nasdf> is neither null nor an empty string, nor contains only of white space characters.", result.Message);
+            Assert.AreEqual("Argument value <     \r\nasdf> is neither null nor an empty string, nor consists only of white space characters.", result.Message);
         }
     }
 }
