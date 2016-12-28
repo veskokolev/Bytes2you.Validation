@@ -6,6 +6,7 @@ using Bytes2you.Validation.ValidationPredicates.EnumPredicates;
 
 namespace Bytes2you.Validation
 {
+    // NOTE: C# 6.0 does not allow Enum constraints on Type parameters. 
     public static class EnumArgumentFluentExtensions
     {
         public static IValidatableArgument<TEnum> IsMemberOfEnum<TEnum>(this IArgument<TEnum> @argument)
