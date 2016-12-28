@@ -111,7 +111,10 @@
     <Compile Include="ValidationPredicates\EnumerablePredicates\EnumerableNullOrEmptyValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\BoolPredicates\TrueValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\StringPredicates\StringNotNullOrWhiteSpaceValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\StringPredicates\StringNotRegexMatchValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\StringPredicates\StringNullOrWhiteSpaceValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\StringPredicates\StringRegexMatchValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\StringPredicates\StringRegexValidationPredicateBase.cs" />
     <Compile Include="ValidationPredicates\ValidationPredicate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidationPredicates\StringPredicates\StringNullOrEmptyValidationPredicate.cs" />

@@ -11,7 +11,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.StringArgumentFluentEx
     public class IsNullOrEmpty_Should
     {
         [TestMethod]
-        public void AddNullOrEmptyStringValidationPredicate()
+        public void AddStringNullOrEmptyValidationPredicate()
         {
             // Arrange.
             ValidatableArgument<string> argument =

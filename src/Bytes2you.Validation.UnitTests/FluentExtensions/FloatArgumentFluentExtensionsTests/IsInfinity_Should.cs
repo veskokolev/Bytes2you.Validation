@@ -11,7 +11,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.FloatArgumentFluentExt
     public class IsInfinity_Should
     {
         [TestMethod]
-        public void AddDoubleInfinityValidationPredicate()
+        public void AddFloatInfinityValidationPredicate()
         {
             // Arrange.
             ValidatableArgument<float> argument =

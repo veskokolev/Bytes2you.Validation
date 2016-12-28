@@ -8,35 +8,37 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Bytes2you.Validation.UnitTests.FluentExtensions.StringArgumentFluentExtensionsTests
 {
     [TestClass]
-    public class IsEqual_Should
+    public class IsNotRegexMatch_Should
     {
         [TestMethod]
-        public void AddStringEqualValidationPredicate()
+        public void AddStringNotRegexMatchValidationPredicate()
         {
             // Arrange.
+            string value = TextHelper.GetTextWithLength(5000);
             ValidatableArgument<string> argument =
-                new ValidatableArgument<string>("argument", "abc");
+                new ValidatableArgument<string>("argument", value);
 
             // Act.
-            argument.IsEqual("Abc", StringComparison.OrdinalIgnoreCase);
+            argument.IsNotRegexMatch("xxx");
 
             // Assert.
             Assert.AreEqual(1, argument.ValidationPredicates.Count());
-            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(StringEqualValidationPredicate));
+            Assert.IsInstanceOfType(argument.ValidationPredicates.First(), typeof(StringNotRegexMatchValidationPredicate));
         }
 
         [TestMethod]
         public void RunInExpectedTime()
         {
             // Arrange.
+            string value = TextHelper.GetTextWithLength(5000);
             ValidatableArgument<string> argument =
-                new ValidatableArgument<string>("argument", "abc");
+                new ValidatableArgument<string>("argument", value);
 
             // Act & Assert.
             Ensure.ActionRunsInExpectedTime(
                 () =>
                 {
-                    argument.IsEqual("Abc", StringComparison.OrdinalIgnoreCase);
+                    argument.IsNotRegexMatch("abc");
                 },
                 PerformanceConstants.ValidationPredicateExecutionCount,
                 PerformanceConstants.ValidationPredicateTotalExecutionExpectedTime);

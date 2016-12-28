@@ -118,8 +118,10 @@
     <Compile Include="FluentExtensions\StringArgumentFluentExtensionsTests\IsNotEqual_Should.cs" />
     <Compile Include="FluentExtensions\StringArgumentFluentExtensionsTests\IsNotNullOrEmpty_Should.cs" />
     <Compile Include="FluentExtensions\StringArgumentFluentExtensionsTests\IsNotNullOrWhiteSpace.cs" />
+    <Compile Include="FluentExtensions\StringArgumentFluentExtensionsTests\IsNotRegexMatch_Should.cs" />
     <Compile Include="FluentExtensions\StringArgumentFluentExtensionsTests\IsNullOrEmpty_Should.cs" />
     <Compile Include="FluentExtensions\StringArgumentFluentExtensionsTests\IsNullOrWhiteSpace_Should.cs" />
+    <Compile Include="FluentExtensions\StringArgumentFluentExtensionsTests\IsRegexMatch_Should.cs" />
     <Compile Include="FluentExtensions\ValidatableArgumentFluentExtensionTests\Throw_Should.cs" />
     <Compile Include="FluentExtensions\ValidatableArgumentFluentExtensionTests\TryGetArgumentException_Should.cs" />
     <Compile Include="GuardTests\Constructors_Should.cs" />
@@ -132,6 +134,7 @@
     <Compile Include="Helpers\StringHelperTests\IsNullOrWhiteSpace_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Testing\Helpers\Ensure.cs" />
+    <Compile Include="Testing\Helpers\TextHelper.cs" />
     <Compile Include="Testing\Mocks\ArgumentMock.cs" />
     <Compile Include="Testing\Mocks\CustomEnum.cs" />
     <Compile Include="Testing\Mocks\CustomIConvertibleStruct.cs" />
@@ -263,6 +266,9 @@
     <Compile Include="ValidationPredicates\StringPredicates\StringNotNullOrWhiteSpaceValidationPredicateTests\Instance_Should.cs" />
     <Compile Include="ValidationPredicates\StringPredicates\StringNotNullOrWhiteSpaceValidationPredicateTests\Match_Should.cs" />
     <Compile Include="ValidationPredicates\StringPredicates\StringNotNullOrWhiteSpaceValidationPredicateTests\ValidationType_Should.cs" />
+    <Compile Include="ValidationPredicates\StringPredicates\StringNotRegexMatchValidationPredicateTests\Constructors_Should.cs" />
+    <Compile Include="ValidationPredicates\StringPredicates\StringNotRegexMatchValidationPredicateTests\Match_Should.cs" />
+    <Compile Include="ValidationPredicates\StringPredicates\StringNotRegexMatchValidationPredicateTests\ValidationType_Should.cs" />
     <Compile Include="ValidationPredicates\StringPredicates\StringNullOrEmptyValidationPredicateTests\Constructors_Should.cs" />
     <Compile Include="ValidationPredicates\StringPredicates\StringNullOrEmptyValidationPredicateTests\Instance_Should.cs" />
     <Compile Include="ValidationPredicates\StringPredicates\StringNullOrEmptyValidationPredicateTests\Match_Should.cs" />
@@ -277,6 +283,9 @@
     <Compile Include="ValidationPredicates\StringPredicates\StringNullOrWhiteSpaceValidationPredicateTests\Instance_Should.cs" />
     <Compile Include="ValidationPredicates\StringPredicates\StringNullOrWhiteSpaceValidationPredicateTests\Match_Should.cs" />
     <Compile Include="ValidationPredicates\StringPredicates\StringNullOrWhiteSpaceValidationPredicateTests\ValidationType_Should.cs" />
+    <Compile Include="ValidationPredicates\StringPredicates\StringRegexMatchValidationPredicateTests\Constructors_Should.cs" />
+    <Compile Include="ValidationPredicates\StringPredicates\StringRegexMatchValidationPredicateTests\Match_Should.cs" />
+    <Compile Include="ValidationPredicates\StringPredicates\StringRegexMatchValidationPredicateTests\ValidationType_Should.cs" />
     <Compile Include="ValidationPredicates\ValidationPredicateTests\Name_Should.cs" />
     <Compile Include="ValidationPredicates\ValidationPredicateTests\Match_Should.cs" />
   </ItemGroup>

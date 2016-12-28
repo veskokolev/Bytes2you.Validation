@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Bytes2you.Validation.Extensions;
 using Bytes2you.Validation.ValidationPredicates.StringPredicates;
 
@@ -45,6 +46,16 @@ namespace Bytes2you.Validation
         public static IValidatableArgument<string> IsNotEqual(this IArgument<string> @argument, string value, StringComparison comparisonType)
         {
             return @argument.AddValidationPredicate(new StringNotEqualValidationPredicate(value, comparisonType));
+        }
+
+        public static IValidatableArgument<string> IsRegexMatch(this IArgument<string> @argument, string pattern)
+        {
+            return @argument.AddValidationPredicate(new StringRegexMatchValidationPredicate(pattern));
+        }
+
+        public static IValidatableArgument<string> IsNotRegexMatch(this IArgument<string> @argument, string pattern)
+        {
+            return @argument.AddValidationPredicate(new StringNotRegexMatchValidationPredicate(pattern));
         }
     }
 }

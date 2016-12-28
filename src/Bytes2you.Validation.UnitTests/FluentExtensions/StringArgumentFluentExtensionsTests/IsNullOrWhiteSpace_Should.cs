@@ -11,7 +11,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.StringArgumentFluentEx
     public class IsNullOrWhiteSpace_Should
     {
         [TestMethod]
-        public void AddNullOrEmptyStringValidationPredicate()
+        public void AddStringNullOrWhiteSpaceValidationPredicate()
         {
             // Arrange.
             ValidatableArgument<string> argument =

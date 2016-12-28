@@ -11,7 +11,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.ClassArgumentFluentExt
     public class IsNotNull_Should
     {
         [TestMethod]
-        public void AddNullValidationPredicate()
+        public void AddNotNullValidationPredicate()
         {
             // Arrange.
             ValidatableArgument<object> argument = new ValidatableArgument<object>("argument", new object());

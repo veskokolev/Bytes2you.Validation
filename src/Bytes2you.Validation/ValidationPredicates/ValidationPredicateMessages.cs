@@ -27,6 +27,8 @@ namespace Bytes2you.Validation.ValidationPredicates
         public static readonly string NotNullOrEmptyStringMessage = "Argument value <{0}> is neither null nor an empty string.";
         public static readonly string EqualStringMessage = "Argument value <{0}> is equal to <{1}>. StringComparison <{2}>.";
         public static readonly string NotEqualStringMessage = "Argument value <{0}> is not equal to <{1}>. StringComparison <{2}>.";
+        public static readonly string RegexMatchStringMessage = "Argument value <{0}> contains a match of the regular expression <{1}>.";
+        public static readonly string NotRegexMatchStringMessage = "Argument value <{0}> does not contain a match of the regular expression <{1}>.";
 
         public static readonly string TrueMessage = "The argument is true.";
         public static readonly string FalseMessage = "The argument is false.";

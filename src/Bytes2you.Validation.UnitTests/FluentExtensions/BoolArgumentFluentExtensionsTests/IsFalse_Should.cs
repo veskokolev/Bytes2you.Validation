@@ -11,7 +11,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.BoolArgumentFluentExte
     public class IsFalse_Should
     {
         [TestMethod]
-        public void AddTrueValidationPredicate()
+        public void AddFalseValidationPredicate()
         {
             // Arrange.
             ValidatableArgument<bool> argument = new ValidatableArgument<bool>("argument", true);

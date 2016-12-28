@@ -11,7 +11,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.StringArgumentFluentEx
     public class IsNotEqual_Should
     {
         [TestMethod]
-        public void AddNotNullOrEmptyStringValidationPredicate()
+        public void AddStringNotEqualValidationPredicate()
         {
             // Arrange.
             ValidatableArgument<string> argument =

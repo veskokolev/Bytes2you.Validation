@@ -12,7 +12,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.EnumerableArgumentFlue
     public class IsNullOrEmpty_Should
     {
         [TestMethod]
-        public void AddNullOrEmptyEnumerableValidationPredicate()
+        public void AddEnumerableNullOrEmptyValidationPredicate()
         {
             // Arrange.
             ValidatableArgument<int[]> argument =

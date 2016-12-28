@@ -11,7 +11,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.GuidArgumentFluentExte
     public class IsEmptyGuid_Should
     {
         [TestMethod]
-        public void AddEmptyGuidValidationPredicate()
+        public void AddGuidEmptyValidationPredicate()
         {
             // Arrange.
             ValidatableArgument<Guid> argument =

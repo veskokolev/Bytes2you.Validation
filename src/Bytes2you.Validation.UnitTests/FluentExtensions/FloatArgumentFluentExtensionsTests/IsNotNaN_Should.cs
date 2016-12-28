@@ -11,7 +11,7 @@ namespace Bytes2you.Validation.UnitTests.FluentExtensions.FloatArgumentFluentExt
     public class IsNotNaN_Should
     {
         [TestMethod]
-        public void AddDoubleNaNValidationPredicate()
+        public void AddFloatNotNaNValidationPredicate()
         {
             // Arrange.
             ValidatableArgument<float> argument =
