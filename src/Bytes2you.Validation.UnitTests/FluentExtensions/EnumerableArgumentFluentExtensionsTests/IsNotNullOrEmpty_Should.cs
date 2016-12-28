@@ -6,7 +6,7 @@ using Bytes2you.Validation.UnitTests.Testing.Helpers;
 using Bytes2you.Validation.ValidationPredicates.EnumerablePredicates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Bytes2you.Validation.UnitTests.FluentExtensions.EnumerableArgumentFluentExttensionsTests
+namespace Bytes2you.Validation.UnitTests.FluentExtensions.EnumerableArgumentFluentExtensionsTests
 {
     [TestClass]
     public class IsNotNullOrEmpty_Should

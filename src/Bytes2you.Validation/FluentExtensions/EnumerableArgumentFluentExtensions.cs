@@ -6,7 +6,7 @@ using Bytes2you.Validation.ValidationPredicates.EnumerablePredicates;
 
 namespace Bytes2you.Validation
 {
-    public static class EnumerableArgumentFluentExttensions
+    public static class EnumerableArgumentFluentExtensions
     {
         public static IValidatableArgument<T> IsNullOrEmpty<T>(this IArgument<T> @argument)
             where T : IEnumerable

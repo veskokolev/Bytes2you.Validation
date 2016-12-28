@@ -64,6 +64,8 @@
     <Compile Include="Extensions\ArgumentExtensionsTests\AddValidationPredicate_Should.cs" />
     <Compile Include="Extensions\ArgumentExtensionsTests\ToValidatableArgument_Should.cs" />
     <Compile Include="Extensions\TypeExtensionsTests\HasPublicConstructors_Should.cs" />
+    <Compile Include="FluentExtensions\EnumArgumentFluentExtensionsTests\IsMemberOfEnum_Should.cs" />
+    <Compile Include="FluentExtensions\EnumArgumentFluentExtensionsTests\IsNotMemberOfEnum_Should.cs" />
     <Compile Include="FluentExtensions\GenericArgumentFluentExtensionsTests\IsEqual_Should.cs" />
     <Compile Include="FluentExtensions\GenericArgumentFluentExtensionsTests\IsNotEqual_Should.cs" />
     <Compile Include="FluentExtensions\BoolArgumentFluentExtensionsTests\IsFalse_Should.cs" />
@@ -90,8 +92,8 @@
     <Compile Include="FluentExtensions\DoubleArgumentFluentExtensionsTest\IsNotNegativeInfinity_Should.cs" />
     <Compile Include="FluentExtensions\DoubleArgumentFluentExtensionsTest\IsNotPositiveInfinity_Should.cs" />
     <Compile Include="FluentExtensions\DoubleArgumentFluentExtensionsTest\IsPositiveInfinity_Should.cs" />
-    <Compile Include="FluentExtensions\EnumerableArgumentFluentExttensionsTests\IsNotNullOrEmpty_Should.cs" />
-    <Compile Include="FluentExtensions\EnumerableArgumentFluentExttensionsTests\IsNullOrEmpty_Should.cs" />
+    <Compile Include="FluentExtensions\EnumerableArgumentFluentExtensionsTests\IsNotNullOrEmpty_Should.cs" />
+    <Compile Include="FluentExtensions\EnumerableArgumentFluentExtensionsTests\IsNullOrEmpty_Should.cs" />
     <Compile Include="FluentExtensions\FloatArgumentFluentExtensionsTests\IsInfinity_Should.cs" />
     <Compile Include="FluentExtensions\FloatArgumentFluentExtensionsTests\IsNaN_Should.cs" />
     <Compile Include="FluentExtensions\FloatArgumentFluentExtensionsTests\IsNegativeInfinity_Should.cs" />
@@ -123,6 +125,7 @@
     <Compile Include="GuardTests\Constructors_Should.cs" />
     <Compile Include="GuardTests\WhenArgument_Should.cs" />
     <Compile Include="Helpers\EnumerableHelperTests\IsNullOrEmpty_Should.cs" />
+    <Compile Include="Helpers\EnumHelperTests\ThrowIfNotEnum_Should.cs" />
     <Compile Include="Helpers\PortableLazyTests\Constructors_Should.cs" />
     <Compile Include="Helpers\PortableLazyTests\Value_Should.cs" />
     <Compile Include="Helpers\StringHelperTests\IsEmpty_Should.cs" />
@@ -130,6 +133,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Testing\Helpers\Ensure.cs" />
     <Compile Include="Testing\Mocks\ArgumentMock.cs" />
+    <Compile Include="Testing\Mocks\CustomEnum.cs" />
+    <Compile Include="Testing\Mocks\CustomIConvertibleStruct.cs" />
     <Compile Include="Testing\Mocks\IntValidationPredicateMock.cs" />
     <Compile Include="Testing\Mocks\TypeWithPrivateConstructor.cs" />
     <Compile Include="Testing\Mocks\TypeWithPublicConstructor.cs" />
@@ -172,6 +177,14 @@
     <Compile Include="ValidationPredicates\EnumerablePredicates\EnumerableNotNullOrEmptyValidationPredicateTests\ValidationType_Should.cs" />
     <Compile Include="ValidationPredicates\EnumerablePredicates\EnumerableNullOrEmptyValidationPredicateTests\Instance_Should.cs" />
     <Compile Include="ValidationPredicates\EnumerablePredicates\EnumerableNullOrEmptyValidationPredicateTests\ValidationType_Should.cs" />
+    <Compile Include="ValidationPredicates\EnumPredicates\MemberOfEnumValidationPredicateTests\Constructors_Should.cs" />
+    <Compile Include="ValidationPredicates\EnumPredicates\MemberOfEnumValidationPredicateTests\Instance_Should.cs" />
+    <Compile Include="ValidationPredicates\EnumPredicates\MemberOfEnumValidationPredicateTests\Match_Should.cs" />
+    <Compile Include="ValidationPredicates\EnumPredicates\MemberOfEnumValidationPredicateTests\ValidationType_Should.cs" />
+    <Compile Include="ValidationPredicates\EnumPredicates\NotMemberOfEnumValidationPredicateTests\Constructors_Should.cs" />
+    <Compile Include="ValidationPredicates\EnumPredicates\NotMemberOfEnumValidationPredicateTests\Instance_Should.cs" />
+    <Compile Include="ValidationPredicates\EnumPredicates\NotMemberOfEnumValidationPredicateTests\Match_Should.cs" />
+    <Compile Include="ValidationPredicates\EnumPredicates\NotMemberOfEnumValidationPredicateTests\ValidationType_Should.cs" />
     <Compile Include="ValidationPredicates\FloatPredicates\FloatInfinityValidationPredicateTests\Instance_Should.cs" />
     <Compile Include="ValidationPredicates\FloatPredicates\FloatInfinityValidationPredicateTests\ValidationType_Should.cs" />
     <Compile Include="ValidationPredicates\FloatPredicates\FloatNaNValidationPredicateTests\Instance_Should.cs" />

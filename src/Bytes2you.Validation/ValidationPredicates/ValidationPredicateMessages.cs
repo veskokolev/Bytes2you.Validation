@@ -42,5 +42,8 @@ namespace Bytes2you.Validation.ValidationPredicates
 
         public static readonly string InstanceOfTypeMessage = "The argument is instance of type <{0}>.";
         public static readonly string NotInstanceOfTypeMessage = "The argument is not instance of type <{0}>.";
+
+        public static readonly string MemberOfEnumMessage = "Argument value <{0}> is member of the enum <{1}>.";
+        public static readonly string NotMemberOfEnumMessage = "Argument value <{0}> is not member of the enum <{1}>.";
     }
 }

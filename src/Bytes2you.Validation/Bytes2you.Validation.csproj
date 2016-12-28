@@ -52,6 +52,7 @@
     <Compile Include="FluentExtensions\ByteArgumentFluentExtensions.cs" />
     <Compile Include="FluentExtensions\ClassArgumentFluentExtensions.cs" />
     <Compile Include="FluentExtensions\DoubleArgumentFluentExtensions.cs" />
+    <Compile Include="FluentExtensions\EnumArgumentFluentExtensions.cs" />
     <Compile Include="FluentExtensions\FloatArgumentFluentExtensions.cs" />
     <Compile Include="FluentExtensions\NullableArgumentFluentExtensions.cs" />
     <Compile Include="FluentExtensions\ShortArgumentFluentExtensions.cs" />
@@ -59,9 +60,10 @@
     <Compile Include="FluentExtensions\GenericArgumentFluentExtensions.cs" />
     <Compile Include="FluentExtensions\BoolArgumentFluentExtensions.cs" />
     <Compile Include="FluentExtensions\ComparableOfTArgumentFluentExtensions.cs" />
-    <Compile Include="FluentExtensions\EnumerableArgumentFluentExttensions.cs" />
+    <Compile Include="FluentExtensions\EnumerableArgumentFluentExtensions.cs" />
     <Compile Include="FluentExtensions\GuidArgumentFluentExtensions.cs" />
     <Compile Include="Helpers\EnumerableHelper.cs" />
+    <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\PortableLazy.cs" />
     <Compile Include="Helpers\MessageFormatHelper.cs" />
     <Compile Include="Helpers\StringHelper.cs" />
@@ -78,6 +80,8 @@
     <Compile Include="ValidationPredicates\BoundedArgumentValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\DoublePredicates\DoubleInfinityValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\DoublePredicates\DoubleNotInfinityValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\EnumPredicates\MemberOfEnumValidationPredicate.cs" />
+    <Compile Include="ValidationPredicates\EnumPredicates\NotMemberOfEnumValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\GuidPredicates\GuidEmptyValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\GenericPredicates\EqualValidationPredicate.cs" />
     <Compile Include="ValidationPredicates\BoolPredicates\FalseValidationPredicate.cs" />
